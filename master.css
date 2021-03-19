@@ -51,7 +51,7 @@ h4 {
 }
 
 p {
-	padding-bottom: 22px;
+	padding-bottom: 8px;
 }
 
 p.bletter {
@@ -137,11 +137,12 @@ p.bletter {
 }
 
 .blogPost ul {
-		margin: 0 0 20px 22px;
+		margin: 0 0 0px 22px;
 		list-style: none;
 	}
 .blogPost ul li {
 		margin-bottom: 0px;
+		margin-top: 0px;
 	}
 .blogPost ol {
 		margin: 0 0 20px 22px;
