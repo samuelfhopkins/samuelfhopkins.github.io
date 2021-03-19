@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage[tmargin=0.5in,bmargin=1in,rmargin=1.5in,lmargin=1.5in]{geometry}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage{ytableau}
+
+\title{Stirling numbers and left-to-right maxima, \\UMTYMP Advanced Topics, Fall 2020}
+\date{}
+
+
+\begin{document}
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+The \emph{(unsigned) Stirling $\#$'s of the 1st kind} are $c(n,k) := \textrm{$\# p\in S_n$ with $k$ cycles}$. The \emph{fundamental bijection} $p\mapsto \hat{p}$ writes a permutation in canonical cycle notation and then drops the parentheses and reinterprets it in in one-line notation:
+\[ p=(4)(521)(76)(83) \mapsto 45217683=\hat{p} \]
+A \emph{left-to-right maxima} of $p$ is a letter that is greater than all letters to its left.
+
+
+\medskip
+
+\begin{enumerate}
+
+\item Explain why $\sum_{k=1}^{n} c(n,k) x^k = \sum_{p \in S_n} x^{\textrm{LRMax}(p)}$ using the fundamental bijection, where $\textrm{LRMax}(p)$ is the number of left-to-right maxima of $p$.
+
+\end{enumerate}
+
+Imagine building up a permutation $p\in S_n$ in one-line notation step-by-step as follows: first we write down $n$; then we write down $n-1$ either before or after $n$; then we write $n-2$ down in one of the $3$ ``spots'' it could occupy; and so on all the way to $1$. For example, with $n=5$:
+\begin{gather*}
+\mathbf{5}\\
+5\mathbf{4} \\
+5\mathbf{3}4 \\
+\mathbf{2}534 \\
+2\mathbf{1}534
+\end{gather*}
+
+
+
+\begin{enumerate}
+\addtocounter{enumi}{1}
+\item Explain why $i\in[n]$ will be a left-to-right maxima in $p$ if and only if when we write $i$, we write it in the first spot, in this step-by-step procedure building $p$.
+\item Explain why the last item proves
+\[ \sum_{p \in S_n} x^{\textrm{LRMax}(p)} = x(x+1)(x+2)\cdots(x+(n-1)). \]
+
+\medskip
+
+\item What is the generating function $ \sum_{p \in S_n} x^{\textrm{RLMax}(p)}$, where $\textrm{RLMax}(p)$ is the number of \emph{right-to-left} maxima of $p$?
+\item What is the generating function $ \sum_{p \in S_n} x^{\textrm{LRMin}(p)}$, where $\textrm{LRMin}(p)$ is the number of left-to-right \emph{minima} of $p$?
+
+
+\end{enumerate}
+
+\end{document}
