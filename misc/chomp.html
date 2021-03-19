@@ -1,0 +1,82 @@
+<!doctype html>  
+<html>  
+<head>  
+     <title>Chomp</title> 
+</head>  
+<body onload="maketbl()"> 
+<h1>Chomp</h1>
+	<form method="" action="" name="myForm">
+	<p> Number of rows: <SELECT NAME = "rowNum" SIZE = "1" onChange = "maketbl()">
+		<OPTION>1</OPTION>
+		<OPTION>2</OPTION>
+		<OPTION>3</OPTION>
+		<OPTION>4</OPTION>
+		<OPTION selected="selected">5</OPTION>
+		<OPTION>6</OPTION>
+		<OPTION>7</OPTION>
+		<OPTION>8</OPTION>
+		<OPTION>9</OPTION>
+		<OPTION>10</OPTION>
+	</SELECT> &nbsp; &nbsp; Number of columns: <SELECT NAME = "colNum" SIZE = "1" onChange = "maketbl()">
+		<OPTION>1</OPTION>
+		<OPTION>2</OPTION>
+		<OPTION>3</OPTION>
+		<OPTION>4</OPTION>
+		<OPTION>5</OPTION>
+		<OPTION>6</OPTION>
+		<OPTION selected="selected">7</OPTION>
+		<OPTION>8</OPTION>
+		<OPTION>9</OPTION>
+		<OPTION>10</OPTION>
+	</SELECT> &nbsp; &nbsp; <input type="button" value="Reset" onclick="maketbl()">
+	</p></form>
+	
+	<div id="chompArea">
+		
+	</div>
+    <script>
+    	function maketbl()	{
+    		document.getElementById('chompArea').innerHTML = "";
+    		var numRows = parseInt(document.myForm.rowNum.options[document.myForm.rowNum.selectedIndex].value);
+    		var numCols = parseInt(document.myForm.colNum.options[document.myForm.colNum.selectedIndex].value);
+    		var tbl = document.createElement("table");
+  			var tblBody = document.createElement("tbody");
+    		var i;
+    		var j;
+    		for (i = 0; i < numRows; i++) {
+    			var row = document.createElement("tr");
+    			for (j = 0; j < numCols; j++) {
+  					var cell = document.createElement("td");
+  					cell.style = "text-align: center;";
+    				var myImg = document.createElement("IMG");
+    				myImg.setAttribute('src', 'chomp_fill.png');
+    				myImg.setAttribute('alt', 'na');
+    				myImg.setAttribute('width', '100');
+    				myImg.setAttribute('height', '100');
+    				myImg.id = 'myImage'+i.toString()+j.toString();
+    				myImg.setAttribute('onClick', 'chomp('+i.toString()+','+j.toString()+')');
+      				cell.appendChild(myImg);
+      				row.appendChild(cell);
+      			}
+      			tblBody.appendChild(row); 
+      		}				
+   			tbl.appendChild(tblBody);
+   			var element = document.getElementById("chompArea");
+   			element.appendChild(tbl);
+      	}
+
+        function chomp(a,b) {
+        	var numRows = parseInt(document.myForm.rowNum.options[document.myForm.rowNum.selectedIndex].value);
+    		var numCols = parseInt(document.myForm.colNum.options[document.myForm.colNum.selectedIndex].value);
+        	var i;
+    		var j;
+    		for (i = a; i >= 0; i--) {
+    			for (j = b; j <numCols; j++) {
+    				var image = document.getElementById('myImage'+i.toString()+j.toString());
+    				image.src = "chomp_empty.png";
+    			}
+    		}
+        }
+    </script>
+</body>  
+</html> 

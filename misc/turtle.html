@@ -1,0 +1,92 @@
+<!doctype html>  
+<html>  
+<head>  
+     <title>Flipping turtles</title> 
+</head>  
+<body onLoad="iljval()"> 
+<h1>Flipping turtles</h1>
+	<form method="" action="" name="myForm">
+	<p> Number of turtles: <SELECT NAME = "turtleNumber" SIZE = "1" onChange = "iljval()">
+		<OPTION>0</OPTION>
+		<OPTION>1</OPTION>
+		<OPTION>2</OPTION>
+		<OPTION>3</OPTION>
+		<OPTION>4</OPTION>
+		<OPTION>5</OPTION>
+		<OPTION>6</OPTION>
+		<OPTION>7</OPTION>
+		<OPTION>8</OPTION>
+		<OPTION>9</OPTION>
+		<OPTION>10</OPTION>
+		<OPTION>11</OPTION>
+		<OPTION>12</OPTION>
+		<OPTION>13</OPTION>
+		<OPTION>14</OPTION>
+		<OPTION selected="selected">15</OPTION>
+		<OPTION>16</OPTION>
+		<OPTION>17</OPTION>
+		<OPTION>18</OPTION>
+		<OPTION>19</OPTION>
+		<OPTION>20</OPTION>
+	</SELECT>
+	</p></form>
+	
+	<p>Turtles: <input type="button" onclick="iljval()" value ="Reset"></p>
+	
+	<div id="turtleArea"> </div>
+    <script>
+    	function iljval() {
+    		document.getElementById('turtleArea').innerHTML = "";
+    		var number = parseInt(document.myForm.turtleNumber.options[document.myForm.turtleNumber.selectedIndex].value);
+    		var tbl = document.createElement("table");
+  			var tblBody = document.createElement("tbody");
+  			var row = document.createElement("tr");
+    		var i = 0;
+    		var j = 0;
+    		while (i < number) {
+  				var cell = document.createElement("td");
+  				cell.style = "text-align: center;";
+    			var myImg = document.createElement("IMG");
+    			myImg.setAttribute('src', 'turtle.png');
+    			myImg.setAttribute('alt', 'na');
+    			myImg.setAttribute('width', '80');
+    			myImg.setAttribute('height', '65');
+    			myImg.id = 'myImage'+i.toString();
+      			cell.appendChild(myImg);
+      			row.appendChild(cell);
+      			i++;
+      			if ( (i%10 == 0) || (i == number) ) {
+      				tblBody.appendChild(row);
+      				var row = document.createElement("tr");
+      				while (j < i) {
+      					var cell = document.createElement("td");
+  						cell.style = "text-align: center;";
+   						var myButton = document.createElement("BUTTON");
+   						myButton.setAttribute('onclick', 'changeImage('+j.toString()+')');
+   						myButton.innerHTML ='Flip '+(j+1).toString();
+  						cell.appendChild(myButton);
+  						row.appendChild(cell);
+  						j++;
+      				}
+      				tblBody.appendChild(row);
+      				var row = document.createElement("tr");
+      			}
+      		}
+      		tblBody.appendChild(row);				
+   			tbl.appendChild(tblBody);
+   			var element = document.getElementById("turtleArea");
+   			element.appendChild(tbl);
+      	}
+
+        function changeImage(a) {
+            var image = document.getElementById('myImage'+a.toString());
+            if (image.src.match("turtle_flip.png")) {
+                image.src = "turtle.png";
+            }
+            else {
+                image.src = "turtle_flip.png";
+            }
+        }
+    </script>
+</body>  
+</html> 
