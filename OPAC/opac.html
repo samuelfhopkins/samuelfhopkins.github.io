@@ -1,0 +1,154 @@
+<!doctype html>  
+<html>  
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>OPAC 2022</title>  
+	<link rel="stylesheet" href="opac.css" type="text/css" media="screen" />
+	<!-- Load the jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- MathJax script for processing LaTeX -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		MathJax.Hub.Config({
+    		tex2jax: {inlineMath: [['$','$']]}
+  		});
+	</script>
+	<script>
+	/*-------------------------------------------------------------------------------------------- */
+	/* A function that opens up the correct sections of the site, depending on value after hashtag */
+	var openCorrectSections = function() {
+  		var url = window.location.href;
+  		var params = url.split('#');
+  		if ((params.length == 1) || (params[1]=="")) {
+	  		$("#Speakers").show();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+  		}
+  		else if (params[1]=="Funding") {
+      		$("#Speakers").hide();
+      		$("#Funding").show();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+  		} else if (params[1]=="Travel") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").show();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+  		} else if (params[1]=="Schedule") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").show();
+	  		$("#Proceedings").hide();
+  		} else if (params[1]=="Proceedings") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").show();
+  		}
+	};
+	window.addEventListener("load", function() {
+  		openCorrectSections(); /* Show correct sections of the website */
+	});
+	window.addEventListener("hashchange", openCorrectSections);
+	</script>
+</head>  
+<body>
+	<h1>Open Problems in Algebraic Combinatorics</h1>
+	<h2><s>May 18-22, 2020</s></h2>
+	<h2>May 16-20, 2022</h2>
+	<h3>(rescheduled date tentative)</h3>
+	<h2>University of Minnesota</h2>
+	<h3>Organizers: Christine Berkesch, Ben Brubaker, Gregg Musiker, Pavlo Pylyavskyy, Vic Reiner</h3>
+	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Travel">Registration & Travel Info</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Funding">Funding</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> </h3>
+	<h4> <u><font color="red">OPAC Postponed</font></u>: Due to the COVID-19 pandemic, the conference has been postponed. <br> The likely date of the conference will be May 16-20 of 2022, two years from the original date.</h4>
+	<div id="Speakers" style="display: none;">
+		<p>Speakers:</p> 
+		<ul class="speakers"> 
+			<li> Sami Assaf  </li>
+			<li> Sylvie Corteel </li>
+			<li> Philippe Di Francesco </li>
+			<li> Sergey Fomin </li>
+			<li> Pavel Galashin  </li>
+			<li> Eugene Gorsky </li>
+			<li> June Huh </li>
+			<li> Joel Kamnitzer </li>
+			<li> Rick Kenyon </li>
+			<li> Allen Knutson </li>
+			<li> Thomas Lam </li>
+			<li> Anton Mellit </li>
+			<li> Igor Pak </li>
+			<li> Greta Panova </li>
+			<li> Alex Postnikov </li>
+			<li> Claudiu Raicu </li>
+			<li> Steven Sam </li>
+			<li> Ralf Schiffler </li>
+			<li> Anne Schilling </li>
+			<li> David Speyer </li>
+			<li> Hugh Thomas </li>
+			<li> Julianna Tymoczko </li>
+			<li> Lauren Williams </li>
+			<li> Nathan Williams </li>
+		</ul>
+	</div>
+	<div id="Funding" style="display: none;">
+		<p> In light of the postponement of the conference, more info about funding will be posted at a later date. </p>
+		<!--- 
+		<p> <s>The deadline for funding applications was <b>January 15, 2020</b> and <b>has passed</b>. Funding decisions have been made. </s> </p>
+		-->
+	</div>
+	<div id="Travel" style="display: none;">
+		<p> In light of the postponement of the conference, more info about registration and travel will be posted at a later date. </p>
+		
+		<!--- 
+		<s> <p><b>Registration:</b> There is no registration fee for the conference, and all are invited to attend the talks. However all participants must register by <b>May 1, 2020</b> by filling out <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLlDCMt1JVQFABUYLDib27aQNKash_yYoSqqp7NMARV56gdA/viewform">this form</a>.</p>
+		
+		<p><b>Arrival-Departure Dates:</b> The expected arrival date is Sunday, May 17. The conference begins Monday morning. Most attendees will depart either Friday, May 22 or Saturday, May 23. The conference will end at 5pm on Friday.</p>
+		
+		<p><b>Hotels:</b> Hotels near campus include: <a href="https://www.wyndhamhotels.com/days-inn/minneapolis-minnesota/days-inn-hotel-university-ave-se/overview">Days Inn</a>, <a href="https://www.graduatehotels.com/minneapolis/">The Graduate Hotel</a>, and <a href="https://www.hilton.com/en/hotels/mspundt-doubletree-minneapolis-university-area/">Double Tree</a>. Another option is <a href="https://www.airbnb.com/s/University-of-Minnesota-~-Twin-Cities--Minneapolis--MN--United-States/">Airbnb</a>.</p> 
+		
+		<p><b>Local Travel Information:</b> Most attendees will fly into the <a href="https://www.mspairport.com/">Minneapolis-St. Paul International Airport</a> (MSP). The MSP airport has stops (at both terminals 1 and 2) for the <a href="https://www.mspairport.com/directions/ground-transportation/light-rail-transit">light rail transit</a> (LRT) serving Minneapolis and St. Paul. It is <a href="https://goo.gl/maps/dHrianT8Chg68hUr8">easy to take the light rail from MSP to campus</a>. Taxis and Uber can also be used to get from the airport to campus. </p> </s> 
+		-->
+		
+	</div>
+	<div id="Schedule" style="display: none;">
+		<p>Tentative talk titles:</p>
+		<ul class="talks">
+			<li> Sami Assaf: <u>Using polynomials to resolve open problems in representation theory and geometry</u> </li>
+			<li> Sylvie Corteel: <u>Cylindric partitions</u> </li>
+			<li> Philippe Di Francesco: <u>The combinatorics of triangular ice</u> </li>
+			<li> Eugene Gorsky: <u>Generalized q,t-Catalan polynomials and link invariants</u> </li>
+			<li> June Huh: <u>Lorentzian polynomials</u> </li>
+			<li> Joel Kamnitzer: <u>Canonical bases in representation theory and cluster algebras</u></li>
+			<li> Rick Kenyon: <u>Dimers and related models</u> </li>
+			<li> Thomas Lam: <u>Positive geometries</u> </li>
+			<li> Anton Mellit: <u>Combinatorial expressions for the nabla operator</u> </li>
+			<li> Igor Pak: <u>Complexity aspects and challenges in algebraic combinatorics</u> </li>
+			<li> Greta Panova: <u>Structure constants in algebraic combinatorics: from Geometric Complexity Theory to Asymptotics</u> </li>
+			<li> Claudiu Raicu: <u>Homological invariants of $S_n$-equivariant monomial ideals</u> </li>
+			<li> Steven Sam: <u>Combinatorial problems inspired by representation stability</u> </li>
+			<li> Ralf Schiffler: <u>Perfect matching problems in cluster algebras and number theory</u> </li>
+			<li> Anne Schilling: <u>How crystals might help to make progress on plethysm coefficients</u> </li>
+		</ul>
+	</div>
+	<div id="Proceedings" style="display: none;">
+		<p>The conference will be accompanied by a proceedings to be published by the AMS. More info about the proceedings to come. Some of the articles for the proceedings are already available online here:</p>
+		<ul>
+			<li> <a href="files/opac_proceedings_alexandersson_feray.pdf">A positivity conjecture on the structure constants of shifted Jack functions</a> by P. Alexandersson and V. F&eacute;ray</li>
+			<li> <a href="files/opac_proceedings_bergeron_A.pdf">The bosonic-fermionic diagonal coinvariant modules conjecture</a> by F. Bergeron </li>
+			<li> <a href="files/opac_proceedings_bergeron_B.pdf">$(\mathrm{GL}_k \times \mathbb{S}_n)$-modules of multivariate diagonal harmonics</a> by F. Bergeron </li>
+			<li> <a href="files/opac_proceedings_hopkins.pdf">Order polynomial product formulas and poset dynamics</a> by S. Hopkins</li>
+			<li> <a href="files/opac_proceedings_novak_rhoades.pdf">Increasing subsequences and Kroenecker coefficients</a> by J. Novak and B. Rhoades</li>
+			<li> <a href="files/opac_proceedings_reiner_yong.pdf">The "Grothendieck to Lascoux" conjecture</a> by V. Reiner and A. Yong</li>
+		</ul>
+		<p>An Open Problems in Algebraic Combinatorics blog, to accompany the OPAC 2022 conference and continue afterward, is running online <a href="https://realopacblog.wordpress.com/.">here</a>. A pdf version of the blog posts is also available <a href="files/opacblog_master.pdf">here</a>.</p>
+	</div>
+</body>  
+<footer>
+	<p class="foot">Website: Sam Hopkins</p>
+</footer>
+</html> 
