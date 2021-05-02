@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage{ytableau}
+
+\title{Pick's theorem, \\Math 4707, Spring 2021}
+\date{}
+
+\begin{document}
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-0.8cm}
+
+Let $P$ be a lattice polygon with vertices $(x_1,y_1),\ldots, (x_n,y_n) \in \mathbb{Z}^2$ in clockwise cyclic order. For $k$ a positive integer, we use $kP$ to denote the \emph{$k$th dilate} of $P$, which is the polygon with vertices $(kx_1,ky_1),\ldots, (kx_n,ky_n)$. Intuitively $kP$ is $P$ ``stretched'' by a factor of $k$.
+
+\begin{enumerate}
+
+\item Let $P$ be a lattice polygon. Explain why $b(kP)=kb(P)$, i.e., the number of boundary lattice points of $kP$ is $k$ times the number of boundary lattice points of $P$.
+\item Conclude from part (1) and Pick's theorem, that the total number of lattice points in $kP$ is 
+\[ \#(kP\cap \mathbb{Z}^2) = \mathrm{area}(P) \cdot k^2 + (b(P)/2) \cdot k + 1,\]
+which is a {\bf polynomial} in $k$!
+\item Let $P$ be the \emph{unit square}, i.e., the lattice quadrilateral with vertices $(1,1), (1,0), (0,0), (0,1)$. Compute the polynomial $\#(kP\cap \mathbb{Z}^2) $ from part (2). Do you recognize this sequence of numbers?
+\item Let $P$ be the \emph{standard triangle}, i.e., the lattice triangle with vertices $(1,0), (0,0), (0,1)$. Compute the polynomial $\#(kP\cap \mathbb{Z}^2) $ from part (2). Do you recognize this sequence of numbers?
+
+\end{enumerate}
+
+\vspace{-0.2cm}
+
+{\bf Remark}: The higher-dimensional version of a convex polygon is called a \emph{convex polyhedron}: a \emph{convex polyhedron} $P$ in $\mathbb{R}^d$ is the convex hull of finitely many points in $\mathbb{R}^d$. Polygons are built out of ``flat'' things: vertices and sides (a.k.a. edges); polyhedra are also built out of flat things: vertices, edges, faces, etc. You might be aware of the \emph{Platonic solids} in $\mathbb{R}^3$.
+
+We say $P$ is a \emph{lattice polyhedron} if it is the convex hull of finitely many points in $\mathbb{Z}^d$. For $P$ a lattice polyhedron, a version of (2) holds:
+\[ \#(kP\cap \mathbb{Z}^d) = a_d \cdot k^d + a_{d-1} \cdot k^{d-1} + \cdots + a_1 \cdot k + a_0,\]
+i.e., the number of lattice points of $kP$ is given by a \emph{polynomial} in $P$ called the \emph{Ehrhart polynomial} of $P$. A whole area of combinatorics, called \emph{Ehrhart theory}, studies these polynomials.
+
+\end{document}

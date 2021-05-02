@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+
+\usepackage{ytableau}
+
+\title{Stable matchings,  \\Math 4707, Spring 2021}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+Consider the following preference tables for Doctors and Hospitals:
+
+\[ \begin{tabular}{c | c }
+Doctor & Hospital preferences \\ \hline
+1 & B, A, C, D \\
+2 & D, A, B, C \\
+3 & A, C, B, D \\
+4 & B, C, A, D
+\end{tabular} \qquad \begin{tabular}{c | c }
+Hospital & Doctor preferences \\ \hline
+A & 1, 3, 2, 4 \\
+B & 3, 4, 1, 2 \\
+C & 4, 2, 3, 1 \\
+D & 3, 2, 1, 4
+\end{tabular} \]
+
+\begin{enumerate}
+\item First run the Gale-Shapley algorithm with the Doctors proposing to the Hospitals, and write down the stable matching you obtain.
+\item Then run the Gale-Shapley algorithm \emph{with the Hospitals proposing to the Doctors}, and write down the stable matching you obtain.
+\item Of the two matchings you obtained, which is ``better for the Doctors''? Which is ``better for the Hospitals''? Explain what the phrases in quotation marks mean.
+\end{enumerate}
+
+\end{document}
