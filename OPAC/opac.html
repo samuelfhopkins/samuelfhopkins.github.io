@@ -94,29 +94,26 @@
 			<li> Nathan Williams </li>
 		</ul>
 	</div>
-	<div id="Funding" style="display: none;">
-		<p> More info about funding for the conference will be posted soon. </p>
-		<!--- 
-		<p> <s>The deadline for funding applications was <b>January 15, 2020</b> and <b>has passed</b>. Funding decisions have been made. </s> </p>
-		-->
-	</div>
 	<div id="Travel" style="display: none;">
-		<p> More info about registration for and travel to the conference will be posted soon. </p>
+		<p><b>Registration:</b> There is no registration fee for the conference, and all are invited to attend the talks. However, all participants must register by <b>May 1, 2022</b> by filling out <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4c0mAuwRVDEYf4CJsT1DWhouwrWg2IDeoq-PbLmJpkXA9aA/viewform">this Google form</a>. </p>
+		<p> More info about travel to the conference will be posted soon. </p>
 		
 		<!--- 
-		<s> <p><b>Registration:</b> There is no registration fee for the conference, and all are invited to attend the talks. However all participants must register by <b>May 1, 2020</b> by filling out <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLlDCMt1JVQFABUYLDib27aQNKash_yYoSqqp7NMARV56gdA/viewform">this form</a>.</p>
-		
 		<p><b>Arrival-Departure Dates:</b> The expected arrival date is Sunday, May 17. The conference begins Monday morning. Most attendees will depart either Friday, May 22 or Saturday, May 23. The conference will end at 5pm on Friday.</p>
 		
-		<p><b>Hotels:</b> Hotels near campus include: <a href="https://www.wyndhamhotels.com/days-inn/minneapolis-minnesota/days-inn-hotel-university-ave-se/overview">Days Inn</a>, <a href="https://www.graduatehotels.com/minneapolis/">The Graduate Hotel</a>, and <a href="https://www.hilton.com/en/hotels/mspundt-doubletree-minneapolis-university-area/">Double Tree</a>. Another option is <a href="https://www.airbnb.com/s/University-of-Minnesota-~-Twin-Cities--Minneapolis--MN--United-States/">Airbnb</a>.</p> 
+		<p><b>Hotels:</b> Hotels near campus include: <a href="https://www.wyndhamhotels.com/days-inn/minneapolis-minnesota/days-inn-hotel-university-ave-se/overview">Days Inn</a>, <a href="https://www.graduatehotels.com/minneapolis/">The Graduate Hotel</a>, and <a href="https://www.hilton.com/en/hotels/mspundt-doubletree-minneapolis-university-area/">Double Tree</a>. Another option is <a href="https://www.airbnb.com/s/University-of-Minnesota-~-Twin-Cities--Minneapolis--MN--United-States/">Airbnb</a>. </p> 
 		
 		<p><b>Local Travel Information:</b> Most attendees will fly into the <a href="https://www.mspairport.com/">Minneapolis-St. Paul International Airport</a> (MSP). The MSP airport has stops (at both terminals 1 and 2) for the <a href="https://www.mspairport.com/directions/ground-transportation/light-rail-transit">light rail transit</a> (LRT) serving Minneapolis and St. Paul. It is <a href="https://goo.gl/maps/dHrianT8Chg68hUr8">easy to take the light rail from MSP to campus</a>. Taxis and Uber can also be used to get from the airport to campus. </p> </s> 
 		-->
 		
 	</div>
+	<div id="Funding" style="display: none;">
+		<p> <b>Funding</b>: There is limited funding available to support participants attending the conference. The deadline to apply for funding is <b>January 15, 2022</b>. To apply for funding, please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4c0mAuwRVDEYf4CJsT1DWhouwrWg2IDeoq-PbLmJpkXA9aA/viewform">this Google form</a>. </p>
+	</div>
 	<div id="Schedule" style="display: none;">
 		<p>Tentative talk titles:</p>
 		<ul class="talks">
+			<!---  <li> Speaker: <u>Talk Title</u> <button class="accordion">+</button> <div class="panel"> Abstract: <i> In this talk I will outline an elementary proof of the Riemann hypothesis, based on the Euclidean division algorithm and some straightforward computations in (infinity,2)-categories. As a corollary I will deduce that P=NP.</i> </div></li> -->
 			<li> Sami Assaf: <u>Using polynomials to resolve open problems in representation theory and geometry</u> </li>
 			<li> Sylvie Corteel: <u>Cylindric partitions</u> </li>
 			<li> Philippe Di Francesco: <u>The combinatorics of triangular ice</u> </li>
@@ -134,7 +131,7 @@
 		</ul>
 	</div>
 	<div id="Proceedings" style="display: none;">
-		<p>The conference will be accompanied by a proceedings to be published by the AMS. More info about the proceedings to come. Some of the articles for the proceedings are already available online here:</p>
+		<p>The conference will be accompanied by a proceedings to be published by the AMS. The proceedings articles will also be made available online here. Some of the articles are already available:</p>
 		<ul>
 			<li> <a href="files/opac_proceedings_alexandersson_feray.pdf">A positivity conjecture on the structure constants of shifted Jack functions</a> by P. Alexandersson and V. F&eacute;ray</li>
 			<li> <a href="files/opac_proceedings_bergeron_A.pdf">The bosonic-fermionic diagonal coinvariant modules conjecture</a> by F. Bergeron </li>
@@ -149,4 +146,21 @@
 <footer>
 	<p class="foot">Website: Sam Hopkins</p>
 </footer>
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+  		acc[i].addEventListener("click", function() {
+    		this.classList.toggle("active");
+    		var panel = this.nextElementSibling;
+    		if (panel.style.display === "block") {
+      			panel.style.display = "none";
+    		} else {
+      			panel.style.display = "block";
+    		}
+  		});
+	}
+</script>
 </html> 
