@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage[tmargin=0.5in,bmargin=1in,rmargin=1.5in,lmargin=1.5in]{geometry}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage{ytableau}
+
+\title{Principle of inclusion-exclusion worksheet, \\UMTYMP Advanced Topics, Fall 2020}
+\date{}
+
+
+\begin{document}
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+\begin{enumerate}
+
+\item How many anagrams of ``COMMITTEE'' have no double letters adjacent (i.e., no ``MM'', ``TT'', or ``EE'')?
+
+\item How many solutions are there to the equation
+\[ x_1 + x_2 + x_3 + x_4  = 20 ,\]
+where each $x_i$ is an integer with $0\leq x_i \leq 8$? {\bf Hint}: Let $A_i$ be the integer solutions such that $x_i > 8$.
+
+\end{enumerate}
+
+Let $D_n$ denote the number of \emph{derangements} in $S_n$, i.e., the number of permutations $p \in S_n$ with $p(i)\neq i$ for all $i\in [n]$. We used PIE to show
+\[ D_n = n! \cdot \sum_{k=0}^{n} (-1)^k \frac{1}{k!}\]
+
+\begin{enumerate}
+
+\addtocounter{enumi}{2}
+
+\item  How many permutations $p \in S_n$ are there which in one-line notation never have the letter $i$ immediately followed by $i+1$, for $i=1,2\ldots,n-1$? 
+
+\item Show that the answer you got to the last problem is the same as $D_n + D_{n-1}$. Can you give a bijective explanation for this?
+
+\item Show that $D_{n+1} = n(D_n + D_{n-1})$ for $n \geq 1$ (where $D_0=1,D_1=0$).
+
+\item Can you give a bijective proof for the last problem?
+
+\end{enumerate}
+
+\end{document}

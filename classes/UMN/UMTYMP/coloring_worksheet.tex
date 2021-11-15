@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+
+\usepackage{ytableau}
+
+\title{Graph coloring, \\UMTYMP Advanced Topics, Fall 2020}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Recall that for a graph $G$, the \emph{chromatic number} of $G$, denoted $\chi(G)$, is the smallest number of colors needed to (properly) color the vertices of $G$. Graphs with $\chi(G)=2$ are called \emph{bipartite}.
+
+If $G$ has a subgraph isomorphic to $K_d$, the complete graph on $d$ vertices, then $\chi(G) \geq d$ because it requires $d$ colors to color even that subgraph.
+
+\begin{enumerate}
+\item For each $d \geq 3$, give an example of a graph $G$ which does not contain a subgraph isomorphic to $K_d$ but with $\chi(G) \geq d$.
+\end{enumerate}
+
+{\bf Remark}: In fact, much more is true. The \emph{girth} of a graph $G$ is the size of the smallest cycle in $G$. A classic result of Erd\"{o}s (probably beyond what we'll prove in this class) says that for any $g,d$, there exists a graph $G$ with girth $\geq g$ and $\chi(G) \geq d$.
+\medskip
+
+Let $\Delta(G)$ denote the maximum degree of $G$. We saw a simple proof by induction that $\chi(G) \leq \Delta(G)+1$.
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Show that the bound just mentioned is sharp: for each $d \geq 1$, give an example of a graph with $\Delta(G)=d$ and $\chi(G) = d+1$. How many examples can you think of?
+\end{enumerate}
+
+{\bf Remark}: \emph{Brooks' theorem} says that the only $G$ with $\chi(G) = \Delta(G)+1$ are the ``obvious'' examples.
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Let $G$ be a bipartite graph on $n$ vertices. How big can $\Delta(G)$ be?
+\item For each $d \geq 1$, give an example of a bipartite graph $G$ for which the \emph{minimum degree} of $G$ is $d$.
+\end{enumerate}
+
+\pagebreak
+
+The \emph{chromatic polynomial} $\chi_G(k)$ of $G$ is the polynomial in $k$ which {\bf counts} (proper) $k$-colorings:
+\[ \chi_G(k) = \#\textrm{$k$-colorings of $G$}.\]
+For example, if $G$ has $n$ isolated vertices (no edges), then $\chi_G(k) = k^n$. On the other hand if $G = K_3$ is the triangle, then $\chi_G(k) = k(k-1)(k-2)$ ({\bf think about this}!).
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item What is the chromatic polynomial $\chi_{K_n}(k)$ of the complete graph $K_n$?
+\item Let $T$ be a tree on $n$ vertices. What is $\chi_T(k)$?
+\item Let $C_n$ be the cycle graph on $n$ vertices. What is $\chi_{C_n}(k)$? ({\bf This one is harder...})
+\item Can you see why $\chi_G(k)$ is always a {\bf polynomial} in $k$?
+\end{enumerate}
+
+\end{document}
