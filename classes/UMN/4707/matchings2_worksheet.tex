@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+
+\usepackage{ytableau}
+
+\title{Finding a matching, \\ Math 4707, Spring 2021}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+Your company has $10$ employees $\{x_1, x_2, x_3, x_4, x_5, x_6, x_7, x_8,x_9,x_{10}\}$ and $10$ tasks to perform $\{y_1, y_2, y_3, y_4, y_5, y_6, y_7, y_8,y_9,y_{10}\}$, but each employee has a different set of tasks that they are capable of doing: 
+\begin{center}
+\begin{tabular}{c  c}
+employee & tasks they can do \\
+$x_1$ & $\{y_2, y_4, y_5\}$ \\
+$x_2$ & $\{y_1, y_2, y_3, y_5, y_6, y_7, y_8\}$ \\
+$x_3$ & $\{y_2, y_5\}$ \\
+$x_4$ & $\{y_2, y_4\}$ \\
+$x_5$ & $\{y_4, y_5\}$ \\
+$x_6$ & $\{y_1, y_3,  y_4, y_6, y_7, y_8\}$ \\
+$x_7$ & $\{y_2,y_7,y_8\}$ \\
+$x_8$ & $\{y_4,y_7,y_8\}$ \\
+$x_9$ & $\{y_5, y_7, y_8\}$ \\
+$x_{10}$ & $\{y_7, y_8, y_9,y_{10}\}$
+\end{tabular}
+\end{center}
+Match each employee to at most one task, so that different employees end up doing different tasks, in such a way that the maximum number of tasks are performed. Prove that your answer attains the maximum.
+
+\medskip
+
+{\bf Bonus problem}: come up with names for all the people and tasks (e.g., $x_1$ = ``Jarvis,'' $y_1$ = ``swap the decaf and caf labels on the coffee pots,'' $x_2$ =``Mildred,'' $y_2$ = ``make fax-machine noises in the printer room'').
+
+\end{document}
