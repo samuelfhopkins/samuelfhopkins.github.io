@@ -35,7 +35,7 @@ body {
 	font-weight: normal;
 	color: black;
 	background: white;
-	background-image: url("opac_background_light.jpg");
+	background-image: url("files/opac_background_light.jpg");
 	background-repeat: no-repeat;
   	background-size: 100%;
 }
@@ -162,7 +162,7 @@ ul li {
 	}
 	
 	body {
-		background-image: url("opac_background_light_mobile.jpg");
+		background-image: url("files/opac_background_light_mobile.jpg");
 		background-repeat: repeat-y;
 		width: 100%;
 	}
