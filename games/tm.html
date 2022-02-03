@@ -1,0 +1,585 @@
+<!doctype html>  
+<html>  
+<head>  
+     <title>Touring Machines</title> 
+	<script>
+	let canvasSize = 400;
+	
+	var boardSize;
+	var board;
+	var maxTurns;
+	
+	var hIn;
+	var hOpp;
+	var hOwn;
+	var hEn;
+	
+	var eIn;
+	var eOpp;
+	var eOwn;
+	var eEn;
+	
+	var hX;
+	var hY;
+	var hDir;
+	
+	var eX;
+	var eY;
+	var eDir;
+	
+	var turn;
+	
+	var running;
+	
+	function reset() {
+		
+		clearInterval(running);
+	
+		document.getElementById("hIn").disabled=false;
+    	document.getElementById("hOpp").disabled=false;
+    	document.getElementById("hOwn").disabled=false;
+    	document.getElementById("hEn").disabled=false;
+    	
+    	document.getElementById("eIn").disabled=false;
+    	document.getElementById("eOpp").disabled=false;
+    	document.getElementById("eOwn").disabled=false;
+    	document.getElementById("eEn").disabled=false;
+		
+		if (document.getElementById('mode').value == 'Solo') {
+			mode = 0;
+		
+		} else if (document.getElementById('mode').value == 'Versus') {
+			mode = 1;
+		}
+		
+		if (document.getElementById('board').value == '8x8 Torus Checkerboard') {
+		
+		boardSize = 8;
+		board = [['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K']];
+		
+		hX = 2;
+		hY = 2;
+		hDir = 3;
+		hIn = 'K';
+		hOpp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 5;
+		eY = 5;
+		eDir = 1;
+		eIn = 'K';
+		eOpp = 'W';
+		eOwn = 'R';
+		eEn = 'B';
+		
+		} else if (document.getElementById('board').value == '8x8 Torus Quadrants') {
+		
+		boardSize = 8;
+		board = [['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K']];
+		
+		hX = 2;
+		hY = 2;
+		hDir = 3;
+		hIn = 'K';
+		hOpp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 5;
+		eY = 5;
+		eDir = 1;
+		eIn = 'K';
+		eOpp = 'W';
+		eOwn = 'R';
+		eEn = 'B';
+		
+		} else if (document.getElementById('board').value == '8x8 Torus Horizontal Stripes') {
+		
+		boardSize = 8;
+		board = [['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W']];
+		
+		hX = 1;
+		hY = 2;
+		hDir = 3;
+		hIn = 'K';
+		hOpp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 6;
+		eY = 5;
+		eDir = 1;
+		eIn = 'W';
+		eOpp = 'K';
+		eOwn = 'R';
+		eEn = 'B';
+		
+		} else if (document.getElementById('board').value == '8x8 Torus Vertical Halves') {
+		
+		boardSize = 8;
+		board = [['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W']];
+		
+		hX = 3;
+		hY = 3;
+		hDir = 3;
+		hIn = 'K';
+		hOpp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 4;
+		eY = 4;
+		eDir = 1;
+		eIn = 'W';
+		eOpp = 'K';
+		eOwn = 'R';
+		eEn = 'B';
+		
+		}
+		
+		maxTurns = document.getElementById('numTurns').value;
+		
+		turn = 0;
+	
+		draw();
+	}
+	
+	function draw() {
+		document.getElementById('turns').innerHTML = String(turn)+"/"+String(maxTurns);
+		var hSquares = 0;
+		var enSquares = 0;
+		var i = 0;
+		while (i < boardSize) {
+			var j = 0;
+			while (j < boardSize) {
+				if (board[i][j] == hOwn) { 
+					hSquares++;
+				} else if (board[i][j] == eOwn) { 
+					enSquares++;
+				}
+			j++;
+			}
+			i++;
+		}
+		document.getElementById('hSquares').innerHTML = String(hSquares)+"/"+String(boardSize*boardSize);
+		document.getElementById('eSquares').innerHTML = String(enSquares)+"/"+String(boardSize*boardSize);
+		
+		
+		var canvas = document.getElementById('myCanvas');
+		if (canvas.getContext) {
+			var ctx = canvas.getContext('2d');
+			
+			var i = 0;
+    		while (i < boardSize) {
+    			var j = 0;
+    			while (j < boardSize) {
+    				if (board[i][j] == 'K') {
+    					ctx.fillStyle = 'rgb(0, 0, 0)';
+        				ctx.fillRect(i*(canvasSize/boardSize), j*(canvasSize/boardSize), (canvasSize/boardSize), (canvasSize/boardSize));
+    				}
+    				if (board[i][j] == 'W') {
+    					ctx.fillStyle = 'rgb(255, 255, 255)';
+        				ctx.fillRect(i*(canvasSize/boardSize), j*(canvasSize/boardSize), (canvasSize/boardSize), (canvasSize/boardSize));
+    				}
+    				if (board[i][j] == 'B') {
+    					ctx.fillStyle = 'rgb(0, 0, 255)';
+        				ctx.fillRect(i*(canvasSize/boardSize), j*(canvasSize/boardSize), (canvasSize/boardSize), (canvasSize/boardSize));
+    				}
+    				if (board[i][j] == 'R') {
+    					ctx.fillStyle = 'rgb(255, 0, 0)';
+        				ctx.fillRect(i*(canvasSize/boardSize), j*(canvasSize/boardSize), (canvasSize/boardSize), (canvasSize/boardSize));
+    				}
+
+    				j++;
+    			}
+    			i++;
+    		}
+    		
+    		var i = 0;
+			while (i < boardSize + 1) {
+				ctx.strokeStyle = 'rgb(0, 100, 0)';
+				ctx.beginPath();
+				ctx.moveTo(0, i*(canvasSize/boardSize));
+    			ctx.lineTo(canvasSize, i*(canvasSize/boardSize));
+    			ctx.stroke();
+    			ctx.beginPath();
+				ctx.moveTo(i*(canvasSize/boardSize),0);
+    			ctx.lineTo(i*(canvasSize/boardSize),canvasSize);
+    			ctx.stroke();
+    			i++;
+			}
+    		
+    		ctx.fillStyle = 'rgb(0, 100, 255)';
+    		ctx.beginPath();
+    		if (hDir == 0) {
+    		ctx.moveTo((hX+1)*(canvasSize/boardSize), (hY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+0.5)*(canvasSize/boardSize), (hY+0)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+0.5)*(canvasSize/boardSize), (hY+1)*(canvasSize/boardSize));
+    		} else if (hDir == 1) {
+    		ctx.moveTo((hX+0.5)*(canvasSize/boardSize), (hY+0)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+0)*(canvasSize/boardSize), (hY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+1)*(canvasSize/boardSize), (hY+0.5)*(canvasSize/boardSize));
+    		} else if (hDir == 2) {
+    		ctx.moveTo((hX+0)*(canvasSize/boardSize), (hY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+0.5)*(canvasSize/boardSize), (hY+1)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+0.5)*(canvasSize/boardSize), (hY+0)*(canvasSize/boardSize));
+    		} else if (hDir == 3) {
+    		ctx.moveTo((hX+0.5)*(canvasSize/boardSize), (hY+1)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+1)*(canvasSize/boardSize), (hY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((hX+0)*(canvasSize/boardSize), (hY+0.5)*(canvasSize/boardSize));
+    		}
+    		ctx.fill();
+    		
+    		if (mode == 1) {
+    		
+    		ctx.fillStyle = 'rgb(255, 100, 0)';
+    		ctx.beginPath();
+    		if (eDir == 0) {
+    		ctx.moveTo((eX+1)*(canvasSize/boardSize), (eY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+0.5)*(canvasSize/boardSize), (eY+0)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+0.5)*(canvasSize/boardSize), (eY+1)*(canvasSize/boardSize));
+    		} else if (eDir == 1) {
+    		ctx.moveTo((eX+0.5)*(canvasSize/boardSize), (eY+0)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+0)*(canvasSize/boardSize), (eY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+1)*(canvasSize/boardSize), (eY+0.5)*(canvasSize/boardSize));
+    		} else if (eDir == 2) {
+    		ctx.moveTo((eX+0)*(canvasSize/boardSize), (eY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+0.5)*(canvasSize/boardSize), (eY+1)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+0.5)*(canvasSize/boardSize), (eY+0)*(canvasSize/boardSize));
+    		} else if (eDir == 3) {
+    		ctx.moveTo((eX+0.5)*(canvasSize/boardSize), (eY+1)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+1)*(canvasSize/boardSize), (eY+0.5)*(canvasSize/boardSize));
+    		ctx.lineTo((eX+0)*(canvasSize/boardSize), (eY+0.5)*(canvasSize/boardSize));
+    		}
+    		ctx.fill();
+    		
+    		}
+
+    	}
+    }
+    
+    function start() {
+    	document.getElementById("hIn").disabled=true;
+    	document.getElementById("hOpp").disabled=true;
+    	document.getElementById("hOwn").disabled=true;
+    	document.getElementById("hEn").disabled=true;
+    	
+    	document.getElementById("eIn").disabled=true;
+    	document.getElementById("eOpp").disabled=true;
+    	document.getElementById("eOwn").disabled=true;
+    	document.getElementById("eEn").disabled=true;
+    
+    	clearInterval(running);
+    
+    	if(document.getElementById("speed").value == 'Step-by-step') {
+    		updateTurn();
+    	} else if(document.getElementById("speed").value == 'Slow') {
+    		running = setInterval(updateTurn, 1000);
+    	} else if(document.getElementById("speed").value == 'Fast') {
+    		running = setInterval(updateTurn, 100);
+    	} else if(document.getElementById("speed").value == 'Instant') {
+    		running = setInterval(updateTurn, 10);
+    	}
+    }
+    	
+    function updateTurn() {
+    
+    	if (turn < maxTurns) {
+    	
+    		var toH = [];
+    		var toE = []
+    		
+    		var m;
+    		if(board[hX][hY] == hIn){
+    			m = document.getElementById("hIn").value;
+    		} else if (board[hX][hY] == hOpp) {
+    			m = document.getElementById("hOpp").value;
+    		} else if (board[hX][hY] == hOwn) {
+    			m = document.getElementById("hOwn").value;
+    		} else if (board[hX][hY] == hEn) {
+    			m = document.getElementById("hEn").value;
+    		}
+    		if (m == 'R') {
+    			hDir = ((hDir - 1)%4 + 4) % 4;
+    			toH.push([hX,hY]);
+    			if (hDir == 0) {
+    				hX = ((hX + 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 1) {
+    				hY = ((hY - 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 2) {
+    				hX = ((hX - 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 3) {
+					hY = ((hY + 1) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		if (m == 'L') {
+    			hDir = ((hDir + 1)%4 + 4) % 4;
+    			toH.push([hX,hY]);
+    			if (hDir == 0) {
+    				hX = ((hX + 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 1) {
+    				hY = ((hY - 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 2) {
+    				hX = ((hX - 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 3) {
+					hY = ((hY + 1) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		if (m == 'F') {
+    			toH.push([hX,hY]);
+    			if (hDir == 0) {
+    				toH.push([hX,((hY + 1) % boardSize + boardSize) % boardSize]);
+    				toH.push([hX,((hY - 1) % boardSize + boardSize) % boardSize]);
+    				hX = ((hX + 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 1) {
+    				toH.push([((hX + 1) % boardSize + boardSize) % boardSize,hY]);
+    				toH.push([((hX - 1) % boardSize + boardSize) % boardSize,hY]);
+    				hY = ((hY - 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 2) {
+    				toH.push([hX,((hY + 1) % boardSize + boardSize) % boardSize]);
+    				toH.push([hX,((hY - 1) % boardSize + boardSize) % boardSize]);
+    				hX = ((hX - 1) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 3) {
+    				toH.push([((hX + 1) % boardSize + boardSize) % boardSize,hY]);
+    				toH.push([((hX - 1) % boardSize + boardSize) % boardSize,hY]);
+					hY = ((hY + 1) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		if (m == '2F') {
+    			toH.push([hX,hY]);
+    			if (hDir == 0) {
+    				toH.push([((hX + 1) % boardSize + boardSize) % boardSize,hY]);
+    				hX = ((hX + 2) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 1) {
+    				toH.push([hX,((hY - 1) % boardSize + boardSize) % boardSize]);
+    				hY = ((hY - 2) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 2) {
+    				toH.push([((hX - 1) % boardSize + boardSize) % boardSize,hY]);
+    				hX = ((hX - 2) % boardSize + boardSize) % boardSize;
+    			} else if (hDir == 3) {
+    				toH.push([hX,((hY + 1) % boardSize + boardSize) % boardSize]);
+					hY = ((hY + 2) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		
+    		if(mode == 1) {
+    		
+    		var m;
+    		if(board[eX][eY] == eIn){
+    			m = document.getElementById("eIn").value;
+    		} else if (board[eX][eY] == eOpp) {
+    			m = document.getElementById("eOpp").value;
+    		} else if (board[eX][eY] == eOwn) {
+    			m = document.getElementById("eOwn").value;
+    		} else if (board[eX][eY] == eEn) {
+    			m = document.getElementById("eEn").value;
+    		}
+    		if (m == 'R') {
+    			eDir = ((eDir - 1)%4 + 4) % 4;
+    			toE.push([eX,eY]);
+    			if (eDir == 0) {
+    				eX = ((eX + 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 1) {
+    				eY = ((eY - 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 2) {
+    				eX = ((eX - 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 3) {
+					eY = ((eY + 1) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		if (m == 'L') {
+    			eDir = ((eDir + 1)%4 + 4) % 4;
+    			toE.push([eX,eY]);
+    			if (eDir == 0) {
+    				eX = ((eX + 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 1) {
+    				eY = ((eY - 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 2) {
+    				eX = ((eX - 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 3) {
+					eY = ((eY + 1) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		if (m == 'F') {
+    			toE.push([eX,eY]);
+    			if (eDir == 0) {
+    				toE.push([eX,((eY + 1) % boardSize + boardSize) % boardSize]);
+    				toE.push([eX,((eY - 1) % boardSize + boardSize) % boardSize]);
+    				eX = ((eX + 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 1) {
+    				toE.push([((eX + 1) % boardSize + boardSize) % boardSize,eY]);
+    				toE.push([((eX - 1) % boardSize + boardSize) % boardSize,eY]);
+    				eY = ((eY - 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 2) {
+    				toE.push([eX,((eY + 1) % boardSize + boardSize) % boardSize]);
+    				toE.push([eX,((eY - 1) % boardSize + boardSize) % boardSize]);
+    				eX = ((eX - 1) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 3) {
+    				toE.push([((eX + 1) % boardSize + boardSize) % boardSize,eY]);
+    				toE.push([((eX - 1) % boardSize + boardSize) % boardSize,eY]);
+					eY = ((eY + 1) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		if (m == '2F') {
+    			toE.push([eX,eY]);
+    			if (eDir == 0) {
+    				toE.push([((eX + 1) % boardSize + boardSize) % boardSize,eY]);
+    				eX = ((eX + 2) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 1) {
+    				toE.push([eX,((eY - 1) % boardSize + boardSize) % boardSize]);
+    				eY = ((eY - 2) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 2) {
+    				toE.push([((eX - 1) % boardSize + boardSize) % boardSize,eY]);
+    				eX = ((eX - 2) % boardSize + boardSize) % boardSize;
+    			} else if (eDir == 3) {
+    				toE.push([eX,((eY + 1) % boardSize + boardSize) % boardSize]);
+					eY = ((eY + 2) % boardSize + boardSize) % boardSize;
+    			}
+    		}
+    		
+    		
+    		}
+    		
+    		var i = 0;
+    		while (i < toH.length){
+    			if (!toE.includes(toH[i])){
+    				board[toH[i][0]][toH[i][1]] = 'B';
+    			}
+    			i++;
+    		}
+    		
+    		var i = 0;
+    		while (i < toE.length){
+    			if (!toH.includes(toE[i])){
+    				board[toE[i][0]][toE[i][1]] = 'R';
+    			}
+    			i++;
+    		}
+    	
+    		turn++;
+    	} else {
+    		clearInterval(running);
+    	}
+    	
+    	draw();
+    }
+	</script>
+	<style>
+		canvas { border: 1px solid black; }
+		
+		.column {
+    		float: left;
+    		width: 40%;
+   		}
+
+    	.row:after {
+    		content: "";
+   			display: table;
+    		clear: both;
+    	}
+	</style>
+</head>
+<body onload="reset();">
+	<h1>Touring Machines</h1>
+	Mode: <select id = "mode" SIZE = "1" onChange = "reset();">
+				<OPTION>Solo</OPTION>
+				<OPTION selected="selected">Versus</OPTION>
+			</SELECT> 
+			&nbsp; &nbsp; Board: <select id = "board" SIZE = "1" onChange = "reset();">
+				<OPTION selected="selected">8x8 Torus Checkerboard</OPTION>
+				<OPTION>8x8 Torus Quadrants</OPTION>
+				<OPTION>8x8 Torus Horizontal Stripes</OPTION>
+				<OPTION>8x8 Torus Vertical Halves</OPTION>
+			</SELECT> 
+			&nbsp; &nbsp; Number of turns: <select id = "numTurns" SIZE = "1" onChange = "reset();">
+				<OPTION selected="selected">32</OPTION>
+				<OPTION>64</OPTION>
+				<OPTION>128</OPTION>
+				<OPTION>256</OPTION>
+			</SELECT> &nbsp; &nbsp; <input type="button" onclick="reset();" value ="Reset"> <br> <br>
+	<div class="row">
+		<div class="column">
+			<h2>Move instructions</h2>
+			
+			R: Color square you are on your color. Turn right. Move 1 step forward. <br>
+			L: Color square you are on your color. Turn left. Move 1 step forward. <br>
+			F: Color square you are on and to your left and right your color. Move 1 step forward. <br>
+			2F: Color square you are on and in front of you your color. Move 2 steps forward. <br>
+			
+			
+			<h3> Your machine (blue) </h3>
+			<table>
+			<tr> <td> On initial color (<b>black</b>): </td> <td><select id= "hIn" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td> </tr>
+			<tr><td> On opposite color (<b>white</b>): </td> </td> <td><select id = "hOpp" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td></tr>
+			<tr><td>On own color (<b>blue</b>): </td> </td> <td><select id = "hOwn" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td></tr>
+			<tr><td>On enemy color (<b>red</b>): </td> </td> <td><select id = "hEn" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td></tr>
+			</table>
+			
+			<h3> Enemy machine (red) </h3>
+			<table>
+			<tr> <td> On initial color: </td> <td><select id = "eIn" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td> </tr>
+			<tr><td> On opposite color: </td> </td> <td><select id = "eOpp" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td></tr>
+			<tr><td>On own color: </td> </td> <td><select id = "eOwn" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td></tr>
+			<tr><td>On enemy color: </td> </td> <td><select id = "eEn" SIZE = "1" onChange = "">
+				<OPTION selected="selected">R</OPTION>
+				<OPTION>L</OPTION>
+				<OPTION>F</OPTION>
+				<OPTION>2F</OPTION>
+			</SELECT> </td></tr>
+			</table>
+			
+			<br> *If a square would be colored by both players on a turn, it stays its current color.
+		</div>
+		<div class="column">
+			<b>Turn</b>: <span id="turns">0/32</span>
+    		&nbsp; &nbsp; <b>Your squares</b>: <span id="hSquares">0/64</span> 
+    		&nbsp; &nbsp; <b>Enemy squares</b>: <span id="eSquares">0/64</span> <br>
+    		<canvas id="myCanvas" width="400" height="400"></canvas> <br>
+    		Speed: <select id = "speed" SIZE = "1" onChange = "clearInterval(running)">
+				<OPTION selected="selected">Step-by-step</OPTION>
+				<OPTION>Slow</OPTION>
+				<OPTION>Fast</OPTION>
+				<OPTION>Instant</OPTION>
+			</SELECT>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="button" onclick="start();" value ="Start">
+    	</div>
+    </div>
+</body>
+</body>  
+</html>
