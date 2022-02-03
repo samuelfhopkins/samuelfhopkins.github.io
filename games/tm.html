@@ -140,6 +140,27 @@
 		eOwn = 'R';
 		eEn = 'B';
 		
+		} else if (document.getElementById('board').value=='16x16 Torus Checkerboard') {
+		
+		boardSize = 16;
+		board = [['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K']];
+		
+		hX = 4;
+		hY = 4;
+		hDir = 3;
+		hIn = 'K';
+		hOpp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 11;
+		eY = 11;
+		eDir = 1;
+		eIn = 'K';
+		eOpp = 'W';
+		eOwn = 'R';
+		eEn = 'B';
+		
 		}
 		
 		maxTurns = document.getElementById('numTurns').value;
@@ -554,6 +575,7 @@
 				<OPTION>8x8 Torus Quadrants</OPTION>
 				<OPTION>8x8 Torus Horizontal Stripes</OPTION>
 				<OPTION>8x8 Torus Vertical Halves</OPTION>
+				<OPTION>16x16 Torus Checkerboard</OPTION>
 			</SELECT> 
 			&nbsp; &nbsp; Number of turns: <select id = "numTurns" SIZE = "1" onChange = "reset();">
 				<OPTION selected="selected">32</OPTION>
