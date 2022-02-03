@@ -30,10 +30,14 @@
 	var turn;
 	
 	var running;
+	var instant;
+	
+	var outcome;
 	
 	function reset() {
 		
 		clearInterval(running);
+		instant=false;
 	
 		document.getElementById("hIn").disabled=false;
     	document.getElementById("hOpp").disabled=false;
@@ -141,6 +145,8 @@
 		maxTurns = document.getElementById('numTurns').value;
 		
 		turn = 0;
+		
+		outcome = 0;
 	
 		draw();
 	}
@@ -164,6 +170,16 @@
 		}
 		document.getElementById('hSquares').innerHTML = String(hSquares)+"/"+String(boardSize*boardSize);
 		document.getElementById('eSquares').innerHTML = String(enSquares)+"/"+String(boardSize*boardSize);
+		
+		if (outcome==0) {
+			document.getElementById('outcome').innerHTML = "???";
+		} else if (outcome == 1) {
+			document.getElementById('outcome').innerHTML = "You win!";
+		} else if (outcome == 2) {
+			document.getElementById('outcome').innerHTML = "Enemy wins!";
+		} else if (outcome == 3) {
+			document.getElementById('outcome').innerHTML = "Draw!";
+		}
 		
 		
 		var canvas = document.getElementById('myCanvas');
@@ -271,6 +287,7 @@
     	document.getElementById("eEn").disabled=true;
     
     	clearInterval(running);
+    	instant = false;
     
     	if(document.getElementById("speed").value == 'Step-by-step') {
     		updateTurn();
@@ -278,8 +295,11 @@
     		running = setInterval(updateTurn, 1000);
     	} else if(document.getElementById("speed").value == 'Fast') {
     		running = setInterval(updateTurn, 100);
-    	} else if(document.getElementById("speed").value == 'Instant') {
+    	} else if(document.getElementById("speed").value == 'Very Fast') {
     		running = setInterval(updateTurn, 10);
+    	} else if(document.getElementById("speed").value == 'Instant') {
+    		running = setInterval(updateTurn, 1);
+    		instant = true;
     	}
     }
     	
@@ -460,9 +480,36 @@
     		turn++;
     	} else {
     		clearInterval(running);
+    		instant = false;
+    		if (mode == 1) {
+    			var hSquares = 0;
+				var enSquares = 0;
+				var i = 0;
+				while (i < boardSize) {
+					var j = 0;
+					while (j < boardSize) {
+						if (board[i][j] == hOwn) { 
+							hSquares++;
+						} else if (board[i][j] == eOwn) { 
+							enSquares++;
+						}
+						j++;
+					}
+					i++;
+				}
+				if (hSquares > enSquares) {
+					outcome = 1;
+				} else if (enSquares > hSquares) {
+					outcome = 2;
+				} else if (hSquares == enSquares) {
+					outcome = 3;
+				}
+    		}
     	}
     	
-    	draw();
+    	if (!instant){
+    		draw();
+    	}
     }
 	</script>
 	<style>
@@ -575,9 +622,11 @@
 				<OPTION selected="selected">Step-by-step</OPTION>
 				<OPTION>Slow</OPTION>
 				<OPTION>Fast</OPTION>
+				<OPTION>Very Fast</OPTION>
 				<OPTION>Instant</OPTION>
 			</SELECT>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="button" onclick="start();" value ="Start">
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="button" onclick="start();" value ="Start"> <br>
+			<b>Outcome</b>: <span id="outcome">???</span>
     	</div>
     </div>
 </body>
