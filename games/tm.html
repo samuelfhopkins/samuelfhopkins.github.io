@@ -463,7 +463,15 @@
     		
     		var i = 0;
     		while (i < toH.length){
-    			if (!toE.includes(toH[i])){
+    			var flag = true;
+    			var j = 0;
+    			while (j < toE.length){ 
+    				if (toE[j][0] == toH[i][0] & toE[j][1] == toH[i][1]) {
+    					flag = false;
+    				}
+    				j++;
+    			}
+    			if (flag){
     				board[toH[i][0]][toH[i][1]] = 'B';
     			}
     			i++;
@@ -471,7 +479,15 @@
     		
     		var i = 0;
     		while (i < toE.length){
-    			if (!toH.includes(toE[i])){
+    			var flag = true;
+    			var j = 0;
+    			while (j < toH.length){ 
+    				if (toH[j][0] == toE[i][0] & toH[j][1] == toE[i][1]) {
+    					flag = false;
+    				}
+    				j++;
+    			}
+    			if (flag){
     				board[toE[i][0]][toE[i][1]] = 'R';
     			}
     			i++;
