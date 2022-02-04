@@ -8,14 +8,15 @@
 	var boardSize;
 	var board;
 	var maxTurns;
+	var boundary;
 	
 	var hIn;
-	var hOpp;
+	var hOp;
 	var hOwn;
 	var hEn;
 	
 	var eIn;
-	var eOpp;
+	var eOp;
 	var eOwn;
 	var eEn;
 	
@@ -34,18 +35,62 @@
 	
 	var outcome;
 	
+	function load() {
+		s = location.search.split('?')[1];
+	
+		if (s!=undefined){
+			document.getElementById("mode").selectedIndex=s[0];
+			document.getElementById("board").selectedIndex=s[1];
+			document.getElementById("numTurns").selectedIndex=s[2];
+			document.getElementById("hIn").selectedIndex=s[3];
+			document.getElementById("hOp").selectedIndex=s[4];
+			document.getElementById("hOwn").selectedIndex=s[5];
+			document.getElementById("hEn").selectedIndex=s[6];
+			document.getElementById("eIn").selectedIndex=s[7];
+			document.getElementById("eOp").selectedIndex=s[8];
+			document.getElementById("eOwn").selectedIndex=s[9];
+			document.getElementById("eEn").selectedIndex=s[10];
+		}
+		
+		reset();
+	
+	}
+	
+	function link () {
+
+		s = String(location).split('.html')[0];
+		s = s+".html?"
+		
+		s = s + String(document.getElementById("mode").selectedIndex);
+		s = s + String(document.getElementById("board").selectedIndex);
+		s = s + String(document.getElementById("numTurns").selectedIndex);
+		s = s + String(document.getElementById("hIn").selectedIndex);
+		s = s + String(document.getElementById("hOp").selectedIndex);
+		s = s + String(document.getElementById("hOwn").selectedIndex);
+		s = s + String(document.getElementById("hEn").selectedIndex);
+		s = s + String(document.getElementById("eIn").selectedIndex);
+		s = s + String(document.getElementById("eOp").selectedIndex);
+		s = s + String(document.getElementById("eOwn").selectedIndex);
+		s = s + String(document.getElementById("eEn").selectedIndex);
+	
+		document.getElementById("link").value = s;
+	}
+	
 	function reset() {
+	
+		
+		
 		
 		clearInterval(running);
 		instant=false;
 	
 		document.getElementById("hIn").disabled=false;
-    	document.getElementById("hOpp").disabled=false;
+    	document.getElementById("hOp").disabled=false;
     	document.getElementById("hOwn").disabled=false;
     	document.getElementById("hEn").disabled=false;
     	
     	document.getElementById("eIn").disabled=false;
-    	document.getElementById("eOpp").disabled=false;
+    	document.getElementById("eOp").disabled=false;
     	document.getElementById("eOwn").disabled=false;
     	document.getElementById("eEn").disabled=false;
 		
@@ -60,12 +105,13 @@
 		
 		boardSize = 8;
 		board = [['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K']];
+		boundary = 0;
 		
 		hX = 2;
 		hY = 2;
 		hDir = 3;
 		hIn = 'K';
-		hOpp = 'W';
+		hOp = 'W';
 		hOwn = 'B';
 		hEn = 'R';
 		
@@ -73,7 +119,7 @@
 		eY = 5;
 		eDir = 1;
 		eIn = 'K';
-		eOpp = 'W';
+		eOp = 'W';
 		eOwn = 'R';
 		eEn = 'B';
 		
@@ -81,12 +127,13 @@
 		
 		boardSize = 8;
 		board = [['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K']];
+		boundary = 0;
 		
 		hX = 2;
 		hY = 2;
 		hDir = 3;
 		hIn = 'K';
-		hOpp = 'W';
+		hOp = 'W';
 		hOwn = 'B';
 		hEn = 'R';
 		
@@ -94,7 +141,7 @@
 		eY = 5;
 		eDir = 1;
 		eIn = 'K';
-		eOpp = 'W';
+		eOp = 'W';
 		eOwn = 'R';
 		eEn = 'B';
 		
@@ -102,12 +149,13 @@
 		
 		boardSize = 8;
 		board = [['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W']];
+		boundary = 0;
 		
 		hX = 1;
 		hY = 2;
 		hDir = 3;
 		hIn = 'K';
-		hOpp = 'W';
+		hOp = 'W';
 		hOwn = 'B';
 		hEn = 'R';
 		
@@ -115,7 +163,7 @@
 		eY = 5;
 		eDir = 1;
 		eIn = 'W';
-		eOpp = 'K';
+		eOp = 'K';
 		eOwn = 'R';
 		eEn = 'B';
 		
@@ -123,12 +171,13 @@
 		
 		boardSize = 8;
 		board = [['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W']];
+		boundary = 0;
 		
 		hX = 3;
 		hY = 3;
 		hDir = 3;
 		hIn = 'K';
-		hOpp = 'W';
+		hOp = 'W';
 		hOwn = 'B';
 		hEn = 'R';
 		
@@ -136,7 +185,7 @@
 		eY = 4;
 		eDir = 1;
 		eIn = 'W';
-		eOpp = 'K';
+		eOp = 'K';
 		eOwn = 'R';
 		eEn = 'B';
 		
@@ -144,12 +193,13 @@
 		
 		boardSize = 16;
 		board = [['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['W','K','W','K','W','K','W','K','W','K','W','K','W','K','W','K']];
+		boundary = 0;
 		
 		hX = 4;
 		hY = 4;
 		hDir = 3;
 		hIn = 'K';
-		hOpp = 'W';
+		hOp = 'W';
 		hOwn = 'B';
 		hEn = 'R';
 		
@@ -157,7 +207,51 @@
 		eY = 11;
 		eDir = 1;
 		eIn = 'K';
-		eOpp = 'W';
+		eOp = 'W';
+		eOwn = 'R';
+		eEn = 'B';
+		
+		} else if (document.getElementById('board').value == '8x8 Klein Horizontal Stripes') {
+		
+		boardSize = 8;
+		board = [['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W']];
+		boundary = 1;
+		
+		hX = 1;
+		hY = 2;
+		hDir = 3;
+		hIn = 'K';
+		hOp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 6;
+		eY = 5;
+		eDir = 1;
+		eIn = 'W';
+		eOp = 'K';
+		eOwn = 'R';
+		eEn = 'B';
+		
+		} else if (document.getElementById('board').value == '16x16 Klein Horizontal Stripes') {
+		
+		boardSize = 16;
+		board = [['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W']];
+		boundary = 1;
+		
+		hX = 3;
+		hY = 4;
+		hDir = 3;
+		hIn = 'K';
+		hOp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 12;
+		eY = 11;
+		eDir = 1;
+		eIn = 'W';
+		eOp = 'K';
 		eOwn = 'R';
 		eEn = 'B';
 		
@@ -170,6 +264,21 @@
 		outcome = 0;
 	
 		draw();
+	}
+	
+	function position(x, y) {
+		if (boundary==0) {
+			return [(x % boardSize + boardSize) % boardSize, (y % boardSize + boardSize) % boardSize];
+		} else if (boundary==1) {
+			var newx = (x % boardSize + boardSize) % boardSize;
+			var newy = (y % boardSize + boardSize) % boardSize;
+			if ((0 <= y) & (y <= boardSize - 1)) {
+				return [newx, newy];
+			} else {
+				return [(boardSize-1) - newx, newy];
+			}
+		}
+		return []
 	}
 	
 	function draw() {
@@ -298,12 +407,12 @@
     
     function start() {
     	document.getElementById("hIn").disabled=true;
-    	document.getElementById("hOpp").disabled=true;
+    	document.getElementById("hOp").disabled=true;
     	document.getElementById("hOwn").disabled=true;
     	document.getElementById("hEn").disabled=true;
     	
     	document.getElementById("eIn").disabled=true;
-    	document.getElementById("eOpp").disabled=true;
+    	document.getElementById("eOp").disabled=true;
     	document.getElementById("eOwn").disabled=true;
     	document.getElementById("eEn").disabled=true;
     
@@ -334,8 +443,8 @@
     		var m;
     		if(board[hX][hY] == hIn){
     			m = document.getElementById("hIn").value;
-    		} else if (board[hX][hY] == hOpp) {
-    			m = document.getElementById("hOpp").value;
+    		} else if (board[hX][hY] == hOp) {
+    			m = document.getElementById("hOp").value;
     		} else if (board[hX][hY] == hOwn) {
     			m = document.getElementById("hOwn").value;
     		} else if (board[hX][hY] == hEn) {
@@ -344,64 +453,76 @@
     		if (m == 'R') {
     			hDir = ((hDir - 1)%4 + 4) % 4;
     			toH.push([hX,hY]);
+    			var newPos = [0,0];
     			if (hDir == 0) {
-    				hX = ((hX + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX+1,hY);
     			} else if (hDir == 1) {
-    				hY = ((hY - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX,hY-1);
     			} else if (hDir == 2) {
-    				hX = ((hX - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX-1,hY);
     			} else if (hDir == 3) {
-					hY = ((hY + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX,hY+1);
     			}
+    			hX = newPos[0];
+    			hY = newPos[1];
     		}
     		if (m == 'L') {
     			hDir = ((hDir + 1)%4 + 4) % 4;
     			toH.push([hX,hY]);
+    			var newPos = [0,0];
     			if (hDir == 0) {
-    				hX = ((hX + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX+1,hY);
     			} else if (hDir == 1) {
-    				hY = ((hY - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX,hY-1);
     			} else if (hDir == 2) {
-    				hX = ((hX - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX-1,hY);
     			} else if (hDir == 3) {
-					hY = ((hY + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(hX,hY+1);
     			}
+    			hX = newPos[0];
+    			hY = newPos[1];
     		}
     		if (m == 'F') {
     			toH.push([hX,hY]);
+    			var newPos = [0,0];
     			if (hDir == 0) {
-    				toH.push([hX,((hY + 1) % boardSize + boardSize) % boardSize]);
-    				toH.push([hX,((hY - 1) % boardSize + boardSize) % boardSize]);
-    				hX = ((hX + 1) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX,hY+1));
+    				toH.push(position(hX,hY-1));
+    				newPos = position(hX+1,hY);
     			} else if (hDir == 1) {
-    				toH.push([((hX + 1) % boardSize + boardSize) % boardSize,hY]);
-    				toH.push([((hX - 1) % boardSize + boardSize) % boardSize,hY]);
-    				hY = ((hY - 1) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX+1,hY));
+    				toH.push(position(hX-1,hY));
+    				newPos = position(hX,hY-1);
     			} else if (hDir == 2) {
-    				toH.push([hX,((hY + 1) % boardSize + boardSize) % boardSize]);
-    				toH.push([hX,((hY - 1) % boardSize + boardSize) % boardSize]);
-    				hX = ((hX - 1) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX,hY+1));
+    				toH.push(position(hX,hY-1));
+    				newPos = position(hX-1,hY);
     			} else if (hDir == 3) {
-    				toH.push([((hX + 1) % boardSize + boardSize) % boardSize,hY]);
-    				toH.push([((hX - 1) % boardSize + boardSize) % boardSize,hY]);
-					hY = ((hY + 1) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX+1,hY));
+    				toH.push(position(hX-1,hY));
+					newPos = position(hX,hY+1);
     			}
+    			hX = newPos[0];
+    			hY = newPos[1];
     		}
     		if (m == '2F') {
     			toH.push([hX,hY]);
+    			var newPos;
     			if (hDir == 0) {
-    				toH.push([((hX + 1) % boardSize + boardSize) % boardSize,hY]);
-    				hX = ((hX + 2) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX+1,hY));
+    				newPos = position(hX+2,hY);
     			} else if (hDir == 1) {
-    				toH.push([hX,((hY - 1) % boardSize + boardSize) % boardSize]);
-    				hY = ((hY - 2) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX,hY-1));
+    				newPos = position(hX,hY-2);
     			} else if (hDir == 2) {
-    				toH.push([((hX - 1) % boardSize + boardSize) % boardSize,hY]);
-    				hX = ((hX - 2) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX-1,hY));
+    				newPos = position(hX-2,hY);
     			} else if (hDir == 3) {
-    				toH.push([hX,((hY + 1) % boardSize + boardSize) % boardSize]);
-					hY = ((hY + 2) % boardSize + boardSize) % boardSize;
+    				toH.push(position(hX,hY+1));
+    				newPos = position(hX,hY+2);
     			}
+    			hX = newPos[0];
+    			hY = newPos[1];
     		}
     		
     		if(mode == 1) {
@@ -409,8 +530,8 @@
     		var m;
     		if(board[eX][eY] == eIn){
     			m = document.getElementById("eIn").value;
-    		} else if (board[eX][eY] == eOpp) {
-    			m = document.getElementById("eOpp").value;
+    		} else if (board[eX][eY] == eOp) {
+    			m = document.getElementById("eOp").value;
     		} else if (board[eX][eY] == eOwn) {
     			m = document.getElementById("eOwn").value;
     		} else if (board[eX][eY] == eEn) {
@@ -419,64 +540,76 @@
     		if (m == 'R') {
     			eDir = ((eDir - 1)%4 + 4) % 4;
     			toE.push([eX,eY]);
+    			var newPos = [0,0];
     			if (eDir == 0) {
-    				eX = ((eX + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX+1,eY);
     			} else if (eDir == 1) {
-    				eY = ((eY - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX,eY-1);
     			} else if (eDir == 2) {
-    				eX = ((eX - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX-1,eY);
     			} else if (eDir == 3) {
-					eY = ((eY + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX,eY+1);
     			}
+    			eX = newPos[0];
+    			eY = newPos[1];
     		}
     		if (m == 'L') {
     			eDir = ((eDir + 1)%4 + 4) % 4;
     			toE.push([eX,eY]);
+    			var newPos = [0,0];
     			if (eDir == 0) {
-    				eX = ((eX + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX+1,eY);
     			} else if (eDir == 1) {
-    				eY = ((eY - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX,eY-1);
     			} else if (eDir == 2) {
-    				eX = ((eX - 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX-1,eY);
     			} else if (eDir == 3) {
-					eY = ((eY + 1) % boardSize + boardSize) % boardSize;
+    				newPos = position(eX,eY+1);
     			}
+    			eX = newPos[0];
+    			eY = newPos[1];
     		}
     		if (m == 'F') {
     			toE.push([eX,eY]);
+    			var newPos = [0,0];
     			if (eDir == 0) {
-    				toE.push([eX,((eY + 1) % boardSize + boardSize) % boardSize]);
-    				toE.push([eX,((eY - 1) % boardSize + boardSize) % boardSize]);
-    				eX = ((eX + 1) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX,eY+1));
+    				toE.push(position(eX,eY-1));
+    				newPos = position(eX+1,eY);
     			} else if (eDir == 1) {
-    				toE.push([((eX + 1) % boardSize + boardSize) % boardSize,eY]);
-    				toE.push([((eX - 1) % boardSize + boardSize) % boardSize,eY]);
-    				eY = ((eY - 1) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX+1,eY));
+    				toE.push(position(eX-1,eY));
+    				newPos = position(eX,eY-1);
     			} else if (eDir == 2) {
-    				toE.push([eX,((eY + 1) % boardSize + boardSize) % boardSize]);
-    				toE.push([eX,((eY - 1) % boardSize + boardSize) % boardSize]);
-    				eX = ((eX - 1) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX,eY+1));
+    				toE.push(position(eX,eY-1));
+    				newPos = position(eX-1,eY);
     			} else if (eDir == 3) {
-    				toE.push([((eX + 1) % boardSize + boardSize) % boardSize,eY]);
-    				toE.push([((eX - 1) % boardSize + boardSize) % boardSize,eY]);
-					eY = ((eY + 1) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX+1,eY));
+    				toE.push(position(eX-1,eY));
+					newPos = position(eX,eY+1);
     			}
+    			eX = newPos[0];
+    			eY = newPos[1];
     		}
     		if (m == '2F') {
     			toE.push([eX,eY]);
+    			var newPos;
     			if (eDir == 0) {
-    				toE.push([((eX + 1) % boardSize + boardSize) % boardSize,eY]);
-    				eX = ((eX + 2) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX+1,eY));
+    				newPos = position(eX+2,eY);
     			} else if (eDir == 1) {
-    				toE.push([eX,((eY - 1) % boardSize + boardSize) % boardSize]);
-    				eY = ((eY - 2) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX,eY-1));
+    				newPos = position(eX,eY-2);
     			} else if (eDir == 2) {
-    				toE.push([((eX - 1) % boardSize + boardSize) % boardSize,eY]);
-    				eX = ((eX - 2) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX-1,eY));
+    				newPos = position(eX-2,eY);
     			} else if (eDir == 3) {
-    				toE.push([eX,((eY + 1) % boardSize + boardSize) % boardSize]);
-					eY = ((eY + 2) % boardSize + boardSize) % boardSize;
+    				toE.push(position(eX,eY+1));
+    				newPos = position(eX,eY+2);
     			}
+    			eX = newPos[0];
+    			eY = newPos[1];
     		}
     		
     		
@@ -564,7 +697,7 @@
     	}
 	</style>
 </head>
-<body onload="reset();">
+<body onload="load();">
 	<h1>Touring Machines</h1>
 	Mode: <select id = "mode" SIZE = "1" onChange = "reset();">
 				<OPTION>Solo</OPTION>
@@ -576,6 +709,8 @@
 				<OPTION>8x8 Torus Horizontal Stripes</OPTION>
 				<OPTION>8x8 Torus Vertical Halves</OPTION>
 				<OPTION>16x16 Torus Checkerboard</OPTION>
+				<OPTION>8x8 Klein Horizontal Stripes</OPTION>
+				<OPTION>16x16 Klein Horizontal Stripes</OPTION>
 			</SELECT> 
 			&nbsp; &nbsp; Number of turns: <select id = "numTurns" SIZE = "1" onChange = "reset();">
 				<OPTION selected="selected">32</OPTION>
@@ -598,7 +733,7 @@
 				<OPTION>F</OPTION>
 				<OPTION>2F</OPTION>
 			</SELECT> </td> </tr>
-			<tr><td> On opposite color (<b>white</b>): </td> </td> <td><select id = "hOpp" SIZE = "1" onChange = "">
+			<tr><td> On opposite color (<b>white</b>): </td> </td> <td><select id = "hOp" SIZE = "1" onChange = "">
 				<OPTION selected="selected">R</OPTION>
 				<OPTION>L</OPTION>
 				<OPTION>F</OPTION>
@@ -626,7 +761,7 @@
 				<OPTION>F</OPTION>
 				<OPTION>2F</OPTION>
 			</SELECT> </td> </tr>
-			<tr><td> On opposite color: </td> </td> <td><select id = "eOpp" SIZE = "1" onChange = "">
+			<tr><td> On opposite color: </td> </td> <td><select id = "eOp" SIZE = "1" onChange = "">
 				<OPTION selected="selected">R</OPTION>
 				<OPTION>L</OPTION>
 				<OPTION>F</OPTION>
@@ -666,7 +801,9 @@
 	L: Color square you are on your color. Turn left. Move 1 step forward. <br>
 	F: Color square you are on and to your left and right your color. Move 1 step forward. <br>
 	2F: Color square you are on and in front of you your color. Move 2 steps forward. <br>
-	*If a square would be colored by both players on a turn, it stays its current color.
+	*If a square would be colored by both players on a turn, it stays its current color. <br> <br>
+	
+	<input type="button" onclick="link();" value ="Generate link:"> <input type="text" id="link">
 </body>
 </body>  
 </html>
