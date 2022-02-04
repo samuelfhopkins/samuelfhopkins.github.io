@@ -31,6 +31,7 @@
 	var turn;
 	
 	var running;
+	var isRunning;
 	var instant;
 	
 	var outcome;
@@ -82,6 +83,7 @@
 		
 		
 		clearInterval(running);
+		isRunning=false;
 		instant=false;
 	
 		document.getElementById("hIn").disabled=false;
@@ -325,23 +327,49 @@
 		}
 		my_str = my_str + str
 		document.getElementById('turns').innerHTML = my_str;
-		var hSquares = 0;
-		var enSquares = 0;
+		
+		var hSqs = 0;
+		var eSqs = 0;
 		var i = 0;
 		while (i < boardSize) {
 			var j = 0;
 			while (j < boardSize) {
 				if (board[i][j] == hOwn) { 
-					hSquares++;
+					hSqs++;
 				} else if (board[i][j] == eOwn) { 
-					enSquares++;
+					eSqs++;
 				}
 			j++;
 			}
 			i++;
 		}
-		document.getElementById('hSquares').innerHTML = String(hSquares)+"/"+String(boardSize*boardSize);
-		document.getElementById('eSquares').innerHTML = String(enSquares)+"/"+String(boardSize*boardSize);
+		
+		var my_str = ""
+		var str = String(hSqs)
+		while (str.length < 3) {
+			str = "0"+str
+		}
+		my_str = my_str + str + "/"
+		str = String(boardSize*boardSize)
+		while (str.length < 3) {
+			str = "0"+str
+		}
+		my_str = my_str + str
+		document.getElementById('hSquares').innerHTML = my_str;
+		
+		var my_str = ""
+		var str = String(eSqs)
+		while (str.length < 3) {
+			str = "0"+str
+		}
+		my_str = my_str + str + "/"
+		str = String(boardSize*boardSize)
+		while (str.length < 3) {
+			str = "0"+str
+		}
+		my_str = my_str + str
+		document.getElementById('eSquares').innerHTML = my_str;
+		
 		
 		if (outcome==0) {
 			document.getElementById('outcome').innerHTML = "???";
@@ -459,19 +487,34 @@
     	document.getElementById("eEn").disabled=true;
     
     	clearInterval(running);
+    	
+    	if (!isRunning) {
+    	
+    	isRunning=false;
     	instant = false;
-    
+
     	if(document.getElementById("speed").value == 'Step-by-step') {
     		updateTurn();
     	} else if(document.getElementById("speed").value == 'Slow') {
     		running = setInterval(updateTurn, 1000);
+    		isRunning=true;
     	} else if(document.getElementById("speed").value == 'Fast') {
     		running = setInterval(updateTurn, 100);
+    		isRunning=true;
     	} else if(document.getElementById("speed").value == 'Very Fast') {
     		running = setInterval(updateTurn, 10);
+    		isRunning=true;
     	} else if(document.getElementById("speed").value == 'Instant') {
     		running = setInterval(updateTurn, 1);
+    		isRunning=true;
     		instant = true;
+    	} 
+    	
+    	} else {
+    	
+ 		isRunning=false;
+    	instant = false;
+    	
     	}
     }
     	
@@ -692,6 +735,7 @@
     		turn++;
     	} else {
     		clearInterval(running);
+    		isRunning=false;
     		instant = false;
     		if (mode == 1) {
     			var hSquares = 0;
@@ -836,8 +880,8 @@
 			<input type="button" onclick="link();" value ="Generate link:"> <input type="text" id="link" style="width:400px">
 		</div>
 		<div class="column">
-			<b>Turn</b>: <span id="turns">0000/0032</span> 
-			 &nbsp; Speed: <select id = "speed" SIZE = "1" onChange = "clearInterval(running)">
+			<b>Turn</b>: <span id="turns" style="font-family:monospace; font-size:11pt">0000/0032</span> 
+			 &nbsp; Speed: <select id = "speed" SIZE = "1" onChange = "clearInterval(running); isRunning=false;">
 				<OPTION selected="selected">Step-by-step</OPTION>
 				<OPTION>Slow</OPTION>
 				<OPTION>Fast</OPTION>
@@ -846,8 +890,8 @@
 			</SELECT> 
 			&nbsp; <input type="button" onclick="start();" value ="Start">  &nbsp; <input type="button" onclick="reset();" value ="Reset">  <br>
     		<canvas id="myCanvas" width="400" height="400"></canvas> <br>
-    		<b>Your squares</b>: <span id="hSquares">0/64</span> 
-    		&nbsp; <b>Enemy squares</b>: <span id="eSquares">0/64</span> <br>
+    		<b>Your squares</b>: <span id="hSquares" style="font-family:monospace; font-size:11pt">000/064</span> 
+    		&nbsp; <b>Enemy squares</b>: <span id="eSquares" style="font-family:monospace; font-size:11pt">000/064</span> <br>
 			<b>Outcome</b>: <span id="outcome">???</span>
     	</div>
     </div>
