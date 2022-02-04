@@ -313,7 +313,18 @@
 	}
 	
 	function draw() {
-		document.getElementById('turns').innerHTML = String(turn)+"/"+String(maxTurns);
+		var my_str = ""
+		var str = String(turn)
+		while (str.length < 4) {
+			str = "0"+str
+		}
+		my_str = my_str + str + "/"
+		str = String(maxTurns)
+		while (str.length < 4) {
+			str = "0"+str
+		}
+		my_str = my_str + str
+		document.getElementById('turns').innerHTML = my_str;
 		var hSquares = 0;
 		var enSquares = 0;
 		var i = 0;
@@ -718,7 +729,7 @@
 		
 		.column {
     		float: left;
-    		width: 45%;
+    		width: 50%;
    		}
 
     	.row:after {
@@ -730,7 +741,9 @@
 </head>
 <body onload="load();">
 	<h1>Touring Machines</h1>
-	Mode: <select id = "mode" SIZE = "1" onChange = "reset();">
+	<div class="row">
+		<div class="column">
+			Mode: <select id = "mode" SIZE = "1" onChange = "reset();">
 				<OPTION>Solo</OPTION>
 				<OPTION selected="selected">Versus</OPTION>
 			</SELECT> 
@@ -752,11 +765,8 @@
 				<OPTION>512</OPTION>
 				<OPTION>1024</OPTION>
 				<OPTION>2048</OPTION>
-			</SELECT> &nbsp; &nbsp; <input type="button" onclick="reset();" value ="Reset"> <br> <br>
-	<div class="row">
-		<div class="column">
+			</SELECT> <br>
 			<h2>Move instructions</h2>
-			
 			<div class="row">
 			<div class="column">
 			<h3> Your machine (blue) </h3>
@@ -826,15 +836,15 @@
 			<input type="button" onclick="link();" value ="Generate link:"> <input type="text" id="link" style="width:400px">
 		</div>
 		<div class="column">
-			<b>Turn</b>: <span id="turns">0/32</span> 
-			 &nbsp; &nbsp; Speed: <select id = "speed" SIZE = "1" onChange = "clearInterval(running)">
+			<b>Turn</b>: <span id="turns">0000/0032</span> 
+			 &nbsp; Speed: <select id = "speed" SIZE = "1" onChange = "clearInterval(running)">
 				<OPTION selected="selected">Step-by-step</OPTION>
 				<OPTION>Slow</OPTION>
 				<OPTION>Fast</OPTION>
 				<OPTION>Very Fast</OPTION>
 				<OPTION>Instant</OPTION>
 			</SELECT> 
-			&nbsp; &nbsp; <input type="button" onclick="start();" value ="Start"> <br>
+			&nbsp; <input type="button" onclick="start();" value ="Start">  &nbsp; <input type="button" onclick="reset();" value ="Reset">  <br>
     		<canvas id="myCanvas" width="400" height="400"></canvas> <br>
     		<b>Your squares</b>: <span id="hSquares">0/64</span> 
     		&nbsp; <b>Enemy squares</b>: <span id="eSquares">0/64</span> <br>
