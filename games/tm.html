@@ -36,6 +36,7 @@
 	var outcome;
 	
 	function load() {
+		
 		s = location.search.split('?')[1];
 	
 		if (s!=undefined){
@@ -80,7 +81,6 @@
 	
 		
 		
-		
 		clearInterval(running);
 		instant=false;
 	
@@ -123,28 +123,6 @@
 		eOwn = 'R';
 		eEn = 'B';
 		
-		} else if (document.getElementById('board').value == '8x8 Torus Quadrants') {
-		
-		boardSize = 8;
-		board = [['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K']];
-		boundary = 0;
-		
-		hX = 2;
-		hY = 2;
-		hDir = 3;
-		hIn = 'K';
-		hOp = 'W';
-		hOwn = 'B';
-		hEn = 'R';
-		
-		eX = 5;
-		eY = 5;
-		eDir = 1;
-		eIn = 'K';
-		eOp = 'W';
-		eOwn = 'R';
-		eEn = 'B';
-		
 		} else if (document.getElementById('board').value == '8x8 Torus Horizontal Stripes') {
 		
 		boardSize = 8;
@@ -167,11 +145,33 @@
 		eOwn = 'R';
 		eEn = 'B';
 		
-		} else if (document.getElementById('board').value == '8x8 Torus Vertical Halves') {
+		} else if (document.getElementById('board').value == '8x8 Klein Horizontal Stripes') {
 		
 		boardSize = 8;
-		board = [['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W']];
-		boundary = 0;
+		board = [['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W']];
+		boundary = 1;
+		
+		hX = 1;
+		hY = 2;
+		hDir = 3;
+		hIn = 'K';
+		hOp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 6;
+		eY = 5;
+		eDir = 1;
+		eIn = 'W';
+		eOp = 'K';
+		eOwn = 'R';
+		eEn = 'B';
+		
+		} else if (document.getElementById('board').value == '8x8 RP2 Quadrants') {
+		
+		boardSize = 8;
+		board = [['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['K','K','K','K','W','W','W','W'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K'],['W','W','W','W','K','K','K','K']];
+		boundary = 2;
 		
 		hX = 3;
 		hY = 3;
@@ -184,8 +184,8 @@
 		eX = 4;
 		eY = 4;
 		eDir = 1;
-		eIn = 'W';
-		eOp = 'K';
+		eIn = 'K';
+		eOp = 'W';
 		eOwn = 'R';
 		eEn = 'B';
 		
@@ -211,22 +211,22 @@
 		eOwn = 'R';
 		eEn = 'B';
 		
-		} else if (document.getElementById('board').value == '8x8 Klein Horizontal Stripes') {
+		} else if (document.getElementById('board').value == '16x16 Torus Horizontal Stripes') {
 		
-		boardSize = 8;
-		board = [['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W']];
-		boundary = 1;
+		boardSize = 16;
+		board = [['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W'],['K','W','K','W','K','W','K','W','K','W','K','W','K','W','K','W']];
+		boundary = 0;
 		
-		hX = 1;
-		hY = 2;
+		hX = 3;
+		hY = 4;
 		hDir = 3;
 		hIn = 'K';
 		hOp = 'W';
 		hOwn = 'B';
 		hEn = 'R';
 		
-		eX = 6;
-		eY = 5;
+		eX = 12;
+		eY = 11;
 		eDir = 1;
 		eIn = 'W';
 		eOp = 'K';
@@ -255,6 +255,28 @@
 		eOwn = 'R';
 		eEn = 'B';
 		
+		} else if (document.getElementById('board').value == '16x16 RP2 Quadrants') {
+		
+		boardSize = 16;
+		board = [['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['K','K','K','K','K','K','K','K','W','W','W','W','W','W','W','W'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K'],['W','W','W','W','W','W','W','W','K','K','K','K','K','K','K','K']];
+		boundary = 2;
+		
+		hX = 7;
+		hY = 7;
+		hDir = 3;
+		hIn = 'K';
+		hOp = 'W';
+		hOwn = 'B';
+		hEn = 'R';
+		
+		eX = 8;
+		eY = 8;
+		eDir = 1;
+		eIn = 'W';
+		eOp = 'K';
+		eOwn = 'R';
+		eEn = 'B';
+		
 		}
 		
 		maxTurns = document.getElementById('numTurns').value;
@@ -272,13 +294,22 @@
 		} else if (boundary==1) {
 			var newx = (x % boardSize + boardSize) % boardSize;
 			var newy = (y % boardSize + boardSize) % boardSize;
-			if ((0 <= y) & (y <= boardSize - 1)) {
-				return [newx, newy];
-			} else {
-				return [(boardSize-1) - newx, newy];
+			if ((y < 0) || (y > boardSize - 1)) {
+				newx = (boardSize-1)-newx;
 			}
+			return [newx,newy];
+		} else if (boundary==2) {
+			var newx = (x % boardSize + boardSize) % boardSize;
+			var newy = (y % boardSize + boardSize) % boardSize;
+			if ((y < 0) || (y > boardSize - 1)) {
+				newx = (boardSize-1)-newx;
+			}
+			if ((x < 0) || (x > boardSize - 1)) {
+				newy = (boardSize-1)-newy;
+			}
+			return [newx,newy];
 		}
-		return []
+		return [0,0];
 	}
 	
 	function draw() {
@@ -705,12 +736,13 @@
 			</SELECT> 
 			&nbsp; &nbsp; Board: <select id = "board" SIZE = "1" onChange = "reset();">
 				<OPTION selected="selected">8x8 Torus Checkerboard</OPTION>
-				<OPTION>8x8 Torus Quadrants</OPTION>
 				<OPTION>8x8 Torus Horizontal Stripes</OPTION>
-				<OPTION>8x8 Torus Vertical Halves</OPTION>
-				<OPTION>16x16 Torus Checkerboard</OPTION>
 				<OPTION>8x8 Klein Horizontal Stripes</OPTION>
+				<OPTION>8x8 RP2 Quadrants</OPTION>
+				<OPTION>16x16 Torus Checkerboard</OPTION>
+				<OPTION>16x16 Torus Horizontal Stripes</OPTION>
 				<OPTION>16x16 Klein Horizontal Stripes</OPTION>
+				<OPTION>16x16 RP2 Quadrants</OPTION>
 			</SELECT> 
 			&nbsp; &nbsp; Number of turns: <select id = "numTurns" SIZE = "1" onChange = "reset();">
 				<OPTION selected="selected">32</OPTION>
