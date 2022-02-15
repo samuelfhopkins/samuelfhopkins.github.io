@@ -97,6 +97,8 @@ p {
 p.foot {
 	font-size: 12px;
 	padding-top: 20px;
+	max-width: 950px;
+	display: inline-block;
 }
  
 ul {
@@ -226,6 +228,8 @@ ul li {
 	p.foot {
 		font-size: 10px;
 		padding-top: 10px;
+		max-width: 950px;
+		display: inline-block;
 	}
 	
 	ul {
