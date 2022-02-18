@@ -28,10 +28,10 @@ Show that the lexicographic order \emph{extends} the dominance order in the sens
 {\bf Bonus problem, just to think about}: Recall from the previous semester that a \emph{lattice} is a partial order where every pair of elements has a least upper bound and a greatest lower bound. Show that dominance order on partitions of $n$ is a lattice.
 
 \item Show that we could've used dominance order instead of lexicographic order in our arguments about the triangularity of the transition matrices from $p_{\lambda}$ or $e_{\lambda}$ to $m_{\mu}$. That is, show that
-\[ p_{\lambda} = \sum_{\mu \geq \lambda} \alpha_{\mu} m_{\mu} \qquad \textrm{and} \qquad e_{\lambda} = \sum_{\mu \leq \lambda^t} \beta_{\mu} m_{\mu} \quad \textrm{for coefficients $\alpha_{\mu},\beta_{\mu}\in\mathbb{C}$}\]
-where the $\leq$ is dominance order (and recall that $\lambda^t$ denotes the \emph{transpose} of $\lambda$).
+\[ p_{\lambda} = \sum_{\lambda \leq \mu} \alpha_{\mu} m_{\mu} \qquad \textrm{and} \qquad e_{\lambda} = \sum_{\mu \leq \lambda^t} \beta_{\mu} m_{\mu} \quad \textrm{for coefficients $\alpha_{\mu},\beta_{\mu}\in\mathbb{C}$}\]
+for any $\lambda \vdash n$, where $\leq$ denotes dominance order and $\lambda^t$ denotes the transpose of $\lambda$.
 
-\item Let $\lambda \vdash n$ and define $f^{\lambda}$ to be the coefficient of $x_1x_2\cdots x_n$ in the Schur function $s_{\lambda}$. Explain why $f^{\lambda} = f^{\lambda^t}$, and also give an example showing that this is not true for other coefficients.
+\item Let $\lambda \vdash n$ and define $f^{\lambda}$ to be the coefficient of $x_1x_2\cdots x_n$ in the Schur function $s_{\lambda}(x_1,x_2,\ldots)$. Explain why $f^{\lambda} = f^{\lambda^t}$. Give an example showing that this is not true for other coefficients of Schur functions, i.e., that $s_{\lambda} \neq s_{\lambda^t}$ in general.
 
 \item The Cauchy--Binet formula says that if $A=(A_{i,j})$ is an $m \times n$ matrix and $B=(B_{i,j})$ is an $n\times m$ matrix, then the determinant of the $m \times m$ matrix $AB$ can be computed by
 \[ \det(AB) = \sum_{I \subseteq [n], \; \#I = m} \det(A\mid_{\mathrm{cols}=I})  \det(B\mid_{\mathrm{rows}=I}). \]
