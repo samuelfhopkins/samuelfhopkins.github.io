@@ -24,6 +24,7 @@
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
   		}
   		else if (params[1]=="Funding") {
       		$("#Speakers").hide();
@@ -31,24 +32,35 @@
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
   		} else if (params[1]=="Travel") {
   	  		$("#Speakers").hide();
       		$("#Funding").hide();
 	  		$("#Travel").show();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
   		} else if (params[1]=="Schedule") {
   	  		$("#Speakers").hide();
       		$("#Funding").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").show();
 	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
   		} else if (params[1]=="Proceedings") {
   	  		$("#Speakers").hide();
       		$("#Funding").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").show();
+	  		$("#Conferences").hide();
+  		} else if (params[1]=="Conferences") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").show();
   		}
 	};
 	window.addEventListener("load", function() {
@@ -62,7 +74,7 @@
 	<h2>May 16-20, 2022</h2>
 	<h2>University of Minnesota</h2>
 	<h3>Organizers: Christine Berkesch, Ben Brubaker, Gregg Musiker, Pavlo Pylyavskyy, Vic Reiner</h3>
-	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Travel">Registration & Travel Info</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Funding">Funding</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> </h3>
+	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Travel">Registration, Travel & Funding</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#Conferences">Other Conferences</a> </h3>
 	<br>
 	<div id="Speakers" style="display: none;">
 		<p><b>Speakers:</b></p> 
@@ -102,6 +114,8 @@
 		
 		<p><b>Local Travel Information:</b> Most attendees will fly into the <a href="https://www.mspairport.com/">Minneapolis-St. Paul International Airport</a> (MSP). The MSP airport has stops (at both terminals 1 and 2) for the <a href="https://www.mspairport.com/directions/ground-transportation/light-rail-transit">light rail transit</a> (LRT) serving Minneapolis and St. Paul. It is <a href="https://goo.gl/maps/N63uSyuphHm7CnTYA">easy to take the light rail from MSP to campus</a>. Taxis and Uber can also be used to get from the airport to campus. </p> </s> 
 		
+		<p> <b>Funding</b>: There is limited funding available to support participants attending the conference. The deadline to apply for funding was <b>January 15, 2022</b> and has passed. Funding decisions will be made soon.</p>
+		
 	</div>
 	<div id="Funding" style="display: none;">
 		<p> <b>Funding</b>: There is limited funding available to support participants attending the conference. The deadline to apply for funding was <b>January 15, 2022</b> and has passed. Funding decisions will be made soon.</p>
@@ -137,6 +151,9 @@
 			<li> <a href="files/proceedings/novak_rhoades.pdf">Increasing subsequences and Kroenecker coefficients</a> by J. Novak and B. Rhoades</li>
 		</ul>
 		<p><b>Blog:</b> An Open Problems in Algebraic Combinatorics blog, to accompany the OPAC 2022 conference and continue on afterwards, is running online <a href="https://realopacblog.wordpress.com/.">here</a>. A pdf version of the blog posts is also available <a href="files/blog_master.pdf">here</a>.</p>
+	</div>
+	<div id="Conferences" style="display: none;">
+		<p><b>Other Conferences:</b> You might also be interested in <a href="https://www-users.cse.umn.edu/~mahrud/GradMoCCA/">GradMoCCA: a Graduate Meeting on Combinatorial Commutative Algebra</a> which will take place May 13-15, 2022 at the University of Minnesota, immediately before the OPAC conference.</p>
 	</div>
 </body>  
 <footer>
