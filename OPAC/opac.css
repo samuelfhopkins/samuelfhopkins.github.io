@@ -2,13 +2,11 @@
 =BASIC SETUP
 ------------------------------*/
 
-/* Makeshift CSS Reset */
 * {
 	margin: 0;
 	padding: 0;
 }
 
-/* Tell the browser to render HTML 5 elements as block */
 header, footer, section, aside, nav, article {
 	display: block;
 }
@@ -128,7 +126,6 @@ ul li {
 	margin-bottom: 0px;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: transparent;
   font-size: 18px;
@@ -211,9 +208,18 @@ ul li {
 		padding-bottom: 5px;
 		padding-left: 0px;
 		padding-right: 0px;
-		background-color: rgba(155, 255, 255, 0.5);
+		background-color: rgba(155, 255, 255, 0.75);
 		border-style: solid;
 		width: 95%;
+	}
+	
+	.panel {
+		padding: 10px;
+  		border-style: none;
+  		background-color: rgba(0, 255, 0, 0.25);
+  		display: none;
+  		overflow: hidden;
+  		width: 90%;
 	}
 	
 	p {
