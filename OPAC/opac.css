@@ -34,7 +34,7 @@ body {
 	font: 18px Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	color: black;
-	background: white;
+	background: rgba(95, 85, 80, 1.0);
 	background-image: url("files/background_light.jpg");
 	background-repeat: no-repeat;
   	background-size: 100%;
@@ -84,7 +84,7 @@ div {
 	padding-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	background-color: rgba(155, 255, 255, 0.5);
+	background-color: rgba(155, 255, 255, 0.75);
 	border-style: solid;
 }
 
@@ -141,16 +141,14 @@ ul li {
   transition: 0.4s;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   background-color: #ccc;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 0px;
+  padding: 10px;
   border-style: none;
-  background-color: transparent;
+  background-color: rgba(0, 255, 0, 0.25);
   display: none;
   overflow: hidden;
 }
@@ -165,7 +163,6 @@ ul li {
 	
 	body {
 		background-image: url("files/background_light_mobile.jpg");
-		background-repeat: repeat-y;
 		width: 100%;
 	}
 	
@@ -238,16 +235,6 @@ ul li {
 		margin: 0 0 0 10px;
 		list-style: square;
 	}
-	
-	/*ul.talks {
-		padding-left: 10px;
-		font-size: 12px;
-		margin: 0 0 0 10px;
-		list-style: square;
-  		-webkit-column-count: 2;
-  		-moz-column-count: 2;
-  		column-count: 2;
-	}*/
 
 	ul.speakers {
 		padding-left: 10px;
