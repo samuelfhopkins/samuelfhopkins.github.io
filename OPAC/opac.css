@@ -261,6 +261,10 @@ td {
 		font-size: 11px;
 	}
 	
+	td {
+		padding: 1px;
+	}
+	
 	ul {
 		padding-left: 10px;
 		font-size: 12px;
