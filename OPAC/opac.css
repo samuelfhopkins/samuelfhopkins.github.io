@@ -256,6 +256,11 @@ td {
 		display: inline-block;
 	}
 	
+	table {
+		font-size: 11px;
+		max-width: 400px;
+	}
+	
 	ul {
 		padding-left: 10px;
 		font-size: 12px;
