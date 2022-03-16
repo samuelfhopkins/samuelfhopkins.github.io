@@ -257,8 +257,9 @@ td {
 	}
 	
 	table {
+		padding: 2px;
 		font-size: 11px;
-		max-width: 400px;
+		max-width: 380px;
 	}
 	
 	ul {
