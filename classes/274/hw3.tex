@@ -20,7 +20,7 @@
 \begin{enumerate}
 
 \item A \emph{plane partition} is an infinite $2D$-array $\pi = (\pi_{i,j})_{i=1,2,\ldots}^{j=1,2,\ldots}$ of nonnegative integers $\pi_{i,j} \in \mathbb{N}$ such that only finitely many entries are nonzero and the entries are weakly \emph{decreasing} along rows and down columns in the sense that $\pi_{i,j} \geq \pi_{i',j'}$ if $i \leq i'$ and $j \leq j'$. The \emph{size} $|\pi|$ of $\pi$ is the sum of the entries: $|\pi| :=\sum_{i,j \geq 1} \pi_{i,j}$. Prove that 
-\begin{equation} \label{eq:pp} \sum_{\textrm{$\pi$ a plane partition}} q^{|\pi|} = \prod_{i \geq 1} \frac{1}{(1-q^i)^i}. \end{equation}
+\begin{equation} \label{eq:pp} \sum_{\textrm{$\pi$ a plane partition}} q^{|\pi|} = \prod_{i \geq 1} \frac{1}{(1-q^i)^i} \end{equation}
 {\bf Hint}: recall we proved the following product formula for \emph{reverse} plane partitions of shape $\lambda$:
 \begin{equation} \label{eq:rpp} \sum_{\pi \in \mathrm{RPP}(\lambda)} q^{|\pi|} = \prod_{u \in \lambda} \frac{1}{1-q^{h(u)}} \end{equation}
 where $h(u)$ is the hook length of the box $u$. Observe that a $180^\circ$ rotation of a reverse plane partition of shape $\lambda = n \times n = (\overbrace{n,n,\ldots,n}^{n})$ is the same as a plane partition whose nonzero entries fit in the upper-left $n\times n$ square. Then deduce \eqref{eq:pp} from \eqref{eq:rpp} by taking the limit $n\to \infty$.
