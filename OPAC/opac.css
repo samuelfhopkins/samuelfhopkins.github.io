@@ -267,7 +267,7 @@ td.special {
 	}
 	
 	ul {
-		padding-left: 10px;
+		padding-left: 0px;
 		font-size: 12px;
 		margin: 0 0 0 10px;
 		list-style: square;
