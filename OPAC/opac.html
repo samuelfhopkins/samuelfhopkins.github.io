@@ -25,6 +25,7 @@
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
 	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
   		}
   		else if (params[1]=="Funding") {
       		$("#Speakers").hide();
@@ -33,6 +34,7 @@
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
 	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
   		} else if (params[1]=="Travel") {
   	  		$("#Speakers").hide();
       		$("#Funding").hide();
@@ -40,6 +42,7 @@
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
 	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
   		} else if (params[1]=="Schedule") {
   	  		$("#Speakers").hide();
       		$("#Funding").hide();
@@ -47,6 +50,7 @@
 	  		$("#Schedule").show();
 	  		$("#Proceedings").hide();
 	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
   		} else if (params[1]=="Proceedings") {
   	  		$("#Speakers").hide();
       		$("#Funding").hide();
@@ -54,6 +58,7 @@
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").show();
 	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
   		} else if (params[1]=="Conferences") {
   	  		$("#Speakers").hide();
       		$("#Funding").hide();
@@ -61,6 +66,15 @@
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
 	  		$("#Conferences").show();
+	  		$("#Photos").hide();
+  		} else if (params[1]=="Photos") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
+	  		$("#Photos").show();
   		}
 	};
 	window.addEventListener("load", function() {
@@ -74,7 +88,7 @@
 	<h2>May 16-20, 2022</h2>
 	<h2>University of Minnesota</h2>
 	<h3>Organizers: Christine Berkesch, Ben Brubaker, Gregg Musiker, Pavlo Pylyavskyy, Vic Reiner</h3>
-	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp; <a href="#Travel">Registration & Travel</a> &nbsp;&nbsp;&nbsp; <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> &nbsp;&nbsp;&nbsp; <a href="#Conferences">Other Conferences</a> </h3>
+	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp; <a href="#Travel">Registration & Travel</a> &nbsp;&nbsp;&nbsp; <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> &nbsp;&nbsp;&nbsp; <a href="#Photos">Photos</a> </h3>
 	<br>
 	<div id="Speakers" style="display: none;">
 		<p><b>Speakers:</b></p> 
@@ -232,6 +246,10 @@
 		<ul>
 		<li><a href="https://sites.google.com/view/gpcc2020/">Great Plains Combinatorics Conference</a>, which will take place April 30 - May 1, 2022 at  North Dakota State University.</li>
 		<li><a href="https://www-users.cse.umn.edu/~mahrud/GradMoCCA/">GradMoCCA: a Graduate Meeting on Combinatorial Commutative Algebra</a>, which will take place May 13-15, 2022 at the University of Minnesota, immediately before the OPAC conference.</li>
+		</ul>
+	</div>
+	<div id="Photos" style="display: none;">
+		<p align="center"><img src="files/conference_photo.jpg" alt="Conference Photo" width=900></p>
 		</ul>
 	</div>
 </body>  
