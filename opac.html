@@ -1,0 +1,278 @@
+<!doctype html>  
+<html>  
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>OPAC 2022</title>  
+	<link rel="stylesheet" href="opac.css" type="text/css" media="screen" />
+	<!-- Load the jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- MathJax script for processing LaTeX -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		MathJax.Hub.Config({
+    		tex2jax: {inlineMath: [['$','$']]}
+  		});
+	</script>
+	<script>
+	/*-------------------------------------------------------------------------------------------- */
+	/* A function that opens up the correct sections of the site, depending on value after hashtag */
+	var openCorrectSections = function() {
+  		var url = window.location.href;
+  		var params = url.split('#');
+  		if ((params.length == 1) || (params[1]=="")) {
+	  		$("#Speakers").show();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
+  		}
+  		else if (params[1]=="Funding") {
+      		$("#Speakers").hide();
+      		$("#Funding").show();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
+  		} else if (params[1]=="Travel") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").show();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
+  		} else if (params[1]=="Schedule") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").show();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
+  		} else if (params[1]=="Proceedings") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").show();
+	  		$("#Conferences").hide();
+	  		$("#Photos").hide();
+  		} else if (params[1]=="Conferences") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").show();
+	  		$("#Photos").hide();
+  		} else if (params[1]=="Photos") {
+  	  		$("#Speakers").hide();
+      		$("#Funding").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Proceedings").hide();
+	  		$("#Conferences").hide();
+	  		$("#Photos").show();
+  		}
+	};
+	window.addEventListener("load", function() {
+  		openCorrectSections(); /* Show correct sections of the website */
+	});
+	window.addEventListener("hashchange", openCorrectSections);
+	</script>
+</head>  
+<body>
+	<h1>Open Problems in Algebraic Combinatorics</h1>
+	<h2>May 16-20, 2022</h2>
+	<h2>University of Minnesota</h2>
+	<h3>Organizers: Christine Berkesch, Ben Brubaker, Gregg Musiker, Pavlo Pylyavskyy, Vic Reiner</h3>
+	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp; <a href="#Travel">Registration & Travel</a> &nbsp;&nbsp;&nbsp; <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> &nbsp;&nbsp;&nbsp; <a href="#Photos">Photos</a> </h3>
+	<br>
+	<div id="Speakers" style="display: none;">
+		<p><b>Speakers:</b></p> 
+		<ul class="speakers"> 
+			<li> <a href="https://dornsife.usc.edu/samihassaf/">Sami Assaf</a>  </li>
+			<li> <a href="https://math.berkeley.edu/~corteel/">Sylvie Corteel</a> </li>
+			<li> <a href="https://faculty.math.illinois.edu/~philippe/">Philippe Di Francesco</a> </li>
+			<li> <a href="http://www.math.lsa.umich.edu/~fomin/">Sergey Fomin</a> </li>
+			<li> <a href="https://www.math.ucla.edu/~galashin/">Pavel Galashin</a> </li>
+			<li> <a href="https://www.math.ucdavis.edu/~egorskiy/">Eugene Gorsky</a> </li>
+			<li> <a href="https://web.math.princeton.edu/~huh/">June Huh</a> </li>
+			<li> <a href="http://www.math.toronto.edu/jkamnitz/">Joel Kamnitzer</a> </li>
+			<li> <a href="https://gauss.math.yale.edu/~rwk25/">Richard Kenyon</a> </li>
+			<li> <a href="https://pi.math.cornell.edu/~allenk/">Allen Knutson</a> </li>
+			<li> <a href="http://www.math.lsa.umich.edu/~tfylam/">Thomas Lam</a> </li>
+			<li> <a href="https://www.mellit.org/">Anton Mellit</a> </li>
+			<li> <a href="https://www.math.ucla.edu/~pak/">Igor Pak</a> </li>
+			<li> <a href="https://sites.google.com/usc.edu/gpanova/home">Greta Panova</a> </li>
+			<li> <a href="https://math.mit.edu/~apost/">Alexander Postnikov</a> </li>
+			<li> <a href="https://faculty.uml.edu/jpropp/">James Propp</a> </li>
+			<li> <a href="https://www3.nd.edu/~craicu/">Claudiu Raicu</a> </li>
+			<li> <a href="https://schiffler.math.uconn.edu/">Ralf Schiffler</a> </li>
+			<li> <a href="https://www.math.ucdavis.edu/~anne/">Anne Schilling</a> </li>
+			<li> <a href="http://www-personal.umich.edu/~speyer/">David Speyer</a> </li>
+			<li> <a href="https://math.uqam.ca/corps-professoral/professeurs/professeurs-reguliers/professeur/thomas.hugh_r/">Hugh Thomas</a> </li>
+			<li> <a href="https://www.smith.edu/academics/faculty/julianna-tymoczko">Julianna Tymoczko</a> </li>
+			<li> <a href="https://people.math.harvard.edu/~williams/">Lauren Williams</a> </li>
+			<li> <a href="https://personal.utdallas.edu/~nxw170830/index.html">Nathan Williams</a> </li>
+		</ul>
+	</div>
+	<div id="Travel" style="display: none;">
+		<p><b>Registration:</b> There is no registration fee for the conference, and all are invited to attend the talks in person. To register to attend the conference virtually over Zoom, click <a href="https://umn.zoom.us/meeting/register/tJYtc-morT4qHNRIX574kc1-iXz69jqk9g6V">here</a>.</p>
+		
+		<p><b>Arrival-Departure Dates:</b> The expected arrival date is Sunday, May 15. The conference begins Monday morning. Most attendees will depart either Friday, May 20 or Saturday, May 21. The conference will end at 5:30pm on Friday.</p>
+		
+		<p><b>Hotels:</b> Hotels near campus include <a href="https://z.umn.edu/GraduateHotelReservations/">The Graduate Hotel</a>, <a href="https://www.wyndhamhotels.com/days-inn/minneapolis-minnesota/days-inn-hotel-university-ave-se/overview">Days Inn</a>, and <a href="https://www.hilton.com/en/hotels/msputgi-hilton-garden-inn-minneapolis-university-area/">Hilton Garden Inn</a>. Another possibility is <a href="https://www.airbnb.com/s/University-of-Minnesota--Minneapolis--Minnesota--United-States/homes?">Airbnb</a>. The above link for the Graduate Hotel includes the OPAC-specific days and discounted rate. For the Days Inn, participants can call (612) 623-9303 at any time and ask to make a reservation under "OPAC Workshop" for a discounted rate.</p> 
+		
+		<p><b>Local Travel Information:</b> Most attendees will fly into the <a href="https://www.mspairport.com/">Minneapolis-St. Paul International Airport</a> (MSP). The MSP airport has stops (at both terminals 1 and 2) for the <a href="https://www.mspairport.com/directions/ground-transportation/light-rail-transit">light rail transit</a> (LRT) serving Minneapolis and St. Paul. It is <a href="https://goo.gl/maps/N63uSyuphHm7CnTYA">easy to take the light rail from MSP to campus</a>. Taxis and Uber can also be used to get from the airport to campus. </p> </s> 
+		
+		<p><b>Parking:</b> For those who plan to drive to the conference, paid public parking is available at facilities and meters throughout the campus. For more information about parking, see <a href="https://pts.umn.edu/Park/Public-Visitor-Parking/Visitor-Public-Parking">this link</a> and also <a href="https://pts.umn.edu/sites/pts.umn.edu/files/2021-08/ebankcampusmap-2021-2022.pdf">this map</a>. Note that the conference will take place in Smith Hall, on the East Bank part of campus.</p>
+		
+		<p> <b>Funding</b>: There was limited funding available to support participants attending the conference. The deadline to apply for funding was <b>January 15, 2022</b> and has passed. </p>
+		
+	</div>
+	<div id="Funding" style="display: none;">
+		<p> <b>Funding</b>: There is limited funding available to support participants attending the conference. The deadline to apply for funding was <b>January 15, 2022</b> and has passed. Funding decisions will be made soon.</p>
+	</div>
+	<div id="Schedule" style="display: none;">
+		<p><b>Talk Schedule</b> <i>(all times in Central Time)</i> <b>:</b></p>
+		<table>
+		<tr>
+			<td> </td>
+			<td> Monday, May 16 </td>
+			<td> Tuesday, May 17 </td>
+			<td> Wednesday, May 18 </td>
+			<td> Thursday, May 19 </td>
+			<td> Friday, May 20 </td>
+		</tr>
+		<tr>
+			<td> 9:00-10:00am </td>
+			<td> S. Fomin </td>
+			<td> P. Galashin  </td>
+			<td> I. Pak </td>
+			<td> S. Corteel </td>
+			<td> A. Mellit </td>
+		</tr>
+		<tr>
+			<td> 10:30-11:30am </td>
+			<td> J. Kamnitzer </td>
+			<td> G. Panova  </td>
+			<td> S. Assaf </td>
+			<td> H. Thomas  </td>
+			<td> T. Lam </td>
+			
+		</tr>
+		<tr>
+			<td> 12:00-1:00pm </td>
+			<td class="special" colspan="5"> Lunch </td>
+		</tr>
+		<tr>
+			<td> 1:30-2:30pm </td>
+			<td> L. Williams </td>
+			<td class="special"> </td>
+			<td> D. Speyer </td>
+			<td> C. Raicu </td>
+			<td> A. Schilling </td>
+		</tr>
+		<tr>
+			<td> 3:00-4:00pm </td>
+			<td> R. Kenyon </td>
+			<td> P. Di Francesco </td>
+			<td> R. Schiffler </td>
+			<td> J. Tymoczko </td>
+			<td> A. Knutson </td>
+			
+		</tr>
+		<tr>
+			<td> 4:30-5:30pm </td>
+			<td> E. Gorsky </td>
+			<td> A. Postnikov </td>
+			<td> J. Propp </td>
+			<td> J. Huh </td>
+			<td> N. Williams </td>
+		</tr>
+		</table>
+		<p><b>Location of Talks</b>: All talks will take place in Smith Hall 100. Smith Hall is directly across the quad from Vincent Hall, where the math department is located.</p>
+		<p><b>Streaming and Recording of Talks:</b> The talks are being streamed online. Click <a href="https://umn.zoom.us/meeting/register/tJYtc-morT4qHNRIX574kc1-iXz69jqk9g6V">here</a> to obtain the Zoom link. The talks are also being recorded. Here are the links to the recordings:</p>
+		<ul>
+			<li><a href="https://umn.zoom.us/rec/share/T4GMcz999jX4Xo1smA3IFg9VxG3Ew3Ml76QoDYgRNqb4XEdBTou0SO5OVshCUlGF.vPy0IX59ZOIZgjYd">Monday morning</a>; <a href="https://umn.zoom.us/rec/share/QEvlwX2bmzHIlU67oSj4d-Q4KrGUs_X-wMDQH4JKDzKo6yeoCzz6mMzt6rY6GThI.1HQSRYWpiZeU14hh">Monday afternoon</a></li>
+			<li><a href="https://umn.zoom.us/rec/share/PlUzQUgFXS8cW6j5oLPQjS8VU1aUzTBgW5pgL34v9kqtEIVwN54mFZGRMKDz2C4Y.TkbZRbc2bML79fwf">Tuesday morning</a>; <a href="https://umn.zoom.us/rec/share/LdTj72GoFHEvnne_qF-wm20lQZqca7pUmtOSvZyaIJgci2HNoH89wUT3imwIZxy0.ATLdEo8QMdcTMOTB">Tuesday afternoon</a></li>
+			<li><a href="https://umn.zoom.us/rec/share/CrBXU8rCYdnFf6-vio3wR7sZWCRazuGaO0SVZjx4nvakJDEe5hL09G55Kf_C9oLi.8Xc2eHVQNe5Fb1Ew">Wednesday</a></li>
+		</ul>
+		<p><b>Talk Titles</b> <i>(click + for the abstracts; click titles for slides)</i> <b>:</b></p>
+		<ul class="talks">
+			<li> S. Assaf: <u><a href="files/slides/assaf.pdf">Positive Structures in Algebraic Combinatorics</a></u> <button class="accordion">+</button> <div class="panel">A quintessential problem that arises in algebraic combinatorics is to prove that a given polynomial expands nonnegatively into a certain basis. A classic example of this is the Littlewood--Richardson Rule for expanding a Schur polynomial into the Schur basis. The coefficients in this case give the multiplicity of the irreducible decomposition of tensor products in the general linear group, describe the decomposition of restrictions of modules in the symmetric group, and enumerate points in a suitable triple intersection of Grassmannian Schubert varieties. Many important problems of this nature persist today, such as expanding the Kronecker product of Schur functions into the Schur basis (corresponding to giving the irreducible decomposition of tensor products in the symmetric group) and expanding the product of Schubert polynomials into the Schubert basis (corresponding to enumerating points in intersections of arbitrary Schubert varieties). Motivated by these open problems, I’ll review powerful combinatorial structures, such as crystal graphs and dual equivalence graphs, that might be useful in approaching these positivity problems, and point to new directions that could lead to new solutions to these long standing positivity problems.</div> </li>
+			<li> S. Corteel: <u>Cylindric partitions and Rogers-Ramanujan identities</u> <button class="accordion">+</button> <div class="panel">Rogers-Ramanujan identities have many connections and one of them is representation theory. Thanks to this connection, it is expected that $A_n$-Rogers Ramanujan identities exist. The case $n=1$ corresponds to the Andrews-Gordon and Andrews-Bressoud identities. Foda and Welsh had the brilliant idea to give another proof of these identities using cylindric partitions with two columns. It is conjectured that cylindric partitions with $n+1$ columns are the good combinatorial objects to attack the $A_n$ problem. In this talk I will explain recent progress in the case $n=2$ and will state conjectures for the general case.</div> </li>
+			<li> P. Di Francesco: <u><a href="files/slides/di_francesco.pdf">Triangular ice combinatorics</a></u> <button class="accordion">+</button> <div class="panel">We consider the two-dimensional 20-Vertex "ice" model on the triangular lattice with special "domain wall" type boundary conditions on various domains. Like the square lattice (6-Vertex) version, this model has a fascinating combinatorial content. We review the known exact results and conjectures relating its configurations to domino tilings of certain plane domains.</div> </li>
+			<li> S. Fomin: <u><a href="files/slides/fomin.pdf">Quiver mutations</a></u> <button class="accordion">+</button> <div class="panel">Quiver mutations are certain transformations of finite oriented graphs (quivers). They provide the underlying combinatorial structure for cluster algebras of skew-symmetric type. I will survey various open problems concerning quiver mutations, from a purely combinatorial perspective.</div> </li>
+			<li> P. Galashin: <u><a href="files/slides/galashin.pdf">Positroid varieties</a></u> <button class="accordion">+</button> <div class="panel">Positroid varieties are remarkable subsets of the Grassmannian introduced by Knutson--Lam--Speyer building on the work of Postnikov in total positivity. I will survey various open problems arising from the interplay between positroid varieties and cluster algebras, knot theory, statistical mechanics, and Catalan combinatorics.</div> </li>
+			<li> E. Gorsky: <u><a href="files/slides/gorsky.pdf">Generalized q,t-Catalan polynomials and link invariants</a></u> <button class="accordion">+</button> <div class="panel">Khovanov and Rozansky defined in 2005 a triply graded link homology theory which generalizes HOMFLY-PT polynomial. In this talk, I will outline some known results and structures in Khovanov-Rozansky homology, describe its connection to q,t-Catalan combinatorics and present several geometric models for some classes of links.</div> </li>
+			<li> J. Huh: <u>Open problems on Lorentzian polynomials</u> <button class="accordion">+</button> <div class="panel">Conjecturally, skew-Schur polynomials, Schur P polynomials, Schubert polynomials, homogeneous components of Grothendieck polynomials, key polynomials, and degree polynomials of Bernstein-Gelfand-Gelfand all become Lorentzian after normalizations. I will present these and some other open problems on Lorentzian polynomials. Joint work with Petter Brändén, and with Jacob Matherne, Karola Mészáros, and Avery St. Dizier. </div> </li>
+			<li> J. Kamnitzer: <u><a href="files/slides/kamnitzer.pdf">Canonical bases in representation theory and cluster algebras</a></u> <button class="accordion">+</button> <div class="panel">When Fomin and Zelevinsky invented cluster algebras, one motivation was to understand canonical bases in representation theory. Finite-type cluster algebras come with a natural basis given by cluster monomials. For infinite-type cluster algebras, the construction of bases containing the cluster monomials has been the subject of intense work in recent years, producing three families of bases:  the "generic basis", "common triangular basis", and "theta basis". All these bases are parametrized by the tropical points in the dual cluster variety, in line with the Fock-Goncharov conjecture. On the other hand, in representation theory, we also have three families of bases: the "semicanonical basis", "canonical basis", and "Mirkovic-Vilonen basis". Of course, it is very tempting to match up these families with the ones coming from cluster algebras. I will explain known results and open problems in this direction.</div> </li>
+			<li> R. Kenyon: <u><a href="files/slides/kenyon.pdf">Open problems in higher rank dimers</a></u> <button class="accordion">+</button> <div class="panel">The dimer model studies a natural probability measure on the space of perfect matching ("dimer covers") of an edge-weighted graph; the probability of a dimer cover is proportional to the product of its edge weights. When the graph is bipartite, a useful change in viewpoint is to view the edge weights as defining a "$C^*$ local system", that is a line bundle with connection. This leads us to consider natural generalizations using higher-rank bundles, in particular $SL_n$-local systems. Several of our open problems concern the combinatorial objects enumerated by the resulting Kasteleyn matrix.</div> </li>
+			<li> A. Knutson: <u>Schubert calculus and quiver varieties</u> <button class="accordion">+</button> <div class="panel">I'll give a rundown of the different axes of generalization of the original Schubert calculus (intersection theory on Grassmannians), the state of the art, and which open problems seem most tractable and/or most important. Many of the recent advances have come from seeing flag manifolds (or really, their cotangent bundles) as special cases of Nakajima quiver varieties, and I'll discuss the combinatorial questions suggested in this framework. Time permitting, I may also discuss a theory of "generic pipe dreams" that interpolate between ordinary and bumpless, and some questions about them.</div> </li>
+			<li> T. Lam: <u>Positive geometries</u> <button class="accordion">+</button> <div class="panel">Positive geometries are certain semialgebraic spaces equipped with a differential form, the canonical form.  Examples of positive geometries include polytopes, positive parts of toric varieties, various kinds of totally positive spaces, and conjecturally, Grassmann polytopes and amplituhedra.  I will discuss various open problems concerning the combinatorics and geometry of positive geometries and their canonical forms.</div> </li>
+			<li> A. Mellit: <u>Combinatorial expressions for the nabla operator</u> <button class="accordion">+</button> <div class="panel">In q,t-mathematics a major object of interest is the nabla operator. This operator is applied to various symmetric functions and we are interested in explicit combinatorial expansions of the results. Several such expansions have been established: the compositional shuffle conjecture evaluates nabla applied to the modified Hall-Littlewood polynomials, the Loehr-Warrington conjecture evaluates nabla applied to the Schur polynomials, and the result of application of nabla to products of q,t-modified compete homogeneous functions was established in a recent paper by Carlsson and the author. In the talk I will present an approach based on p-tableaux which shows that all these evaluations are in fact equivalent. It is still unclear however what are the representation theoretic and geometric meanings of this. Based on a joint work with Erik Carlsson.</div> </li>
+			<li> I. Pak: <u>Complexity approach to combinatorial interpretations</u> <button class="accordion">+</button> <div class="panel">For over a century, the Algebraic Combinatorics has enjoyed a remarkable development due in part to the fundamental combinatorial interpretations such as the Young rule and the Littlewood-Richardson rule.  It is an article of faith that other major structure constants should also have combinatorial interpretations:  the Kronecker, plethystic and Schubert coefficients.  But really, why should we believe that in the first place?  And what exactly do we mean by a combinatorial interpretation?  I will present a Computational Complexity point of view on these questions and speculate about future developments.  Much of the talk is based on a recent joint work with Christian Ikenmeyer.</div> </li>
+			<li> G. Panova: <u><a href="files/slides/panova.pdf">Structure constants: complexity and asymptotics</a></u>  <button class="accordion">+</button> <div class="panel">Kostka, Littlewood-Richardson, Kronecker, plethysm coefficients are fundamental quantities in algebraic combinatorics, yet many natural questions about them stay unanswered for more than 80 years. They lack "nice formulas", a notion which can be formalized using computational complexity theory, and thus what we can hope is to understand are their asymptotic behavior in various regimes and inequalities they could satisfy. Understanding these quantities has applications beyond combinatorics: this is closely related to understanding the [limit] behavior of tiling models in statistical mechanics and, more recently, they are involved in establishing computational lower bounds and separation of complexity classes like VP vs VNP in arithmetic complexity theory. In this talk I'll outline the above applications and then discuss the state of the art and outstanding problems related to asymptotics, positivity and complexity of structure constants focusing mostly on the Kronecker coefficients of the symmetric group.</div> </li>
+			<li> A. Postnikov: <u>8 1/2 Open Problems in Algebraic Combinatorics</u> <button class="accordion">+</button> <div class="panel">We will discuss several problems related to Schubert calculus, Schur positivity, total positivity, matrix completion, rays, and x-rays.</div> </li>
+			<li> J. Propp: <u><a href="files/slides/propp.pdf">Trimer covers in the triangular grid</a></u> <button class="accordion">+</button> <div class="panel">Much as the square grid admits a natural 2-coloring, the triangular grid admits a natural 3-coloring and one can consider trimers containing one vertex of each color. Building on work of Conway, Lagarias, and Thurston, I’ll describe a two-parameter family of finite subgraphs of the triangular grid that are analogous to Aztec diamonds and that give rise to numerous conjectural exact formulas for the number of trimer covers.</div> </li>
+			<li> C. Raicu: <u>Cohomology of line bundles on flag varieties</u> <button class="accordion">+</button> <div class="panel">A fundamental problem at the confluence of algebraic geometry, combinatorics and representation theory is to understand the structure and vanishing behavior of the cohomology of line bundles on flag varieties. Over fields of characteristic zero, this is the content of the Borel-Weil-Bott theorem and is well-understood, but in positive characteristic it remains wide open, despite important progress over the years. I will give an overview of the subject emphasizing a variety of open questions, and discuss some recent progress.</div> </li>
+			<li> R. Schiffler: <u>Perfect matching problems in cluster algebras and number theory</u> <button class="accordion">+</button> <div class="panel">Snake graphs and band graphs are used to construct canonical bases for cluster algebras of surface type. The perfect matchings of these graphs parametrize the Laurent polynomial expansions of the basis elements. Later it was shown that there is a bijection between (unlabeled) snake graphs and continued fractions such that the number of perfect matchings of the snake graph is equal to the numerator of the continued fraction. In this talk we will explore this connection to number theory further.</div> </li>
+			<li> A. Schilling: <u><a href="files/slides/schilling.pdf">The mystery of plethysm coefficients</a></u> <button class="accordion">+</button> <div class="panel">The irreducible polynomial representations $\rho^\lambda$ of $GL_n$ are indexed by integer partitions $\lambda$ with at most $n$ parts. The character of $\rho^\lambda$ is the Schur polynomial $s_\lambda$. The composition of two such representations $\rho^\lambda : GL_n \to GL_m$ and $\rho^\mu : GL_m \to GL_\ell$ is also a polynomial representation of $GL_n$ and its characters is denoted $s_\lambda[s_\mu]$, the plethysm of two Schur functions. It is an open problem to find a combinatorial interpretation of the coefficients in the Schur expansion of $s_\lambda[s_\mu]$. I will discuss some ideas on how to attack this problem using the representation theory of the algebra of uniform block permutations (see <a href="https://arxiv.org/abs/2112.13909">joint work with Rosa Orellana, Franco Saliola, and Mike Zabrocki</a>).</div> </li>
+			<li> D. Speyer: <u><a href="files/slides/speyer.pdf">Coxeter combinatorics beyond the Tits cone</a></u> <button class="accordion">+</button> <div class="panel">If W is a finite Coxeter group, then there is a finite hyperplane arrangment whose regions are indexed by W. These regions describe torsion classes for the corresponding preprojective algebra, and form a complete semi-distributive lattice. Once W is infinite, the elements of W only describe a hyperplane arrangement inside the Tits cone. I will describe three strategies to develop a theory to extend W to describe the whole space: (1) Reading's theory of shards (2) ideas from the representation theory of preprojective algebras (3) Dyer's conjectures about biclosed sets of roots. This talk will be friendly to people who have not seen any of these concepts before.</div> </li>
+			<li> H. Thomas: <u>Combinatorics of string-like amplitudes</u> <button class="accordion">+</button> <div class="panel">I will discuss a system of equations associated to a surface. The variables, of which there are typically infinitely many, are associated to homotopy classes of curves. I will discuss strategies towards solving the equations, in terms of combinatorics, hyperbolic geometry, and representation theory. In the case that the surface is a disk, the corresponding system of equations (which exceptionally has only  finitely many variables) was introduced and solved in 1969 by Koba and Nielsen. It plays a key rôle in their definition of the tree string amplitude. We hope to define analogous integrals corresponding to other surfaces, which would provide higher loop order corrections to the tree string amplitude. I will explain some of the challenges involved. This talk will be based on joint work with Nima Arkani-Hamed, Hadleigh Frost, Pierre-Guy Plamondon, and Giulio Salvatori.</div> </li>
+			<li> J. Tymoczko: <u>Ten questions about Hessenberg varieties</u> <button class="accordion">+</button> <div class="panel">Hessenberg varieties are a family of subvarieties of the flag variety parametrized by two objects: a linear operator and a Dyck path, or nondecreasing step function that stays above the diagonal.  They combine the geometric and combinatorial richness of Schubert varieties with that of nilpotent orbits.  Specific subfamilies of Hessenberg varieties — especially Springer fibers and regular semisimple Hessenberg varieties — encode important geometric representations, leading to important applications in knot theory and other fields.  In this talk, we describe ten open questions about Hessenberg varieties, including questions about their geometry, connections to webs, representation theory, and others.</div> </li>
+			<li> L. Williams: <u><a href="files/slides/l_williams.pdf">Combinatorics of hopping particles and positivity in Markov chains</a></u> <button class="accordion">+</button> <div class="panel">The asymmetric simple exclusion process (ASEP) is a model for translation in protein synthesis and traffic flow; it can be defined as a Markov chain describing particles hopping on a one-dimensional lattice. I will give an overview of some of the connections of the stationary distribution of the ASEP to combinatorics (tableaux and multiline queues) and special functions (Askey-Wilson polynomials, Macdonald polynomials, and Schubert polynomials). I will also mention some open problems and observations about positivity in Markov chains.</div> </li>
+			<li> N. Williams: <u>Catalan Combinatorics</u> <button class="accordion">+</button> <div class="panel">I will discuss some recent and some not-so-recent results and conjectures in Catalan combinatorics associated to reflection groups.</div> </li>
+		</ul>
+	</div>
+	<div id="Proceedings" style="display: none;">
+		<p><b>Proceedings:</b> The conference will be accompanied by a proceedings to be published by the AMS. The proceedings articles will also be made available for free online here. Some of the articles are already available:</p>
+		<ul>
+			<li> <a href="files/proceedings/alexandersson_feray.pdf">A positivity conjecture on the structure constants of shifted Jack functions</a> by P. Alexandersson and V. F&eacute;ray</li>
+			<li> <a href="files/proceedings/bergeron_A.pdf">The bosonic-fermionic diagonal coinvariant modules conjecture</a> by F. Bergeron </li>
+			<li> <a href="files/proceedings/bergeron_B.pdf">$(\mathrm{GL}_k \times \mathbb{S}_n)$-modules of multivariate diagonal harmonics</a> by F. Bergeron </li>
+			<li> <a href="files/proceedings/hopkins.pdf">Order polynomial product formulas and poset dynamics</a> by S. Hopkins</li>
+			<li> <a href="files/proceedings/lai.pdf">Problems in the enumeration of tilings</a> by T. Lai</li>
+			<li> <a href="files/proceedings/novak_rhoades.pdf">Increasing subsequences and Kroenecker coefficients</a> by J. Novak and B. Rhoades</li>
+			<li> <a href="files/proceedings/yong.pdf">Castelnuovo-Mumford regularity and Schubert geometry</a> by A. Yong</li>
+		</ul>
+		<p><b>Blog:</b> An Open Problems in Algebraic Combinatorics blog, to accompany the OPAC 2022 conference and continue on afterwards, is running online <a href="https://realopacblog.wordpress.com/.">here</a>. A pdf version of the blog posts is also available <a href="files/blog_master.pdf">here</a>.</p>
+	</div>
+	<div id="Conferences" style="display: none;">
+		<p><b>Other Conferences:</b> You might also be interested in the following nearby combinatorics conferences.</p>
+		<ul>
+		<li><a href="https://sites.google.com/view/gpcc2020/">Great Plains Combinatorics Conference</a>, which will take place April 30 - May 1, 2022 at  North Dakota State University.</li>
+		<li><a href="https://www-users.cse.umn.edu/~mahrud/GradMoCCA/">GradMoCCA: a Graduate Meeting on Combinatorial Commutative Algebra</a>, which will take place May 13-15, 2022 at the University of Minnesota, immediately before the OPAC conference.</li>
+		</ul>
+	</div>
+	<div id="Photos" style="display: none;">
+		<p><b>Conference Photo:</b> <p align="center"> <img src="files/conference_photo.jpg" alt="Conference Photo" width=90%> </p> </p>
+		</ul>
+	</div>
+</body>  
+<footer>
+	<br><img src="files/nsf_logo.png" alt="NSF" height=50><img src="files/nsa_logo.png" alt="NSA" height=50><img src="files/ima_logo.png" alt="IMA" height=50><img src="files/cse_logo.png" alt="UMN CSE" height=50><br>
+	<p class="foot">The OPAC 2022 Workshop is supported in part by the National Science Foundation, NSF (DMS-1745638), the National Security Agency (H98230-20-1-0008 P00001), and the Institute for Mathematics and its Applications. In kind support is provided by the University of Minnesota School of Mathematics in the College of Science and Engineering. <br> <br> Website: Sam Hopkins</p>
+</footer>
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+  		acc[i].addEventListener("click", function() {
+    		this.classList.toggle("active");
+    		var panel = this.nextElementSibling;
+    		if (panel.style.display === "block") {
+      			panel.style.display = "none";
+    		} else {
+      			panel.style.display = "block";
+    		}
+  		});
+	}
+</script>
+</html> 
