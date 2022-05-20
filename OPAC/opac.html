@@ -20,60 +20,33 @@
   		var params = url.split('#');
   		if ((params.length == 1) || (params[1]=="")) {
 	  		$("#Speakers").show();
-      		$("#Funding").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
-	  		$("#Conferences").hide();
-	  		$("#Photos").hide();
-  		}
-  		else if (params[1]=="Funding") {
-      		$("#Speakers").hide();
-      		$("#Funding").show();
-	  		$("#Travel").hide();
-	  		$("#Schedule").hide();
-	  		$("#Proceedings").hide();
-	  		$("#Conferences").hide();
 	  		$("#Photos").hide();
   		} else if (params[1]=="Travel") {
   	  		$("#Speakers").hide();
-      		$("#Funding").hide();
 	  		$("#Travel").show();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
-	  		$("#Conferences").hide();
 	  		$("#Photos").hide();
   		} else if (params[1]=="Schedule") {
   	  		$("#Speakers").hide();
-      		$("#Funding").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").show();
 	  		$("#Proceedings").hide();
-	  		$("#Conferences").hide();
 	  		$("#Photos").hide();
   		} else if (params[1]=="Proceedings") {
   	  		$("#Speakers").hide();
-      		$("#Funding").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").show();
-	  		$("#Conferences").hide();
-	  		$("#Photos").hide();
-  		} else if (params[1]=="Conferences") {
-  	  		$("#Speakers").hide();
-      		$("#Funding").hide();
-	  		$("#Travel").hide();
-	  		$("#Schedule").hide();
-	  		$("#Proceedings").hide();
-	  		$("#Conferences").show();
 	  		$("#Photos").hide();
   		} else if (params[1]=="Photos") {
   	  		$("#Speakers").hide();
-      		$("#Funding").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
 	  		$("#Proceedings").hide();
-	  		$("#Conferences").hide();
 	  		$("#Photos").show();
   		}
 	};
@@ -132,9 +105,6 @@
 		
 		<p> <b>Funding</b>: There was limited funding available to support participants attending the conference. The deadline to apply for funding was <b>January 15, 2022</b> and has passed. </p>
 		
-	</div>
-	<div id="Funding" style="display: none;">
-		<p> <b>Funding</b>: There is limited funding available to support participants attending the conference. The deadline to apply for funding was <b>January 15, 2022</b> and has passed. Funding decisions will be made soon.</p>
 	</div>
 	<div id="Schedule" style="display: none;">
 		<p><b>Talk Schedule</b> <i>(all times in Central Time)</i> <b>:</b></p>
@@ -241,16 +211,9 @@
 		</ul>
 		<p><b>Blog:</b> An Open Problems in Algebraic Combinatorics blog, to accompany the OPAC 2022 conference and continue on afterwards, is running online <a href="https://realopacblog.wordpress.com/.">here</a>. A pdf version of the blog posts is also available <a href="files/blog_master.pdf">here</a>.</p>
 	</div>
-	<div id="Conferences" style="display: none;">
-		<p><b>Other Conferences:</b> You might also be interested in the following nearby combinatorics conferences.</p>
-		<ul>
-		<li><a href="https://sites.google.com/view/gpcc2020/">Great Plains Combinatorics Conference</a>, which will take place April 30 - May 1, 2022 at  North Dakota State University.</li>
-		<li><a href="https://www-users.cse.umn.edu/~mahrud/GradMoCCA/">GradMoCCA: a Graduate Meeting on Combinatorial Commutative Algebra</a>, which will take place May 13-15, 2022 at the University of Minnesota, immediately before the OPAC conference.</li>
-		</ul>
-	</div>
 	<div id="Photos" style="display: none;">
-		<p><b>Conference Photo:</b> <p align="center"> <img src="files/photos/conference_photo.jpg" alt="Conference Photo" width=90%> <br><a href="files/photos/conference_photo_alt.jpg">alt conference photo</a></p> </p>
-		<p><b>Other Photos:</b> <p align="center"> <img src="files/photos/rainbow.jpg" alt="Rainbow" width=40%> <img src="files/photos/postnikov_students.jpg" alt="Rainbow" width=40%> </p></p>
+		<p><b>Conference Photo:</b> <p align="center"> <img src="files/photos/conference_photo.jpg" alt="Conference Photo" width=91%> <br><a href="files/photos/conference_photo_alt.jpg">alt conference photo</a></p> </p>
+		<p><b>Other Photos:</b> <p align="center"> <img src="files/photos/rainbow.jpg" alt="Rainbow" width=45%> <img src="files/photos/postnikov_students.jpg" alt="Rainbow" width=45%> </p></p>
 		</ul>
 	</div>
 </body>  
