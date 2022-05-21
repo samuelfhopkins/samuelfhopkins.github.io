@@ -4,17 +4,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>OPAC 2022</title>  
 	<link rel="stylesheet" href="opac.css" type="text/css" media="screen" />
-	<!-- Load the jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- MathJax script for processing LaTeX -->
 	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		MathJax.Hub.Config({
     		tex2jax: {inlineMath: [['$','$']]}
   		});
 	</script>
 	<script>
-	/*-------------------------------------------------------------------------------------------- */
-	/* A function that opens up the correct sections of the site, depending on value after hashtag */
 	var openCorrectSections = function() {
   		var url = window.location.href;
   		var params = url.split('#');
@@ -51,7 +47,7 @@
   		}
 	};
 	window.addEventListener("load", function() {
-  		openCorrectSections(); /* Show correct sections of the website */
+  		openCorrectSections();
 	});
 	window.addEventListener("hashchange", openCorrectSections);
 	</script>
