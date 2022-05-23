@@ -88,7 +88,7 @@ div {
 
 p {
 	font-size: 18px;
-	padding-top: 20px;
+	padding-top: 10px;
 	
 }
 
@@ -127,6 +127,7 @@ ul li {
 }
 
 table {
+	border: 0px;
 	font-size: 18px;
 	margin-left: auto;
 	margin-right: auto;
@@ -142,8 +143,8 @@ td {
 }
 
 td.special {
-	border-top: 0;
-	border-bottom: 0;
+	border-top: 0px;
+	border-bottom: 0px;
 	background-color: rgba(0, 255, 0, 0.25);
 }
 
