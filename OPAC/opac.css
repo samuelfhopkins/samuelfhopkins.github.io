@@ -221,14 +221,14 @@ td.special {
 	}
 	
 	div {
-		margin-left: 0;
+		margin-left: 2%;
 		padding-top: 0px;
 		padding-bottom: 10px;
 		padding-left: 5px;
 		padding-right: 5px;
 		background-color: rgba(155, 255, 255, 0.75);
 		border-style: solid;
-		width: 98%;
+		width: 95%;
 	}
 	
 	.panel {
