@@ -231,16 +231,6 @@ td.special {
 		border-style: solid;
 	}
 	
-	.panel {
-		margin-left: 0%;
-		padding: 5px;
-  		border-style: none;
-  		background-color: rgba(0, 255, 0, 0.25);
-  		display: none;
-  		overflow: hidden;
-  		width: 90%;
-	}
-	
 	p {
 		font-size: 12px;
 		padding-top: 10px;
@@ -296,5 +286,14 @@ td.special {
   		font-size: 16px;
   		border: 0;
   	}
-
+  	
+  		.panel {
+		margin-left: 0%;
+		padding: 5px;
+  		border-style: none;
+  		background-color: rgba(0, 255, 0, 0.25);
+  		display: none;
+  		overflow: hidden;
+  		width: 95%;
+	}
 }
