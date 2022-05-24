@@ -18,33 +18,33 @@
 	  		$("#Speakers").show();
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
-	  		$("#Proceedings").hide();
 	  		$("#Photos").hide();
+	  		$("#Proceedings").hide();
   		} else if (params[1]=="Travel") {
   	  		$("#Speakers").hide();
 	  		$("#Travel").show();
 	  		$("#Schedule").hide();
-	  		$("#Proceedings").hide();
 	  		$("#Photos").hide();
+	  		$("#Proceedings").hide();
   		} else if (params[1]=="Schedule") {
   	  		$("#Speakers").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").show();
+	  		$("#Photos").hide();
 	  		$("#Proceedings").hide();
-	  		$("#Photos").hide();
-  		} else if (params[1]=="Proceedings") {
-  	  		$("#Speakers").hide();
-	  		$("#Travel").hide();
-	  		$("#Schedule").hide();
-	  		$("#Proceedings").show();
-	  		$("#Photos").hide();
   		} else if (params[1]=="Photos") {
   	  		$("#Speakers").hide();
 	  		$("#Travel").hide();
 	  		$("#Schedule").hide();
-	  		$("#Proceedings").hide();
 	  		$("#Photos").show();
-  		}
+	  		$("#Proceedings").hide();
+  		} else if (params[1]=="Proceedings") {
+  	  		$("#Speakers").hide();
+	  		$("#Travel").hide();
+	  		$("#Schedule").hide();
+	  		$("#Photos").hide();
+	  		$("#Proceedings").show();
+  		} 
 	};
 	window.addEventListener("load", function() {
   		openCorrectSections();
@@ -57,7 +57,7 @@
 	<h2>May 16-20, 2022</h2>
 	<h2>University of Minnesota</h2>
 	<h3>Organizers: Christine Berkesch, Ben Brubaker, Gregg Musiker, Pavlo Pylyavskyy, Vic Reiner</h3>
-	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp; <a href="#Travel">Registration & Travel</a> &nbsp;&nbsp;&nbsp; <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> &nbsp;&nbsp;&nbsp; <a href="#Photos">Participants & Photos</a> </h3>
+	<h3><a href="#">Speakers</a> &nbsp;&nbsp;&nbsp; <a href="#Travel">Registration & Travel</a> &nbsp;&nbsp;&nbsp; <a href="#Schedule">Talk Schedule</a> &nbsp;&nbsp;&nbsp; <a href="#Photos">Participants & Photos</a> &nbsp;&nbsp;&nbsp; <a href="#Proceedings">Proceedings & Blog</a> </h3>
 	<br>
 	<div id="Speakers" style="display: none;">
 		<p><b>Speakers:</b></p> 
@@ -190,19 +190,6 @@
 			<li> N. Williams: <u><a href="files/slides/n_williams.pdf">Catalan Combinatorics</a></u> <button class="accordion">+</button> <div class="panel">I will discuss some recent and some not-so-recent results and conjectures in Catalan combinatorics associated to reflection groups.</div> </li>
 		</ul>
 	</div>
-	<div id="Proceedings" style="display: none;">
-		<p><b>Proceedings:</b> The conference will be accompanied by a proceedings to be published by the AMS. The proceedings articles will also be made available for free online here. Some of the articles are already available:</p>
-		<ul>
-			<li> <a href="files/proceedings/alexandersson_feray.pdf">A positivity conjecture on the structure constants of shifted Jack functions</a> by P. Alexandersson and V. F&eacute;ray</li>
-			<li> <a href="files/proceedings/bergeron_A.pdf">The bosonic-fermionic diagonal coinvariant modules conjecture</a> by F. Bergeron </li>
-			<li> <a href="files/proceedings/bergeron_B.pdf">$(\mathrm{GL}_k \times \mathbb{S}_n)$-modules of multivariate diagonal harmonics</a> by F. Bergeron </li>
-			<li> <a href="files/proceedings/hopkins.pdf">Order polynomial product formulas and poset dynamics</a> by S. Hopkins</li>
-			<li> <a href="files/proceedings/lai.pdf">Problems in the enumeration of tilings</a> by T. Lai</li>
-			<li> <a href="files/proceedings/novak_rhoades.pdf">Increasing subsequences and Kroenecker coefficients</a> by J. Novak and B. Rhoades</li>
-			<li> <a href="files/proceedings/yong.pdf">Castelnuovo-Mumford regularity and Schubert geometry</a> by A. Yong</li>
-		</ul>
-		<p><b>Blog:</b> An Open Problems in Algebraic Combinatorics blog, to accompany the OPAC 2022 conference and continue on afterwards, is running online <a href="https://realopacblog.wordpress.com/.">here</a>. A pdf version of the blog posts is also available <a href="files/blog_master.pdf">here</a>.</p>
-	</div>
 	<div id="Photos" style="display: none;">
 		<p><b>Participants:</b> Click <a href="files/participant_list.pdf">here</a> for a list of conference participants.</p>
 		<p><b>Photos</b> <i>(click some photos for alternates)</i> <b>:</b></p> 
@@ -218,6 +205,19 @@
 		<img src="files/photos/tianyi.jpg" alt="Tianyi Yu" width=47.5%> <img src="files/photos/coffee_break.jpg" alt="Coffee Break" width=47.5%>
 		<img src="files/photos/tom_lauren.jpg" alt="Tom Roby and Lauren Williams" width=47.5%> 
 		</p>
+	</div>
+	<div id="Proceedings" style="display: none;">
+		<p><b>Proceedings:</b> The conference will be accompanied by a proceedings to be published by the AMS. The proceedings articles will also be made available for free online here. Some of the articles are already available:</p>
+		<ul>
+			<li> <a href="files/proceedings/alexandersson_feray.pdf">A positivity conjecture on the structure constants of shifted Jack functions</a> by P. Alexandersson and V. F&eacute;ray</li>
+			<li> <a href="files/proceedings/bergeron_A.pdf">The bosonic-fermionic diagonal coinvariant modules conjecture</a> by F. Bergeron </li>
+			<li> <a href="files/proceedings/bergeron_B.pdf">$(\mathrm{GL}_k \times \mathbb{S}_n)$-modules of multivariate diagonal harmonics</a> by F. Bergeron </li>
+			<li> <a href="files/proceedings/hopkins.pdf">Order polynomial product formulas and poset dynamics</a> by S. Hopkins</li>
+			<li> <a href="files/proceedings/lai.pdf">Problems in the enumeration of tilings</a> by T. Lai</li>
+			<li> <a href="files/proceedings/novak_rhoades.pdf">Increasing subsequences and Kroenecker coefficients</a> by J. Novak and B. Rhoades</li>
+			<li> <a href="files/proceedings/yong.pdf">Castelnuovo-Mumford regularity and Schubert geometry</a> by A. Yong</li>
+		</ul>
+		<p><b>Blog:</b> An Open Problems in Algebraic Combinatorics blog, to accompany the OPAC 2022 conference and continue on afterwards, is running online <a href="https://realopacblog.wordpress.com/.">here</a>. A pdf version of the blog posts is also available <a href="files/blog_master.pdf">here</a>.</p>
 	</div>
 </body>  
 <footer>
