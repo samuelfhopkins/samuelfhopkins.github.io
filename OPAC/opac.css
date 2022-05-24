@@ -263,9 +263,9 @@ td.special {
 	}
 	
 	ul {
-		padding-left: 5px;
+		padding-left: 10px;
 		font-size: 12px;
-		margin: 0 0 0 5px;
+		margin: 0 0 0 10px;
 		list-style: square;
 	}
 
@@ -277,6 +277,13 @@ td.special {
   		-webkit-column-count: 2;
   		-moz-column-count: 2;
   		column-count: 2;
+	}
+	
+	ul.talks {
+		padding-left: 10px;
+		font-size: 18px;
+		margin: 0 0 0 10px;
+		list-style: square;
 	}
 
 	ul li {
