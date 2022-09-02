@@ -201,12 +201,16 @@ aside section {
 				
 @media (max-width: 1000px) {
 
+body {
+	width: 900px;
+}
+
 #content {
 	display: inline;
 }
 	aside {
         display: block;
-		width: 750px;
+		width: 900px;
 	}
 	
 	aside img {
@@ -215,12 +219,12 @@ aside section {
 	
 	#mainContent {
 		display: block;
-		width: 750px;
+		width: 900px;
 	}
 	
 	#wideContent {
 		display: block;
-		width: 750px;
+		width: 900px;
 	}
 
 }
