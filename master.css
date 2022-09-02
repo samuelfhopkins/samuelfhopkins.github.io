@@ -232,6 +232,7 @@ h4 {
 	
 	aside img {
 		float: right;
+		width: 300px;
 	}
 	
 	#mainContent {
