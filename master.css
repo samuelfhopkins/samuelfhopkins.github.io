@@ -199,23 +199,23 @@ html,body {
 
 body {
 	width: 900px;
-	font: 19px/33px Helvetica, Arial, sans-serif;
+	font: 26px/44px Helvetica, Arial, sans-serif;
 }
 
 h1 {
-	font-size: 27px;
+	font-size: 36px;
 }
 
 h2 {
-	font-size: 22px;
+	font-size: 30px;
 }
 
 h3 {
-	font-size: 19px;
+	font-size: 26px;
 }
 
 h4 {
-	font-size: 19px;
+	font-size: 26px;
 }
 
 #content {
