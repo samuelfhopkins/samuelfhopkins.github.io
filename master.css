@@ -243,5 +243,9 @@ h4 {
 		display: block;
 		width: 900px;
 	}
+	
+.blogPost figure.right {
+	width: 300px;
+}
 
 }
