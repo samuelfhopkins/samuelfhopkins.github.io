@@ -244,8 +244,8 @@ h4 {
 		width: 900px;
 	}
 	
-.blogPost figure.right {
-	width: 300px;
+.blogPost figure.right img {
+	width: 400px;
 }
 
 }
