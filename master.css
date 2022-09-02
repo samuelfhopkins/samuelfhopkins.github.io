@@ -198,30 +198,29 @@ aside section {
 				color: blue;
 				margin-left: 5px;
 			}
+				
 @media (max-width: 1000px) {
 
 #content {
 	display: inline;
 }
 	aside {
-        display: inline;
-		width: 900px;
-		vertical-align: top;
+        display: block;
+		width: 750px;
 	}
 	
-	aside.img {
-		float: left;
+	aside img {
+		float: right;
 	}
 	
 	#mainContent {
-		display: inline;
-		width: 900px;
+		display: block;
+		width: 750px;
 	}
 	
 	#wideContent {
-		display: inline;
-		width: 900px;
+		display: block;
+		width: 750px;
 	}
-	
 
 }
