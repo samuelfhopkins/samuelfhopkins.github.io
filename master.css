@@ -54,17 +54,6 @@ p {
 	padding: 0;
 	padding-bottom: 8px;
 }
-
-p.bletter {
-     float: left;
-     height: 45px;
-     margin-top: -20px;
-     padding-top: 45px;
-     margin-bottom: -35px;
-     padding-right: -10px;
-     margin-right: 10px;
-     font-size: 500%;
- }
  
  td {
  	min-width: 100px;
@@ -201,8 +190,32 @@ aside section {
 				
 @media (max-width: 1000px) {
 
+html,body {
+  		text-size-adjust: none;
+  		-webkit-text-size-adjust: none;
+  		-moz-text-size-adjust: none;
+  		-ms-text-size-adjust: none;
+	}
+
 body {
 	width: 900px;
+	font: 19px/33px Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 27px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 19px;
+}
+
+h4 {
+	font-size: 19px;
 }
 
 #content {
