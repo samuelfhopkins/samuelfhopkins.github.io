@@ -209,6 +209,10 @@ aside section {
 		vertical-align: top;
 	}
 	
+	aside.img {
+		float: left;
+	}
+	
 	#mainContent {
 		display: inline;
 		width: 900px;
