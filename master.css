@@ -1,22 +1,12 @@
-/*------------------------------
-=BASIC SETUP
-------------------------------*/
-
-/* Makeshift CSS Reset */
 * {
 	margin: 0;
 	padding: 0;
 }
 
-/* Tell the browser to render HTML 5 elements as block */
-header, footer, section, aside, nav, article {
-	display: block;
-}
-
 body {
 	margin: 0 auto;
 	padding: 20px;
-	width: 1125px;
+	width: 1075px;
 	font: 13px/22px Helvetica, Arial, sans-serif;
 	background: white;
 }
@@ -54,6 +44,10 @@ p {
 	padding: 0;
 	padding-bottom: 8px;
 }
+
+ul {
+	margin: 0 0 0 22px;
+}
  
 td {
  	min-width: 100px;
@@ -64,190 +58,134 @@ td {
  	padding-bottom: 0px;
  	vertical-align: top;
  }
- 
- ul {
- 	margin: 0 0 0 22px;
- }
 
-/*------------------------------
-=CONTENT AREA AND SIDEBAR LAYOUT
-------------------------------*/
-
-#content {
-	display: table;
-}
-	aside {
-        display: table-cell;
-		width: 225px;
-		vertical-align: top;
-	}
-	
-	#mainContent {
-    
-		display: table-cell;
-		width: 500px;
-		
-		border-width: 0px;
-		padding: 0px;
-		padding-left: 20px;
-		background-color: white;
-	}
-	
-	#wideContent {
-    
-		display: table-cell;
-		width: 900px;
-		
-		border-width: 0px;
-		padding: 0px;
-		padding-left: 20px;
-		background-color: white;
-	}
-	
-	
-
-/*------------------------------
-=BLOG POST
-------------------------------*/
-
-
-.blogPost figure.right {
+figure {
 	margin-top: 0px;
     margin-bottom: 22px;
     float: right;
 }
 
-.blogPost figcaption {
+figcaption {
 	font-style: italic;
 	text-align: right;
 }
 
-.blogPost img {
-    margin: 0px;
-    float: center;
+#content {
+	display: table;
 }
 
-.blogPost ul {
-		margin: 0 0 0px 22px;
-		list-style: none;
-	}
-.blogPost ul li {
-		margin-bottom: 0px;
-		margin-top: 0px;
-	}
-.blogPost ol {
-		margin: 0 0 20px 22px;
-		font-size: 11px;
-	}
-.blogPost a:link {
-        text-decoration: underline;
-        color: black;
-    }
-    
-.blogPost a:visited {
-        text-decoration: underline;
-        font-weight: normal;
-        color: black;
-    }
+aside {
+	display: table-cell;
+	width: 225px;
+	vertical-align: top;
+}
+	
+#mainContent {
+	display: table-cell;
+	width: 500px;
+	
+	border-width: 0px;
+	padding: 0px;
+	padding-left: 20px;
+}
 
-.blogPost a:hover{
+#classContent {
+	display: table-cell;
+	width: 850px;
+	
+	border-width: 0px;
+	padding: 0px;
+	padding-left: 20px;
+}
+	
+aside ul {
+	margin-left: 5px;
+	list-style: none;
+}
+
+aside a {
+	text-decoration: underline;
+	color: black;
+}
+
+aside a:hover {
+	text-decoration: underline;
+	color: blue;
+	margin-left: 5px;
+}
+
+aside img {
+	float: right;
+}
+
+#mainContent ul {
+		list-style: none;
+}
+
+#mainContent a {
+        text-decoration: underline;
+        color: black;
+}
+
+#mainContent a:hover{
     	text-decoration: underline;
     	color: blue;
-    }
-
-.blogPost iframe{
-	border: 0;
 }
-
-/*------------------------------
-=SIDEBAR
-------------------------------*/
-aside section {
-	margin: 0px;
-	margin-bottom: 10px;
-	padding: 0px;
-	background: white;
-}
-
-	aside section h3 {
-		color: black;
-	}
-	aside section ul {
-		margin-left: 5px;
-		list-style: none;
-	}
-	
-		aside section ul li a {
-			display: block;
-			text-decoration: underline;
-			color: black;
-		}
-		
-			aside section ul li a:hover {
-				text-decoration: underline;
-				color: blue;
-				margin-left: 5px;
-			}
 				
 @media (max-width: 1000px) {
 
-html,body {
+	html,body {
   		text-size-adjust: none;
   		-webkit-text-size-adjust: none;
   		-moz-text-size-adjust: none;
   		-ms-text-size-adjust: none;
 	}
 
-body {
-	width: 900px;
-	font: 26px/44px Helvetica, Arial, sans-serif;
-}
+	body {
+		width: 100%;
+		font: 26px/44px Helvetica, Arial, sans-serif;
+	}
 
-h1 {
-	font-size: 36px;
-	line-height: 60px;
-}
+	h1 {
+		font-size: 36px;
+		line-height: 60px;
+	}
 
-h2 {
-	font-size: 30px;
-	line-height: 88px;
-}
+	h2 {
+		font-size: 30px;
+		line-height: 88px;
+	}
 
-h3 {
-	font-size: 26px;
-	line-height: 44px;
-}
+	h3 {
+		font-size: 26px;
+		line-height: 44px;
+	}
 
-h4 {
-	font-size: 26px;
-	line-height: 44px;
-}
-
-#content {
-	display: inline;
-}
-	aside {
-        display: block;
-		width: 900px;
+	h4 {
+		font-size: 26px;
+		line-height: 44px;
 	}
 	
-	aside img {
-		float: right;
-		width: 300px;
+	img {
+		width: 350px;
+	}
+
+	#content {
+		display: inline;
+	}
+	
+	aside {
+        display: block;
+		width: 100%;
 	}
 	
 	#mainContent {
 		display: block;
-		width: 900px;
+		width: 100%;
 	}
 	
-	#wideContent {
+	#classContent {
 		display: block;
-		width: 900px;
+		width: 100%;
 	}
-	
-.blogPost figure.right img {
-	width: 400px;
-}
-
 }
