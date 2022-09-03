@@ -106,8 +106,8 @@ ul.speakers {
 	font-size: 18px;
 	margin: 0 0 0 22px;
 	list-style: square;
-  	-webkit-column-count: 2; /* Chrome, Safari, Opera */
-  	-moz-column-count: 2; /* Firefox */
+  	-webkit-column-count: 2;
+  	-moz-column-count: 2;
   	column-count: 2;
 }
 
@@ -179,25 +179,16 @@ td.special {
 	h1 {
 		font-size: 25px;
 		line-height: 25px;
-		padding: 0;
-		font-weight: bold;
-		text-align: center;
 	}
 
 	h2 {
 		font-size: 16px;
 		line-height: 18px;
-		padding: 0;
-		font-weight: bold;
-		text-align: center;
 	}
 
     h3 {
 		font-size: 13px;
 		line-height: 15px;
-		padding: 0;
-		font-weight: bold;
-		text-align: center;
 	}
 	
 	h4 {
@@ -206,13 +197,7 @@ td.special {
 		line-height: 12px;
 		padding-top: 5px;
 		padding-bottom: 5px;
-		font-weight: bold;
-		text-align: center;
-		background-color: rgba(155, 255, 255, 0.5);
-		border-style: solid;
 		width: 95%;
-		margin-top: 10px;
-		margin-bottom: 10px;
 	}
 	
 	div {
@@ -222,8 +207,6 @@ td.special {
 		padding-bottom: 10px;
 		padding-left: 5px;
 		padding-right: 5px;
-		background-color: rgba(155, 255, 255, 0.75);
-		border-style: solid;
 	}
 	
 	p {
@@ -235,7 +218,6 @@ td.special {
 		font-size: 10px;
 		padding-top: 10px;
 		max-width: 550px;
-		display: inline-block;
 	}
 	
 	table {
@@ -251,24 +233,18 @@ td.special {
 		padding-left: 10px;
 		font-size: 12px;
 		margin: 0 0 0 10px;
-		list-style: square;
 	}
 
 	ul.speakers {
 		padding-left: 10px;
 		font-size: 12px;
 		margin: 0 0 0 10px;
-		list-style: square;
-  		-webkit-column-count: 2;
-  		-moz-column-count: 2;
-  		column-count: 2;
 	}
 	
 	ul.talks {
 		padding-left: 10px;
 		font-size: 18px;
 		margin: 0 0 0 8px;
-		list-style: square;
 	}
 
 	ul li {
@@ -285,10 +261,6 @@ td.special {
   	.panel {
 		margin-left: 0%;
 		padding: 5px;
-  		border-style: none;
-  		background-color: rgba(0, 255, 0, 0.25);
-  		display: none;
-  		overflow: hidden;
   		width: 95%;
 	}
 }
