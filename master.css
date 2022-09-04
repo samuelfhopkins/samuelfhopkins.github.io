@@ -176,16 +176,16 @@ aside img {
 	
 	aside {
         display: block;
-		width: 100%;
+		width: 98%;
 	}
 	
 	#mainContent {
 		display: block;
-		width: 90%;
+		width: 93%;
 	}
 	
 	#classContent {
 		display: block;
-		width: 90%;
+		width: 93%;
 	}
 }
