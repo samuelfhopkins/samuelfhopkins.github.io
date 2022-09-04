@@ -167,7 +167,7 @@ aside img {
 	}
 	
 	img {
-		width: 350px;
+		height: 500px;
 	}
 
 	#content {
@@ -181,11 +181,11 @@ aside img {
 	
 	#mainContent {
 		display: block;
-		width: 100%;
+		width: 90%;
 	}
 	
 	#classContent {
 		display: block;
-		width: 100%;
+		width: 90%;
 	}
 }
