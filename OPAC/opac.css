@@ -207,10 +207,6 @@ td.special {
 		font-size: 12px;
 	}
 	
-	td.special {
-		background-color: rgba(0, 255, 0, 1);
-	}
-	
 	ul {
 		padding-left: 10px;
 		font-size: 12px;
@@ -244,6 +240,5 @@ td.special {
 		margin-left: 0%;
 		padding: 5px;
   		width: 95%;
-  		background-color: rgba(0, 255, 0, 1);
 	}
 }
