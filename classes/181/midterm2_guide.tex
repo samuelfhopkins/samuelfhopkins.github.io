@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Midterm \#2 Study Guide \\Math 181 (Discrete Structures), Fall 2022}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1cm}
+
+\begin{enumerate}
+\item Indirect proofs [\S2.2] 
+\begin{enumerate}
+\item proof of by contrapositive: to prove $p \to q$, prove $\neg q \to \neg p$ instead
+\item proof by contradiction: assume negation of statement, and deduce contradiction ($r \wedge \neg r$)
+\end{enumerate}
+
+\item Mathematical induction [\S2.4, 2.5]
+\begin{enumerate}
+\item basic structure of inductive proofs: base case $P(1)$, and induction step $P(n) \to P(n+1)$
+\item proving $\forall (n \in \mathbb{Z}_{>0}) \; P(n)$ by induction, especially when $P(n)$ is an algebraic formula
+\item finding patterns to guess formulas involving $n$ which can then be proved by induction
+\item the strong form of mathematical induction: can use $P(k)$ for all $k < n$ to prove $P(n)$
+\end{enumerate}
+
+\item Functions [\S3.1]
+\begin{enumerate}
+\item ways to view a function $f\colon X \to Y$: rule to convert input $x\in X$ to output $y=f(x)\in Y$; set of ordered pairs $(x,y)$; arrow diagram from $X$ to $Y$
+\item one-to-one, onto, and bijective functions
+\item composition of functions, and inverse functions
+\end{enumerate}
+
+\item Sequences and strings [\S3.2]
+\begin{enumerate}
+\item finite and infinite sequences: ordered list of elements of some set
+\item set of strings $X^*$ on some finite alphabet $X$, and the null string $\lambda \in X^*$
+\item subsequences (not necessarily consecutive) versus substrings (consecutive)
+\end{enumerate}
+
+\item Relations [\S3.4, 3.5]
+\begin{enumerate}
+\item digraph representation of a relation $R$ on a set $X$
+\item properties that $R$ can have: reflexive, symmetric, anti-symmetric, transitive
+\item partial order (reflexive, anti-symmetric, transitive): way to ``compare'' things in $X$
+\item equivalence relation (reflexive, symmetric, transitive): way to say certain things in $X$ are ``the same''; corresponds to a partition of $X$ into equivalence classes
+\end{enumerate}
+
+\item Basic counting principles [\S6.1]
+\begin{enumerate}
+\item multiplication principle: total $\#$ of possibilities = product of $\#$ of choices at each step
+\item addition principle: size of union of \emph{disjoint} sets is sum of sizes of the sets
+\item principle of inclusion and exclusion: $\#(X \cup Y) = \#X + \#Y - \# (X \cap Y)$
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
