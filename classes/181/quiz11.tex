@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Quiz \#11, Due: 11/23 \\Math 181 (Discrete Structures), Fall 2022}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1cm}
+
+Problem 1 is worth 4 points (2 pts each part), and Problem 2 is worth 6 points (2 pts each part), for a total of 10 points. Remember to \emph{show your work} and \emph{explain your answers} on all problems!
+
+\begin{enumerate}
+
+\item In a standard deck of Western playing cards, cards have two qualities:
+\begin{itemize}
+\item a \emph{suit}: Spades, Hearts, Diamonds, or Clubs
+\item a \emph{rank}: 2--10, Jack, Queen, King, or Ace
+\end{itemize}
+There are $4$ suits and $13$ ranks, for a total of $4\times 13=52$ cards. A \emph{poker hand} consists of $5$ of these $52$ cards. We saw in class that there are $C(52,5) = 52!/(5! \cdot 47!)=2,598,960$ different poker hands.
+\begin{enumerate}
+\item A poker hand is called \emph{four of a kind} if it consists of all four cards of one rank, plus any other card. How many four of a kind hands are there?
+\item A poker hand is called a \emph{full house} if it consists of three of the cards of one rank, and two of the cards of another rank. How many full house hands are there?
+\end{enumerate}
+
+\item \begin{enumerate}
+\item How many rearrangements of the word LOLLYPOP are there?
+\item How many rearrangements of LOLLYPOP start with a Y or end with a~P (or both)? \\ {\bf Hint}: remember the Principle of Inclusion-Exclusion, $\#(X\cup Y) = \#X + \#Y - \#(X\cap Y)$
+\item How many rearrangements of LOLLYPOP have the two O's adjacent? \\ {\bf Hint}: to make the O's adjacent, you can treat them as a single character ``OO''
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
