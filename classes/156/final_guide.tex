@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Final Exam Study Guide \\ Math 156 (Calculus I), Fall 2022}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\vspace{-2.3cm}
+
+\begin{enumerate}
+\item Basics (domain/range, what graph looks like, etc.)~for standard functions [\S1.1, 1.2, 1.4, 1.5]
+\begin{enumerate}
+\item algebraic functions: power functions (like $x^3$), root functions (like $\sqrt{x}$), \\ polynomials (like $x^2-3x+1$), rational functions (like $(x^2-1)/(x+5)$)
+\item trigonometric functions (like $\sin(x)$ and $\cos(x)$)
+\item exponential functions (like $e^x$) and logarithmic functions (like $\ln(x)$)
+\item piecewise functions (like absolute value $|x|$)
+\end{enumerate}
+
+\item Algebraic operations on functions as geometric operations on graphs [\S1.3]
+\begin{enumerate}
+\item translation (up/down $\&$ left/right), stretching (horiz. $\&$ vert.), reflection (over axes)
+\item symmetry under these operations, especially even and odd functions
+\end{enumerate}
+
+\item How to make new functions from old functions $f(x), g(x)$ [\S1.3]
+\begin{enumerate}
+\item sum ($f+g$), difference ($f-g$), scaling ($cf$), product ($fg$), quotient ($f/g$)
+\item composition of functions: $(f \circ g)(x) = f(g(x))$
+\end{enumerate}
+
+\item Inverse functions $f=g^{-1}$ [\S1.5]
+\begin{enumerate}
+\item especially exponential and logarithmic functions
+\item graph of inverse function is reflection across line $y=x$
+\end{enumerate}
+
+\item Intuitive definition of limit and basic reasons why a limit might not exist [\S2.2]
+\begin{enumerate}
+\item intuitive definition of one-sided limits
+\item one-sided limits must agree for usual (two-sided) limit to exist
+\end{enumerate}
+
+\item How to compute limits using the limit laws [\S2.3, 2.5]
+\begin{enumerate}
+\item sum ($f+g$), difference ($f-g$), scaling ($cf$), product ($fg$), quotient ($f/g$) limit laws
+\item how to deal with ``$0/0$'' by cancelling factors
+\item continuous functions (pushing limit thru, and direct substitution a.k.a.~``plugging in'')
+\end{enumerate}
+
+\item Limits at infinity and limits equal to infinity [\S2.2, 2.6]
+\begin{enumerate}
+\item limits at $\pm \infty$ = horizontal asymptotes
+\item $\pm \infty$-valued limits = vertical asymptotes
+\end{enumerate}
+
+\item The definition(s) of derivative [\S2.1, 2.7, 2.8]
+\begin{enumerate}
+\item derivative as slope of the tangent to a curve at a point
+\item derivative as a limit $f'(a) = \lim_{x \to a} \; (f(x)-f(a))/(x-a)$
+\end{enumerate}
+
+\item Derivatives of basic functions [\S 3.1, 3.3, 3.6]
+\begin{enumerate}
+\item power functions: $d/dx (x^n) = n x^{n-1}$
+\item exponential and logarithmic functions: $d/dx(e^x) = e^x$ and $d/dx(\ln(x)) = 1/x$
+\item trigonometric functions: $d/dx(\sin(x)) = \cos(x)$ and $d/dx(\cos(x)) = -\sin(x)$
+\end{enumerate}
+
+\item Rules for derivatives of combinations of functions [\S 3.1, 3.2, 3.4]
+\begin{enumerate}
+\item derivative is linear: $d/dx( \; c\cdot f(x) + c\cdot g(x) \;) = c \cdot f'(x) + d \cdot g'(x)$ for $c,d \in \mathbb{R}$
+\item product rule: $d/dx( \; f(x)\cdot g(x) \;) = f(x) \cdot g'(x) + g(x) \cdot f'(x)$
+\item chain rule: $d/dx (\; f(g(x)) \; ) = f'(g(x)) \cdot g'(x)$
+\item quotient rule: $\displaystyle d/dx (\; f(x)/g(x) \;) = (\; g(x)\cdot f'(x) - f(x)\cdot g'(x) \; )/(g(x))^2$\\ {[\emph{don't have to separately memorize quotient rule, it follows from other rules}]}
+\end{enumerate}
+
+\item Implicit differentiation [\S 3.5]
+\begin{enumerate}
+\item for $y$ defined implicitly via equation $p(x,y)=0$, find $dy/dx$ by taking $d/dx$ of both sides
+\item use this to find the slope of the tangent at any point on the curve
+\end{enumerate}
+
+\item Related rates [\S 3.9]
+\begin{enumerate}
+\item if two quantities $f(t), g(t)$ are related, then their rates of change $df/dt$, $dg/dt$ are related: like with implicit differentiation, just differentiate the relation between $f(t)$ and $g(t)$
+\end{enumerate}
+
+\item Extreme values [\S 4.1, 4.3]
+\begin{enumerate}
+\item local versus absolute (global) minimum and maximum values, Extreme Value Theorem
+\item the Closed Interval Method: extreme values of continuous $f$ on closed interval must occur at endpoints or at critical points (values $x$ where $f'(x)=0$ or is not defined)
+\item 1st and 2nd Derivative Tests for deciding if critical points are min.'s or max.'s
+\end{enumerate}
+
+\item What derivatives tell us about shape of graph [\S 4.2, 4.3, 4.5]
+\begin{enumerate}
+\item $f'(x)>0$ means $f$ is increasing, $f'(x) <0$ means $f$ is decreasing
+\item $f''(x)>0$ means $f$ is concave up (smile), $f''(x) <0$ means $f$ is concave down (frown)
+\end{enumerate}
+
+\item L'H\^{o}pital's rule [\S 4.4]
+\begin{enumerate}
+\item for indeterminate form limits (meaning ``$\pm \frac{\infty}{\infty}$'' or ``$\frac{0}{0}$''), $\lim_{x\to a} \frac{f(x)}{g(x)} = \lim_{x\to a} \frac{f'(x)}{g'(x)}$
+\end{enumerate}
+
+\item Anti-derivatives, a.k.a.~indefinite integrals [\S 4.9, 5.4, 5.5]
+\begin{enumerate}
+\item linearity of integral: $\int a\cdot f(x) + b\cdot g(x) \; dx = a\int f(x) \; dx + b \int g(x) \; dx$ for $a,b\in \mathbb{R}$
+\item basic anti-derivatives/indefinite integrals: $\int x^n \; dx = \frac{1}{n+1}x^{n+1}+C$, $\int e^x \; dx = e^x + C$, $\int \frac{1}{x} \; dx = \ln(x) + C$, $\int \sin(x) \; dx = -\cos(x) +C$, $\int \cos(x) \; dx = \sin(x) + C$
+\item the $u$-substitution technique: can treat the ``$dx$'' in an integral as a differential
+\end{enumerate}
+
+\item Definite integrals [\S 5.1, 5.2, 5.3]
+\begin{enumerate}
+\item definite integral $\int_{a}^{b} f(x) \; dx$ as area under the curve $y=f(x)$ from $x=a$ to $x=b$, or more precisely as limit of ``Riemann'' (rectangle) sums $\lim_{n \to \infty} \sum_{i=0}^{n} f(x^{*}_i) \Delta x$
+\item Fundamental Theorem of Calculus: $\int_{a}^{b} f(x) \; dx = F(b)-F(a) =\int f(x) \; dx \big ]_{a}^{b}$ 
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
