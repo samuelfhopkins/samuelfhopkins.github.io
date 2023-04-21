@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Midterm \#2 Study Guide \\ Math 157 (Calculus II), Spring 2023}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-2cm}
+
+\begin{enumerate}
+\item Parametrized curves [\S10.1, 10.2]
+\begin{enumerate}
+\item Curve of form $x=f(t)$ and $y=g(t)$ for some auxiliary variable $t$ (``time'') [\S10.1]
+\item Slope of tangent to curve given by chain rule [\S10.2]: $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{f'(t)}{g'(t)}$ 
+\item Arc length [\S10.2] is $\int_{a}^{b} \sqrt{(\frac{dy}{dt})^2 + (\frac{dx}{dt})^2} \; dt = \int_{a}^{b} \sqrt{f'(t)^2 + g'(t)^2} \; dt$
+\end{enumerate}
+
+\item Polar coordinates and polar curves [\S10.3, 10.4]
+\begin{enumerate}
+\item Cartesian vs.~polar [\S10.3]: $(x,y) = (r\cos \theta, r \sin \theta)$ and $(r,\theta) = (\sqrt{x^2+y^2}, \arctan (\frac{y}{x}))$
+\item Area inside [\S10.4] polar curve $r=f(\theta)$ for $\alpha \leq \theta \leq \beta$ is $\int_{\alpha}^{\beta} \frac{1}{2} r^2 \; d\theta=\int_{\alpha}^{\beta} \frac{1}{2} f(\theta)^2 \; d\theta$ 
+\item Arc length [\S10.4] of polar curve is $\int_{\alpha}^{\beta} \sqrt{r^2 + (\frac{dr}{d\theta})^2} \; d\theta = \int_{\alpha}^{\beta} \sqrt{f(\theta)^2 + f'(\theta)^2} \; d\theta$ 
+\end{enumerate}
+
+\item Sequences and series [\S11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7]
+\begin{enumerate}
+\item Sequence $\{a_n\}_{n=1}^{\infty} = a_1,a_2,\ldots$ is list of numbers, $\displaystyle \lim_{n\to \infty} a_n$ defined like $\displaystyle \lim_{x \to \infty} f(x)$ [\S11.1]
+\item Series $\sum_{n}^{\infty} a_n$ is ``infinite sum'' $a_1+a_2+\cdots$ of terms $a_n$; its value is $s=\lim_{n\to\infty} s_n$ where $s_n = a_1+a_2+\cdots+a_n$ is the $n$th partial sum [\S11.2]
+\item Important series: geometric series [\S11.2] $\sum_{n=1}^{\infty} ar^{n-1}$ converges if and only if $|r|<1$ (and $=\frac{a}{1-r}$ if it converges); $p$-series [\S11.3] $\sum_{n=1}^{\infty}\frac{1}{n^p}$ converges if and only if $p > 1$ 
+\item Many tests for convergence / divergence of series:
+\begin{enumerate}
+\item (Divergence test [\S11.2]) If $\lim_{n\to \infty} a_n \neq 0$, series $\sum_{n}^{\infty} a_n$ diverges.
+\item (Integral test [\S11.3]) If $f(x)$ continuous, decreasing, and positive, with $a_n = f(n)$, then $\sum_{n}^{\infty} a_n$ converges if and only if $\int_{1}^{\infty} f(x) \; dx$ converges. In this case, have error bounds for remainder $R_n = s-s_n$: $\int_{n+1}^{\infty} f(x) \; dx \leq R_n \leq \int_{n}^{\infty} f(x) \; dx$.
+\item (Comparison tests [\S11.4]) If $\sum_{n}^{\infty} b_n$ converges \& $a_n \leq b_n$, then $\sum_{n}^{\infty} a_n$ converges. If $\sum_{n}^{\infty} b_n$ diverges \& $a_n \geq b_n$, then $\sum_{n}^{\infty} a_n$ diverges. If $\lim_{n\to\infty} \frac{a_n}{b_n}$ exists and is $\neq 0$ or $\infty$, then $\sum_{n}^{\infty} a_n$ converges if and only if $\sum_{n}^{\infty} b_n$ converges.
+\item (Alternating series test [\S11.5]) Alternating series $\sum_{n=1}^{\infty} (-1)^{n-1} b_n$ converges as long as $b_{n+1} \leq b_n$ and $\lim_{n\to\infty} b_n=0$. In this case, have error bound: $|R_n| \leq b_{n+1}$.
+\item (Ratio test [\S11.6]) For series $\sum_{n=1}^{\infty} a_n$, let $L = \lim_{n\to \infty} \frac{|a_{n+1}|}{|a_n|}$. If $L < 1$, series converges. If $L > 1$ (including $\infty$), series diverges. If $L=1$, test is inconclusive.
+\end{enumerate}
+\end{enumerate}
+
+\item Power series and Taylor series [\S11.8, 11.9, 11.10, 11.11]
+\begin{enumerate}
+\item The ratio test tells us that any power series $\sum_{n=0}^{\infty} c_n (x-a)^n$ has a radius of convergence $R$ such that it converges when $|x-a|<R$ and diverges when $|x-a|>R$ [\S11.8]
+\item Differentiate, integrate, and multiply power series like they are polynomials [\S11.9, 11.10]
+\item Taylor series of $f(x)$ at $x=a$ is $\sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n$, where $f^{(n)}$ is $n$th derivative [\S11.10]
+\item Important Taylor series [\S11.10]: $\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n$ ($R=1$); \; $e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$ ($R=\infty$); \; $\sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^{n-1}x^{2n-1}}{(2n+1)!}$ ($R=\infty$); \; $\cos(x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{2n}}{(2n)!}$ ($R=\infty$)
+\item Taylor polynomial $T_n(x)$: $n$th partial sum of series; $f(x) \approx T_n(x)$ if $x\approx a$ [\S11.10, 11.11]
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
