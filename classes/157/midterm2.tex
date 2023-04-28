@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Midterm \#2, 4/27 \\ Math 157 (Calculus II), Spring 2023}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1cm}
+
+Each problem is worth 10 points, for a total of 50 points. You have 50 minutes to do the exam. Remember to \emph{show your work} on all problems!
+
+\begin{enumerate}
+\item Consider the parametrized curve given by $x=t^2-1$ and $y=t^3+t$ for $-\infty < t < \infty$. Compute the slope of the tangent to this curve at the point $(x,y)=(0,2)$.
+\item Consider the polar curve given by $r=\sqrt{\theta (\pi-2\theta)}$ for $0 \leq \theta \leq \frac{\pi}{2}$. Compute the area inside of this curve.
+\item Consider the series $s=\displaystyle \sum_{n=1}^{\infty} \frac{1}{(2n-1)^2}$. Let $s_n = \frac{1}{1^2} + \frac{1}{3^2} + \cdots + \frac{1}{(2n-1)^2}$ be its $n$th partial sum.
+\begin{enumerate}
+\item Compute the third partial sum $s_3$ as an estimate for the true value $s$ of the series. \\ (Do not worry about simplifying your answer.)
+\item Let $R_3 = s - s_3$ be the corresponding remainder, i.e., the error of your estimate from part (a). Give an upper bound for $R_3$. ({\bf Hint}: use an improper integral as the bound.)
+\end{enumerate}
+\item For each of the following series, decide (with explanation) whether it converges or diverges.
+\begin{enumerate}
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{3n}{4n+1}$ \hfill ({\bf Hint}: check the limit of the terms.)
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{3}{2n-1}$ \hfill ({\bf Hint:} compare to a series you know.)
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{2n-1}$ \hfill ({\bf Hint:} it is an alternating series.)
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{2^n+1}{3^n-1}$ \hfill ({\bf Hint:} look at the ratio of successive terms.)
+\end{enumerate}
+
+\item Let $f\colon \mathbb{R}\to \mathbb{R}$ be a twice-differentiable function satisfying $f(0) = 1$, $f'(0) = 2$, and $f''(0)=3$.
+\begin{enumerate}
+\item Write the degree two Taylor polynomial $T_2(x)$, centered at $x=0$, for $f(x)$.
+\item Use your answer in part (a) to estimate the value of $f(\frac{1}{2})$. (You do not need to give any bounds on the error of your estimate.)
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
