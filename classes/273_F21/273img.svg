@@ -1,0 +1,212 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width="428" height="632" viewBox="0 0 428 632" xmlns="http://www.w3.org/2000/svg">
+<title>Genji chapter symbols (Bell number of grouping of 5)</title>
+<g transform="translate(22,624) scale(1,-1)">
+<path d="M0,0 v51 h51 v-51 h-7 v44 h-4 v-44 h-7 v44 h-15 v-44 h-7 v44 h-4 v-44
+h-7Z
+M22,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-26 v-44 h-7
+v44 h-4 v-44 h-7Z
+M22,0 v40 h7 v-40 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-37 v-44 h-7Z
+M11,0 v40 h18 v-40 h-7 v33 h-4 v-33 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-15 v-4 h11
+v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7 v40 h11 v4 h-15 v-44 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-4 v-44 h-7
+v44 h-4 v-44 h-7 v44 h-4 v-44 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(345,0)" fill="#00bd00" d="M0,0 v51 h18 v-44 h4
+v44 h18 v-44 h4 v44 h7 v-51 h-18 v44 h-4 v-44 h-18 v44 h-4 v-44 h-7Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h40 v-51 h-7 v44 h-26 v-44 h-7Z
+M22,0 v40 h7 v-40 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-37 v-44 h-7Z
+M11,0 v40 h29 v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-4 v-44 h-7
+v44 h-4 v-44 h-7 v44 h-15 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h40 v-51 h-7 v44 h-26 v-44 h-7Z
+M11,0 v40 h18 v-40 h-7 v33 h-4 v-33 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-4 v-44 h-7
+v44 h-26 v-44 h-7Z
+M11,0 v40 h18 v-40 h-7 v33 h-4 v-33 h-7Z"/>
+<path transform="translate(345,0)" d="M0,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M22,0 v51 h29 v-51 h-7 v44 h-15 v-44 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h51 v-51 h-7 v44 h-4 v-44 h-7 v44 h-26 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M22,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-37 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M22,0 v40 h18 v-40 h-7 v33 h-4 v-33 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v40 h22 v11 h29 v-51 h-7 v44 h-15
+v-4 h11 v-40 h-7 v33 h-4 v-33 h-7 v33 h-15 v-33 h-7Z
+M11,0 v29 h7 v-29 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h40 v-11 h11 v-40 h-7 v33 h-4
+v-33 h-7 v33 h-15 v-33 h-7 v40 h22 v4 h-26 v-44 h-7Z
+M22,0 v29 h7 v-29 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-37 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M22,0 v40 h7 v-40 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(345,0)" fill="rgb(189,0,0)" d="M0,0 v40 h22 v11 h29
+v-51 h-7 v44 h-15 v-4 h11 v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7 v33 h-4
+v-33 h-7Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h51 v-51 h-7 v44 h-37 v-44 h-7Z
+M11,0 v40 h29 v-40 h-7 v33 h-15 v-33 h-7Z
+M22,0 v29 h7 v-29 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-15 v-44 h-7
+v44 h-4 v-44 h-7 v44 h-4 v-44 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h40 v-51 h-7 v44 h-26 v-44 h-7Z
+M22,0 v40 h18 v-40 h-7 v33 h-4 v-33 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-26 v-44 h-7
+v44 h-4 v-44 h-7Z
+M22,0 v40 h18 v-40 h-7 v33 h-4 v-33 h-7Z"/>
+<path transform="translate(276,0)" fill="rgb(189,0,0)" d="M0,0 v51 h40 v-11 h11
+v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7 v40 h11 v4 h-15 v-44 h-7 v44 h-4
+v-44 h-7Z"/>
+<path transform="translate(345,0)" d="M0,0 v51 h51 v-51 h-7 v44 h-15 v-44 h-7
+v44 h-15 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h40 v-51 h-7 v44 h-15 v-44 h-7 v44 h-4 v-44 h-7Z
+M22,0 v40 h7 v-40 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h7 v-51 h-7Z
+M22,0 v51 h29 v-51 h-7 v44 h-4 v-44 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h29 v-51 h-7 v44 h-15 v-44 h-7Z
+M22,0 v40 h7 v-40 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M22,0 v51 h7 v-51 h-7Z
+M33,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v51 h29 v-11 h22 v-40 h-7 v33 h-4
+v-33 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7 v40 h11 v4 h-15 v-44 h-7Z"/>
+<path transform="translate(345,0)" d="M0,0 v51 h40 v-51 h-7 v44 h-26 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M22,0 v40 h7 v-40 h-7Z
+M44,0 v51 h7 v-51 h-11Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h40 v-51 h-7 v44 h-4 v-44 h-7 v44 h-4 v-44 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h40 v-51 h-7 v44 h-4 v-44 h-7
+v44 h-15 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h29 v-51 h-7 v44 h-15 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M33,0 v51 h7 v-51 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M22,0 v51 h29 v-51 h-7 v44 h-4 v-44 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v40 h11 v11 h29 v-51 h-7 v44 h-15
+v-4 h11 v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(345,0)" d="M0,0 v51 h40 v-11 h11 v-40 h-7 v33 h-4
+v-33 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7 v40 h22 v4 h-26 v-44 h-7Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M33,0 v51 h7 v-51 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h40 v-51 h-7 v44 h-4 v-44 h-7 v44 h-15 v-44 h-7Z
+M22,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h29 v-51 h-7 v44 h-4 v-44 h-7
+v44 h-4 v-44 h-7Z
+M33,0 v51 h7 v-51 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h29 v-51 h-7 v44 h-4 v-44 h-7 v44 h-4 v-44 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v40 h11 v11 h40 v-51 h-7 v44 h-26
+v-4 h11 v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(345,0)" d="M0,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M22,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h40 v-51 h-7 v44 h-15 v-44 h-7 v44 h-4 v-44 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h7 v-51 h-7Z
+M22,0 v51 h29 v-51 h-7 v44 h-15 v-44 h-7Z
+M33,0 v40 h7 v-40 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M22,0 v51 h7 v-51 h-7Z
+M33,0 v51 h7 v-51 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h29 v-51 h-7 v44 h-4 v-44 h-7
+v44 h-4 v-44 h-7Z
+M33,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h29 v-11 h11 v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7 v40 h11 v4
+h-15 v-44 h-7Z"/>
+<path transform="translate(345,0)" d="M0,0 v40 h11 v11 h40 v-51 h-7 v44 h-26
+v-4 h22 v-40 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7 v33 h-4 v-33 h-7Z"/>
+<g transform="translate(0,69)">
+<path d="M0,0 v51 h29 v-51 h-7 v44 h-15 v-44 h-7Z
+M11,0 v40 h7 v-40 h-7Z
+M33,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(69,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h7 v-51 h-7Z
+M22,0 v51 h7 v-51 h-7Z
+M33,0 v51 h7 v-51 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(138,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h7 v-51 h-7Z
+M22,0 v51 h7 v-51 h-7Z
+M33,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(207,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h7 v-51 h-7Z
+M22,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/>
+<path transform="translate(276,0)" d="M0,0 v51 h7 v-51 h-7Z
+M11,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z
+M33,0 v51 h18 v-51 h-7 v44 h-4 v-44 h-7Z"/>
+<path transform="translate(345,0)" d="M0,0 v51 h40 v-51 h-7 v44 h-4 v-44 h-7
+v44 h-4 v-44 h-7 v44 h-4 v-44 h-7Z
+M44,0 v51 h7 v-51 h-7Z"/></g></g></g></g></g></g></g></g></g>
+<g transform="translate(26,18)">
+<text font-family="Bitstream Vera Sans" style="fill:#0000bd;font-size:15px;text-anchor:end;text-align:end">
+<tspan x="0" y="0">1</tspan> <tspan x="69" y="0">2</tspan>
+<tspan x="138" y="0">3</tspan> <tspan x="207" y="0">4</tspan>
+<tspan x="276" y="0">5</tspan> <tspan x="345" y="0">6</tspan>
+<tspan x="0" y="69">7</tspan> <tspan x="69" y="69">8</tspan>
+<tspan x="138" y="69">9</tspan> <tspan x="207" y="69">10</tspan>
+<tspan x="276" y="69">11</tspan> <tspan x="345" y="69">12</tspan>
+<tspan x="0" y="138">13</tspan> <tspan x="69" y="138">14</tspan>
+<tspan x="138" y="138">15</tspan> <tspan x="207" y="138">16</tspan>
+<tspan x="276" y="138">17</tspan> <tspan x="345" y="138">18</tspan>
+<tspan x="0" y="207">19</tspan> <tspan x="69" y="207">20</tspan>
+<tspan x="138" y="207">21</tspan> <tspan x="207" y="207">22</tspan>
+<tspan x="276" y="207">23</tspan> <tspan x="345" y="207">24</tspan>
+<tspan x="0" y="276">25</tspan> <tspan x="69" y="276">26</tspan>
+<tspan x="138" y="276">27</tspan> <tspan x="207" y="276">28</tspan>
+<tspan x="276" y="276">29</tspan> <tspan x="345" y="276">30</tspan>
+<tspan x="0" y="345">31</tspan> <tspan x="69" y="345">32</tspan>
+<tspan x="138" y="345">33</tspan> <tspan x="207" y="345">34</tspan>
+<tspan x="276" y="345">35</tspan> <tspan x="345" y="345">36</tspan>
+<tspan x="0" y="414">37</tspan> <tspan x="69" y="414">38</tspan>
+<tspan x="138" y="414">39</tspan> <tspan x="207" y="414">40</tspan>
+<tspan x="276" y="414">41</tspan> <tspan x="345" y="414">42</tspan>
+<tspan x="0" y="483">43</tspan> <tspan x="69" y="483">44</tspan>
+<tspan x="138" y="483">45</tspan> <tspan x="207" y="483">46</tspan>
+<tspan x="276" y="483">47</tspan> <tspan x="345" y="483">48</tspan>
+<tspan x="0" y="552">49</tspan> <tspan x="69" y="552">50</tspan>
+<tspan x="138" y="552">51</tspan> <tspan x="207" y="552">52</tspan>
+<tspan x="276" y="552">53</tspan> <tspan x="345" y="552">54</tspan>
+</text></g></svg>

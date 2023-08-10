@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Howard Math 273, HW\# 1, \\ {\normalsize Fall 2021; Instructor: Sam Hopkins; Due: Friday, October 1st}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1.5cm}
+
+\begin{enumerate}
+
+\item \emph{(Stanley, EC1, \#1.66)} Let $p_k(n)$ denote the number of partitions of $n$ into $k$ parts. Prove bijectively that
+\[p_0(n)+p_1(n)+p_2(n)+\cdots + p_k(n) = p_k(n+k).\]
+
+\item \emph{(Stanley, EC1, \#1.113)} Fix natural numbers $k,n$. Let $[n]$ denote the set $[n] := \{1,2,\ldots,n\}$. Give a simple formula for the number of ordered $k$-tuples $(T_1,\ldots,T_k)$ of subsets of $[n]$ satisfying
+\begin{itemize}
+\item $T_i \cap T_j = \varnothing$ for all $i\neq j$ (i.e., they are disjoint);
+\item $\bigcup_{i=1}^{k} T_i = [n]$ (i.e., their union is the whole set $[n]$).
+\end{itemize}
+(This is almost the same as saying that the $T_i$ form a set partition of $[n]$, except that some of these sets may be empty, which we do not usually allow for set partitions.)
+
+\item \emph{(Stanley, EC1, \#1.5)} Show that 
+\[ \sum_{n_1,\ldots, n_k \geq 0} \min(n_1,\ldots,n_k) x_1^{n_1}x_2^{n_2}\cdots x_k^{n_k} = \frac{x_1x_2\cdots x_k}{(1-x_1)(1-x_2)\cdots(1-x_k) \cdot (1-x_1x_2\cdots x_k)}. \]
+
+\item \emph{(Stanley, EC1, \#1.26)} Let $\overline{c}(n,m)$ denote the number of compositions of $n$ into parts of size at most $m$. Show that
+\[ \sum_{n\geq 0} \overline{c}(n,m)x^n = \frac{1-x}{1-2x+x^{m+1}}.\]
+
+\item Prove that, for any $n \geq 0$,
+\begin{equation} \label{eq:1}
+ 4^n = \sum_{k=0}^{n} \binom{2k}{k}\binom{2(n-k)}{n-k}.
+\end{equation}
+{\bf Hint}: did we discuss the generating function $\sum_{n=0}^{\infty} \binom{2n}{n}x^n$ of the central binomial coefficients? \\
+{\bf Hard bonus problem, just to think about, not to do}: prove \eqref{eq:1} \emph{bijectively} (see Stanley, EC1, \#1.3(c)).
+
+\item Let $n \geq 1$, and let $\mathrm{ODD}(n)$ denote the subset of permutations in the symmetric group $\mathfrak{S}_n$ with no cycles of even size. Prove that
+\begin{equation}\label{eq:2}
+\sum_{\sigma \in \mathrm{ODD}(n)} 2^{\#\mathrm{cycles}(\sigma)} = 2\cdot n!.
+\end{equation}
+{\bf Hint}: recall \emph{Touchard's theorem}
+\[ \sum_{n \geq 0} \frac{1}{n!} \left(\sum_{\sigma\in \mathfrak{S}_n}t_1^{c_1(\sigma)} t_2^{c_2(\sigma)} \cdots t_n^{c_n(\sigma)} \right)  x^n = e^{t_1\frac{x}{1} + t_2\frac{x^2}{2} + t_3\frac{x^3}{3}+\cdots} = e^{\sum_{j=1}^{\infty} t_j\frac{x^j}{j}},\]
+where $c_k(\sigma)$ is the number of cycles of $\sigma$ of size $k$. \\
+{\bf Hard bonus problem, just to think about, not to do}: prove \eqref{eq:2} \emph{bijectively} (see $\S6.2$ of M. Bona, ``A Walk Through Combinatorics,'' 3rd ed., for the idea).
+
+
+\end{enumerate}
+
+
+\end{document}
