@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+
+\title{Howard Math 274, HW\# 3, \\ {\normalsize Spring 2022; Instructor: Sam Hopkins; Due: Friday, April 22nd}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-2cm}
+
+\begin{enumerate}
+
+\item A \emph{plane partition} is an infinite $2D$-array $\pi = (\pi_{i,j})_{i=1,2,\ldots}^{j=1,2,\ldots}$ of nonnegative integers $\pi_{i,j} \in \mathbb{N}$ such that only finitely many entries are nonzero and the entries are weakly \emph{decreasing} along rows and down columns in the sense that $\pi_{i,j} \geq \pi_{i',j'}$ if $i \leq i'$ and $j \leq j'$. The \emph{size} $|\pi|$ of $\pi$ is the sum of the entries: $|\pi| :=\sum_{i,j \geq 1} \pi_{i,j}$. Prove that 
+\begin{equation} \label{eq:pp} \sum_{\textrm{$\pi$ a plane partition}} q^{|\pi|} = \prod_{i \geq 1} \frac{1}{(1-q^i)^i} \end{equation}
+{\bf Hint}: We proved the following product formula for \emph{reverse} plane partitions of shape $\lambda$:
+\begin{equation} \label{eq:rpp} \sum_{\pi \in \mathrm{RPP}(\lambda)} q^{|\pi|} = \prod_{u \in \lambda} \frac{1}{1-q^{h(u)}} \end{equation}
+where $h(u)$ is the hook length of the box $u$. Observe that a $180^\circ$ rotation of a reverse plane partition of shape $\lambda = n \times n = (\overbrace{n,n,\ldots,n}^{n})$ is the same as a plane partition whose nonzero entries fit in the upper-left $n\times n$ square. Then deduce \eqref{eq:pp} from \eqref{eq:rpp} by taking the limit $n\to \infty$.
+
+\item Recall that a linear extension of a (finite) poset $P$ is a list $p_1,\ldots,p_n$ of all its elements (each appearing once) where $p_i \leq p_j$ implies $i \leq j$. $\mathcal{L}(P)$ denotes the set of linear extensions of $P$.
+\begin{enumerate}
+\item Among posets $P$ with $n$ elements, which has the greatest number $\#\mathcal{L}(P)$ of linear extensions? Which has the least?
+\item The \emph{dual} $P^{*}$ of a poset $P$ is the poset with the same elements but the reverse order: $p \leq_{P} q \Leftrightarrow q \leq_{P^*} p$. Prove that $\#\mathcal{L}(P)=\#\mathcal{L}(P^*)$.
+\item The \emph{(disjoint) union} $P \cup Q$ of two posets $P$ and $Q$ is the poset whose elements are the elements in the union of the two sets, where the order within $P$ and within $Q$ is the same, but all $p \in P$ are incomparable to all $q\in Q$. Give a formula for $\#\mathcal{L}(P\cup Q)$ in terms of $\#\mathcal{L}(P)$, $\#\mathcal{L}(Q)$, and $n = \#P$ and $m = \#Q$.
+\end{enumerate}
+
+\item Recall that $f^{\lambda}$ denotes the number of Standard Young Tableaux of shape $\lambda$. Give a simple formula for $f^{\lambda}$ in the case of a \emph{hook} shaped partition $\lambda = (k,\overbrace{1,1,\ldots,1}^{n-k})$ for $1\leq k \leq n$. 
+
+\item We used the Robinson-Schensted algorithm to prove that $\sum_{\lambda \vdash n} (f^{\lambda})^2 = n!$, the number of permutations in the symmetric group $S_n$. Prove that $\sum_{\lambda \vdash n} f^{\lambda} = \#\{\sigma \in S_n \colon \sigma=\sigma^{-1}\}$, the number of \emph{involutions} in $S_n$. {\bf Hint}: Use a symmetry property of RS(K) we discussed.
+
+\item For $\sigma\in S_n$, let $\mathrm{lis}(\sigma)$ (resp., $\mathrm{lds}(\sigma)$) denote the length of the longest increasing (resp., decreasing) subsequence in $\sigma$. The Erd\H{o}s-Szekeres theorem says $\mathrm{max}(\mathrm{lis}(\sigma), \mathrm{lds}(\sigma)) \geq \sqrt{n}$ for permutations $\sigma\in S_n$. Describe a permutation maximizing $\mathrm{min}(\mathrm{lis}(\sigma), \mathrm{lds}(\sigma))$ among  $\sigma \in S_n$.
+
+\end{enumerate}
+
+
+\end{document}
