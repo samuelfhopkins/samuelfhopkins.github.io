@@ -68,8 +68,10 @@ td {
  }
 
 figure {
-	margin-top: 0px;
-    margin-bottom: 22px;
+	margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     float: right;
 }
 
