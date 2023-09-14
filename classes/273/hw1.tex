@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Howard Math 273, HW\# 1, \\ {\normalsize Fall 2023; Instructor: Sam Hopkins; Due: Friday, September 29th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+%\vspace{-1.5cm}
+
+\begin{enumerate}
+
+\item \emph{(Stanley, EC1, \#1.66)} Let $p_k(n)$ denote the number of partitions of $n$ into exactly $k$ parts. Give a {\bf bijective} proof that
+\[p_0(n)+p_1(n)+p_2(n)+\cdots + p_k(n) = p_k(n+k).\]
+
+\item \emph{(Stanley, EC1, \#1.5)} Show that 
+\[ \sum_{n_1,\ldots, n_k \geq 0} \min(n_1,\ldots,n_k) x_1^{n_1}x_2^{n_2}\cdots x_k^{n_k} = \frac{x_1x_2\cdots x_k}{(1-x_1)(1-x_2)\cdots(1-x_k) \cdot (1-x_1x_2\cdots x_k)}, \]
+where $ \min(n_1,\ldots,n_k)$ means the minimum of the integers $n_1,\ldots,n_k$.
+
+\item \emph{(Stanley, EC1, \#1.26)} Let $\overline{c}(n,m)$ denote the number of compositions of $n$ into parts of size at most $m$. Show that
+\[ \sum_{n\geq 0} \overline{c}(n,m)x^n = \frac{1-x}{1-2x+x^{m+1}}.\]
+
+\item Prove that, for any $n \geq 0$,
+\[ 4^n = \sum_{k=0}^{n} \binom{2k}{k}\binom{2(n-k)}{n-k}. \]
+{\bf Hint}: We discussed the generating function $\sum_{n=0}^{\infty} \binom{2n}{n}x^n$ of the central binomial coefficients. How can you use what we proved about this generating function to deduce this result?
+
+\item Let $n \geq 1$, and let $\mathrm{ODD}(n)$ denote the subset of permutations in the symmetric group $\mathfrak{S}_n$ with no cycles of even size. Prove that
+\[ \sum_{\sigma \in \mathrm{ODD}(n)} 2^{\#\mathrm{cycles}(\sigma)} = 2\cdot n!. \]
+{\bf Hint}: Recall \emph{Touchard's theorem}, which says that
+\[ \sum_{n \geq 0} \frac{1}{n!} \left(\sum_{\sigma\in \mathfrak{S}_n}t_1^{c_1(\sigma)} t_2^{c_2(\sigma)} \cdots t_n^{c_n(\sigma)} \right)  x^n = e^{t_1\frac{x}{1} + t_2\frac{x^2}{2} + t_3\frac{x^3}{3}+\cdots} = e^{\sum_{j=1}^{\infty} t_j\frac{x^j}{j}},\]
+where $c_k(\sigma)$ is the number of cycles of $\sigma$ of size $k$. How can you use Touchard's theorem to deduce this result?
+
+
+\end{enumerate}
+
+
+\end{document}
