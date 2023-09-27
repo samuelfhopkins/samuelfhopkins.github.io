@@ -16,10 +16,10 @@
 \begin{enumerate}
 
 \item \emph{(Stanley, EC1, \#1.66)} Let $p_k(n)$ denote the number of partitions of $n$ into exactly $k$ parts. Give a {\bf bijective} proof that
-\[p_0(n)+p_1(n)+p_2(n)+\cdots + p_k(n) = p_k(n+k).\]
+\[p_0(n)+p_1(n)+p_2(n)+\cdots + p_k(n) = p_k(n+k)\]
 {\bf Hint}: Think about Young diagrams.
 
-\item \emph{(Stanley, EC1, \#1.5)} Show that 
+\item \emph{(Stanley, EC1, \#1.5)} Show that, for any $k \geq 1$,
 \[ \sum_{n_1,\ldots, n_k \geq 0} \min(n_1,\ldots,n_k) x_1^{n_1}x_2^{n_2}\cdots x_k^{n_k} = \frac{x_1x_2\cdots x_k}{(1-x_1)(1-x_2)\cdots(1-x_k) \cdot (1-x_1x_2\cdots x_k)}, \]
 where $ \min(n_1,\ldots,n_k)$ means the minimum of the integers $n_1,\ldots,n_k$.
 
@@ -30,7 +30,7 @@ where $ \min(n_1,\ldots,n_k)$ means the minimum of the integers $n_1,\ldots,n_k$
 \[ \sum_{k=0}^{n} \binom{2k}{k}\binom{2(n-k)}{n-k} = 4^n. \]
 {\bf Hint}: We discussed the generating function $\sum_{n\geq 0} \binom{2n}{n}x^n$ of the central binomial coefficients. How can you use what we proved about this generating function to deduce the desired result?
 
-\item Let $n \geq 1$, and let $\mathrm{ODD}(n)$ denote the subset of permutations in the symmetric group $S_n$ with no cycles of even size. Prove that
+\item Let $\mathrm{ODD}(n)$ denote the subset of permutations in the symmetric group $S_n$ that have no cycles of even size. Prove that, for any $n \geq 1$,
 \[ \sum_{\sigma \in \mathrm{ODD}(n)} 2^{\#\mathrm{cycles}(\sigma)} = 2\cdot n!. \]
 {\bf Hint}: Recall that we showed
 \[ \sum_{n \geq 0}  \left( \, \sum_{\sigma\in S_n} t_1^{c_1(\sigma)} t_2^{c_2(\sigma)} \cdots t_n^{c_n(\sigma)} \, \right)  \frac{x^n}{n!} = e^{t_1 \frac{x}{1} + t_2\frac{x^2}{2} + t_3\frac{x^3}{3} + t_4\frac{x^4}{4} + \cdots},\]
