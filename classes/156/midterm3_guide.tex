@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Midterm \#3 Study Guide \\ Math 156 (Calculus I), Fall 2023}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\pagestyle{empty}
+\thispagestyle{empty}
+
+%\vspace{-2.3cm}
+
+\begin{enumerate}
+
+\item Area under the curve [\S 5.1, 5.2]
+\begin{enumerate}
+\item can approximate area under the curve $y=f(x)$ from $x=a$ to $x=b$ by the rectangle (Riemann) sum $A_n = \sum_{i=1}^{n} f(x^{*}_i) \, \Delta x$, where $\Delta x = \frac{b-a}{n}$, $x_i = a + i \cdot \Delta x$ for $i=0,1,\ldots,n$, and any choice of sample points $x^*_i \in [x_{i-1},x_i]$
+\item usual choices: $x^*_i = x_{i-1}$ (left endpoints $A_n =L_n$); $x^*_i=x_i$ (right endpoints $A_n=R_n$); or $x^* = \frac{x_i+x_{i-1}}{2}$ (midpoints of intervals)
+\item if $f(x)$ is continuous, all give same limit $A=\lim_{n\to \infty} A_n$, the true area under the curve
+\end{enumerate}
+
+\item Definite integrals [\S 5.2, 5.3]
+\begin{enumerate}
+\item definite integral $\int_{a}^{b} f(x) \; dx$ is the area ``under'' the curve $y=f(x)$ from $x=a$ to $x=b$ as defined above: $A=\lim_{n\to \infty} A_n$; this counts area below the $x$-axis negatively
+\item Fundamental Theorem of Calculus: $\int_{a}^{b} f(x) \; dx = F(b)-F(a) =\int f(x) \; dx \big ]_{a}^{b}$, where $F(x) = \int f(x) \; dx$ is an anti-derivative of $f(x)$ 
+\item another way to think of FTC: integral of rate of change is net change (e.g., integral of velocity is displacement)
+\end{enumerate}
+
+\item Anti-derivatives, a.k.a.~indefinite integrals [\S 4.9, 5.4, 5.5]
+\begin{enumerate}
+\item basic anti-derivatives/indefinite integrals: $\int x^n \; dx = \frac{1}{n+1}x^{n+1}+C$, $\int e^x \; dx = e^x + C$, $\int \frac{1}{x} \; dx = \ln(x) + C$, $\int \sin(x) \; dx = -\cos(x) +C$, $\int \cos(x) \; dx = \sin(x) + C$
+\item integral is linear: $\int a\cdot f(x) + b\cdot g(x) \; dx = a\int f(x) \; dx + b \int g(x) \; dx$ for $a,b\in \mathbb{R}$
+\item the $u$-substitution technique: can treat the ``$dx$'' in an integral as a differential, so if we let $u=g(x)$ then we can substitute $du = g'(x) \, dx$ in an integral
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
