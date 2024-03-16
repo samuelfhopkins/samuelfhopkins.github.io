@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Homework \#9, Due: 3/27 \\Math 181 (Discrete Structures), Spring 2024}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1cm}
+
+Problem 1 is worth 4 points, Problem 2 is worth 2 points, and Problem 3 is worth 4 points, for a total of 10 points. Remember to \emph{show your work} and \emph{explain your answers} on all problems!
+
+\begin{enumerate}
+
+\item Let $X=\{a,b\}$ and recall that $X^*$ denotes the set of all strings over the alphabet $X$. \\ Define a function $f\colon X^* \to X^*$ by letting $f(\alpha)$ be the result of simultaneously replacing each $a$ with a $b$, and each $b$ with an $a$, in the string $\alpha \in X^*$. For instance $f(aab) = bba$.
+\begin{enumerate}
+\item Write what $f(a)$, $f(bb)$, $f(baba)$, and $f(\lambda)$ are. (Recall $\lambda \in X^*$ denotes the null string.)
+\item Recall that for strings $\alpha, \beta \in X^*$, we use $\alpha \beta$ to mean the concatenation of $\alpha$ and $\beta$. Express $f(\alpha\beta)$ in terms of $f(\alpha)$ and $f(\beta)$.
+\item What is $f( f(\alpha))$ for a string $\alpha\in X^*$?
+\item Is $f$ one-to-one? Is $f$ onto? Explain.
+\end{enumerate}
+
+\item Let $R$ be the relation on $\{1,2,3,4\}$ given by $R = \{(1,2),(2,3),(3,4),(4,1)\}$. Draw the digraph representation of $R$. Also draw the digraph representation of $R^{-1}$ (the inverse relation).
+
+\item Let $R$ be the relation on the integers $\mathbb{Z}$ where $(x,y) \in R$ if and only if $x-y$ is even.
+\begin{enumerate}
+\item Is $R$ reflexive? Explain.
+\item Is $R$ symmetric? Explain.
+\item Is $R$ anti-symmetric? Explain.
+\item Is $R$ transitive? Explain.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
