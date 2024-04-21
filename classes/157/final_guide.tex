@@ -69,7 +69,7 @@
 \begin{enumerate}
 \item Curve of form $x=f(t)$ and $y=g(t)$ for some auxiliary variable $t$ (``time'') [\S10.1]
 \item Slope of tangent [\S10.2] to curve given by chain rule: $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{g'(t)}{f'(t)}$ 
-\item Arc length [\S10.2] is $\int_{a}^{b} \sqrt{(\frac{dy}{dt})^2 + (\frac{dx}{dt})^2} \; dt = \int_{a}^{b} \sqrt{g'(t)^2 + f'(t)^2} \; dt$
+\item Arc length [\S10.2] is {\small $\int_{a}^{b} \sqrt{(\frac{dy}{dt})^2 + (\frac{dx}{dt})^2} \; dt = \int_{a}^{b} \sqrt{g'(t)^2 + f'(t)^2} \; dt$}
 \end{enumerate}
 
 \item Polar coordinates and polar curves [\S10.3, 10.4]
@@ -78,7 +78,9 @@
 \item Area inside [\S10.4] polar curve $r=f(\theta)$ for $\alpha \leq \theta \leq \beta$ is $\int_{\alpha}^{\beta} \frac{1}{2} r^2 \; d\theta=\int_{\alpha}^{\beta} \frac{1}{2} f(\theta)^2 \; d\theta$ 
 \item Slope of tangent [\S10.4] to polar curve $r=f(\theta)$ given by chain and product rules: 
 {\small \[\frac{dy}{dx} = \frac{dy/d\theta}{dx/d\theta} = \frac{\frac{d}{d\theta}(r \sin\theta)}{\frac{d}{d\theta}(r \cos\theta)} = \frac{f(\theta)\, \cos \theta  + f'(\theta) \, \sin \theta}{f'(\theta)\cos\theta-f(\theta)\, \sin\theta }\]}
-\item Arc length [\S10.4] of polar curve $r=f(\theta)$ is $\int_{\alpha}^{\beta} \sqrt{r^2 + (\frac{dr}{d\theta})^2} \; d\theta = \int_{\alpha}^{\beta} \sqrt{f(\theta)^2 + f'(\theta)^2} \; d\theta$ 
+
+\vspace{-0.2cm}
+\item Arc length [\S10.4] of polar curve $r=f(\theta)$ is {\small $\int_{\alpha}^{\beta} \sqrt{r^2 + (\frac{dr}{d\theta})^2} \; d\theta = \int_{\alpha}^{\beta} \sqrt{f(\theta)^2 + f'(\theta)^2} \; d\theta$ }
 \end{enumerate}
 
 \item Sequences and series [\S11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7]
@@ -99,6 +101,7 @@
 \item Power series and Taylor series [\S11.8, 11.9, 11.10, 11.11]
 \begin{enumerate}
 \item The ratio test tells us that any power series $\sum_{n=0}^{\infty} c_n (x-a)^n$ has a radius of convergence $R$ such that it converges when $|x-a|<R$ and diverges when $|x-a|>R$ [\S11.8]
+\item Power series representations of functions $f(x) = \sum_{n=0}^{\infty} c_n (x-a)^n$; getting a representation for one function from another via algebraic manipulations (like substitution) [\S11.9]
 \item Differentiate, integrate, and multiply power series like they are polynomials [\S11.9, 11.10]
 \item Taylor series of $f(x)$ at $x=a$ is $\sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n$, where $f^{(n)}$ is $n$th derivative [\S11.10]
 \item Important Taylor series [\S11.10]: $\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n$ ($R=1$); \; $e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$ ($R=\infty$); \; $\sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^{n-1}x^{2n+1}}{(2n+1)!}$ ($R=\infty$); \; $\cos(x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{2n}}{(2n)!}$ ($R=\infty$)
