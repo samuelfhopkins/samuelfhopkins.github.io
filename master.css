@@ -1,5 +1,6 @@
 html {
-    width: 100%;
+    	width: 100%;
+	overflow-y: scroll;
 }
 
 * {
@@ -68,11 +69,11 @@ td {
  }
 
 figure {
-	margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    float: right;
+    	margin-top: 5px;
+    	margin-bottom: 5px;
+    	margin-left: 5px;
+    	margin-right: 5px;
+    	float: right;
 }
 
 figcaption {
