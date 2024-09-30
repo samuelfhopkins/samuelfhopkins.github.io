@@ -1,5 +1,7 @@
 html {
     	width: 100%;
+	overflow-y: scroll;
+	scrollbar-gutter: stable both-edges;
 }
 
 * {
@@ -13,8 +15,6 @@ body {
 	width: 1075px;
 	font: 13px/22px Helvetica, Arial, sans-serif;
 	background: white;
-	overflow-y: scroll;
-	scrollbar-gutter: stable both-edges;
 }
 
 h1 {
