@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 210 (Modern Algebra I), Midterm \# 1, \\ {\normalsize Fall 2024; Instructor: Sam Hopkins; Taken on: Wednesday, October 2nd}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Each problem is worth 10 points, for a total of 50 points. You have 80 minutes to do the exam. Partial credit will be given generously, so write as much as you know for each problem.
+
+\thispagestyle{empty}
+\begin{enumerate}
+
+\item Give an example of two finite groups $G$ and $H$ of the same order which are not isomorphic. Explain why your example is correct.
+
+\item Let $n \geq 1$ be a positive integer and recall the dihedral group $D_n = \langle r,s \colon r^n = s^2 = (rs)^2 = 1\rangle$ is the group of symmetries of a regular $n$-gon, where $r$ is clockwise rotation by $\frac{2\pi}{n}$ radians and $s$ is a reflection. Now suppose that $n=2m$ is even and let $N = \langle r^m \rangle \leq D_n$.
+\begin{enumerate}
+\item Prove that $N$ is a normal subgroup of $D_n$.
+\item What is the order of the quotient group $D_n/N$?
+\end{enumerate}
+
+\item (For this problem, recall the notations $n\mathbb{Z}=\{nx\colon x\in \mathbb{Z}\}$, $G\cap H = \{x\colon x\in G \textrm{ and } x\in H\}$ and $G+H=\{g+h\colon g\in G, h\in H\}$.) Consider the subgroups $G = 15\,\mathbb{Z}$ and $H=20\,\mathbb{Z}$ of $\mathbb{Z}$, the integers under addition. Define the numbers $m_1,m_2,m_3,m_4$ by
+\[ G/(G\cap H) \simeq \mathbb{Z}/m_1\mathbb{Z}; \quad H/(G\cap H) \simeq \mathbb{Z}/m_2\mathbb{Z};  \quad (G+H)/G \simeq \mathbb{Z}/m_3\mathbb{Z}; \quad (G+H)/H \simeq \mathbb{Z}/m_4\mathbb{Z}. \]
+What are $m_1$, $m_2$, $m_3$, and $m_4$? {\bf Hint}: the 2nd isomorphism theorem can save you time here.
+
+\item Fix positive integers $1 \leq k \leq n$. Let $\mathcal{F}$ denote the set of $k$-element subsets of $\{1,2,\ldots,n\}$ and let $G=S_n$, the symmetric group on $n$ letters, act on $\mathcal{F}$ by setting $\sigma \cdot X = \{\sigma(i)\colon i \in X\}$ for all $X\in \mathcal{F}$ and $\sigma \in G$. Now fix any one $X\in \mathcal{F}$, e.g., $X=\{1,\ldots,k\}$.
+\begin{enumerate}
+\item Describe the orbit of $X$ under $G$.
+\item Describe the stabilizer $G_X \leq G$.
+\item Use the orbit-stabilizer theorem to prove that $|\mathcal{F}| = \frac{n!}{k!(n-k)!}$.
+\end{enumerate}
+
+\item Let $p$ be a prime number and let $G = S_p$ be the symmetric group on $p$ letters.
+\begin{enumerate}
+\item Explain why the Sylow $p$-subgroups of $G$ are $\langle \sigma \rangle$ for $\sigma \in G$ a $p$-cycle.
+\item Explain why this means that $n_p$, the number of Sylow $p$-subgroups of $G$, is $\frac{1}{p-1}$ times the total number of $p$-cycles in $G$.
+\item Explain why the total number of $p$-cycles in $G$ is $(p-1)!$.
+\item Use the Sylow theorems to conclude that $(p-2)! \equiv 1 \mod p$. (This is \emph{Wilson's theorem}.)
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
