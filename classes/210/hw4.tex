@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 210 (Modern Algebra I), HW\# 4, \\ {\normalsize Fall 2024; Instructor: Sam Hopkins; Due: Wednesday, October 16th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+Recall that all rings $R$ are assumed to be unital (i.e., have a $1$) but not necessarily commutative.
+
+\begin{enumerate}
+
+\item A ring $R$ which satisfies $a^2 = a$ for all $a\in R$ is called a \emph{Boolean ring}. 
+\begin{enumerate}
+\item Prove that a Boolean ring $R$ is commutative, and satisfies $a+a=0$ for all $a\in R$.
+\item Let $U$ be a set and let $\mathcal{P}(U)$ denote the set of all subsets of $U$. For $A,B \in \mathcal{P}(U)$, define $A+B = (A\setminus B) \cup (B\setminus A)$ and $AB = A\cap B$. Prove that this gives $\mathcal{P}(U)$ the structure of a Boolean ring.
+\end{enumerate}
+
+\item Let $G$ be a finite group and $R = \mathbb{Q}[G]$ be the group algebra of $G$ over the rational numbers~$\mathbb{Q}$. Consider the element $x = \displaystyle \frac{1}{|G|}\sum_{g \in G} g \in R$. Prove that $x$ is an \emph{idempotent}, i.e., that $x^2 = x$.
+
+\item Recall that the \emph{center} of a (noncommutative) ring $R$ is $Z(R) = \{x \in R\colon xy = yx \textrm{ for all $y \in R$}\}$. \\
+\\ Now let $R$ be a commutative ring and consider the ring $M_n(R)$ of $n\times n$ matrices with entries in $R$. What is the center $Z(M_n(R))$ of this matrix ring?
+
+\item Let $\mathbb{H}$ denote the quaternions. Recall that an element $p\in \mathbb{H}$ can be represented as a formal sum $p=a + b\mathbf{i} + c\mathbf{j} + d\mathbf{k}$, with $a,b,c,d\in \mathbb{R}$ real numbers, and with $\mathbf{i}^2=\mathbf{j}^2=\mathbf{k}^2=\mathbf{ijk}=-1$. Define the \emph{norm} of such an element $p$ to be $|p| = \sqrt{a^2+b^2+c^2+d^2}$. Prove that this norm is mulpticative, i.e., that $| p q | = |p| \, |q|$ for $p,q \in \mathbb{H}$.
+
+\item Let $R$ be a commutative ring.
+\begin{enumerate}
+\item Let $I$ be an ideal of $R$ and define its \emph{radical} to be $\mathrm{Rad}(I) = \{x \in R\colon x^n \in I \textrm{ for some $n \geq 0$}\}$. Prove that $\mathrm{Rad}(I)$ is also an ideal of $R$.
+\item Recall that $x\in R$ is \emph{nilpotent} if there is some $n \geq 0$ such that $x^n=0$. Prove that the collection of all nilpotent elements is an ideal of $R$. {\bf Hint}: you can use the previous part.
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+\end{document}
