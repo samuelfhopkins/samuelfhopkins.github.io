@@ -13,19 +13,19 @@ body {
 	margin: 0 auto;
 	padding: 20px;
 	width: 1075px;
-	font: 13px/22px Helvetica, Arial, sans-serif;
+	font: 15px/24px Helvetica, Arial, sans-serif;
 	background: white;
 }
 
 h1 {
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 30px;
 	padding: 0px 0;
 	font-weight: thick;
 }
 
 h2 {
-	font-size: 15px;
+	font-size: 17px;
 	line-height: 44px;
 	padding: 0;
 	font-weight: thick;
@@ -33,15 +33,15 @@ h2 {
 
 
 h3 {
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 22px;
 	padding: 0px;
 	font-weight: thick;
 }
 
 h4 {
-	font-size: 13px;
-	line-height: 22px;
+	font-size: 15px;
+	line-height: 24px;
 	padding: 0px;
 	font-weight: normal;
 }
@@ -88,13 +88,13 @@ figcaption {
 
 aside {
 	display: table-cell;
-	width: 225px;
+	width: 250px;
 	vertical-align: top;
 }
 	
 #mainContent {
 	display: table-cell;
-	width: 500px;
+	width: 600px;
 	
 	border-width: 0px;
 	padding: 0px;
@@ -155,27 +155,27 @@ aside img {
 
 	body {
 		width: 100%;
-		font: 26px/44px Helvetica, Arial, sans-serif;
+		font: 28px/46px Helvetica, Arial, sans-serif;
 	}
 
 	h1 {
-		font-size: 36px;
-		line-height: 60px;
+		font-size: 38px;
+		line-height: 62px;
 	}
 
 	h2 {
-		font-size: 30px;
-		line-height: 88px;
+		font-size: 32px;
+		line-height: 90px;
 	}
 
 	h3 {
-		font-size: 26px;
-		line-height: 44px;
+		font-size: 28px;
+		line-height: 46px;
 	}
 
 	h4 {
-		font-size: 26px;
-		line-height: 44px;
+		font-size: 28px;
+		line-height: 46px;
 	}
 	
 	img {
