@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 210 (Modern Algebra I), HW\# 5, \\ {\normalsize Fall 2024; Instructor: Sam Hopkins; Due: Wednesday, October 30th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{enumerate}
+
+\item Let $R=\mathbb{Z}[\sqrt{-5}]$ be the subring of complex numbers of the form $a+b\sqrt{-5}$ with $a,b\in \mathbb{Z}$.
+\begin{enumerate}
+\item Define a \emph{norm} $N\colon R \to \{0,1,\ldots\}$ on this ring by $N(a+b\sqrt{-5})=a^2+5b^2$. Show that this norm is \emph{multiplicative}, i.e., that $N(xy)=N(x)N(y)$ for $x,y\in R$.
+\item Show that $N(x)=0 \Leftrightarrow x=0$ and $N(x)=1 \Leftrightarrow x$ is a unit, for $x \in R$.
+\item Using this norm $N$, show that the elements $2$, $3$, $1+\sqrt{-5}$, $1-\sqrt{-5} \in R$ are irreducible.
+\item Show $2$, $3$, $1+\sqrt{-5}$, $1-\sqrt{-5} \in R$ are not prime. {\bf Hint}: $2 \cdot 3 = 6 = (1+\sqrt{-5})(1-\sqrt{-5})$.
+\end{enumerate}
+(Note that (c) and (d) imply that $R$ is not a unique factorization domain.)
+
+\item Consider the polynomial ring $R=\mathbb{Z}[x]$ and the ideal $I=\langle 2, x \rangle \subseteq R$. Show that $I$ is not a principal ideal. (Hence $R$ is not a principal ideal domain.)
+
+\item Given an example of a polynomial $f(x)$ whose coefficients all belong to $\{0,1\}$ such that:
+\begin{itemize}
+\item $f(x)$ is irreducible when viewed as an element of $\mathbb{Z}[x]$;
+\item $f(x)$ is \emph{reducible} when viewed as an element of $\mathbb{F}_2[x]$, where $\mathbb{F}_2=\mathbb{Z}/2\mathbb{Z}$.
+\end{itemize}
+
+\item \begin{enumerate}
+\item Prove that $1+x$ is a unit in the formal power series ring $\mathbb{Z}[[x]]$. \\{\bf Hint}: think about the Taylor series expansion of $\frac{1}{1+x}$.
+\item Let $R$ be a (not necessarily commutative!) ring. Recall that an element $x \in R$ is called \emph{nilpotent} if there is some $n\geq 1$ such that $x^n=0$. Prove that if $x \in R$ is nilpotent, then~$1+x$ is a unit of $R$. {\bf Hint}: use a similar strategy as in part (a).
+\end{enumerate}
+
+\item Recall that a \emph{local ring} is a commutative ring $R$ with a unique maximal ideal $\mathfrak{m} \subseteq R$. The quotient~$R/\mathfrak{m}$ is called the \emph{residue field} of the local ring $R$. Now let $p$ be a prime number, and consider $R=\mathbb{Z}_{(p)}=\{\frac{a}{b}\colon a,b\in \mathbb{Z}, p\nmid b\}$, the integers localized at the prime ideal $(p)$. What is the residue field of this $R$? Explain your answer.
+
+\end{enumerate}
+
+
+\end{document}
