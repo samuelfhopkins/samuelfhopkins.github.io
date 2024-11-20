@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Final Exam Study Guide \\ Math 156 (Calculus I), Fall 2024}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\vspace{-2.5cm}
+
+\begin{enumerate}
+\item Intuitive definition of limit and basic reasons why a limit might not exist [\S2.2]
+\begin{enumerate}
+\item $\lim_{x\to a} f(x) = L$ means can make $f(x)$ arbitrarily close to $L$ by making $x \neq a$ close to $a$
+\item one-sided limits $\lim_{x\to a^{\pm}} f(x)$: they must agree for usual (two-sided) limit to exist
+\item $\lim_{x\to a} f(x) = \pm \infty$ counts as the limit not existing
+\end{enumerate}
+
+\item How to compute limits using the limit laws [\S2.3, 2.5]
+\begin{enumerate}
+\item sum ($f+g$), difference ($f-g$), scaling ($cf$), product ($fg$), quotient ($f/g$) limit laws
+\item how to deal with ``$\frac{0}{0}$'' by cancelling factors
+\item continuous functions (pushing limit thru, and direct substitution a.k.a.~``plugging in'')
+\end{enumerate}
+
+\item Limits at infinity and limits equal to infinity [\S2.2, 2.6]
+\begin{enumerate}
+\item limits at $\pm \infty$ = horizontal asymptotes (typical example: $\lim_{x\to -\infty} e^x = 0$)
+\item $\pm \infty$-valued limits = vertical asymptotes (typical example: $\lim_{x\to 0^+} 1/x=\infty$)
+\item for rational function $f(x) = P(x)/Q(x)$, $\lim_{x\to \infty} f(x)$ is $0$ if degree $P(x) <$ degree $Q(x)$, is $\pm\infty$ if degree $P(x) >$ degree $Q(x)$, $\&$ is ratio of leading coefficients if degrees are $=$
+\end{enumerate}
+
+\item The definition(s) of derivative [\S2.1, 2.7, 2.8]
+\begin{enumerate}
+\item derivative as slope of the tangent to a curve at a point
+\item derivative as a limit $f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}$
+\item derivative as instantaneous rate of change (e.g., derivative of position is velocity)
+\end{enumerate}
+
+\item Derivatives of basic functions [\S 3.1, 3.3, 3.6]
+\begin{enumerate}
+\item power functions: $d/dx (x^n) = n x^{n-1}$
+\item exponential and logarithmic functions: $d/dx(e^x) = e^x$ and $d/dx(\ln(x)) = 1/x$
+\item trigonometric functions: $d/dx(\sin(x)) = \cos(x)$ and $d/dx(\cos(x)) = -\sin(x)$
+\end{enumerate}
+
+\item Rules for derivatives of combinations of functions [\S 3.1, 3.2, 3.4]
+\begin{enumerate}
+\item derivative is linear: $d/dx( \; a\cdot f(x) + b\cdot g(x) \;) = a \cdot f'(x) + b \cdot g'(x)$ for $a,b \in \mathbb{R}$
+\item product rule: $d/dx( \; f(x)\cdot g(x) \;) = f(x) \cdot g'(x) + g(x) \cdot f'(x)$
+\item chain rule: $d/dx (\; f(g(x)) \; ) = f'(g(x)) \cdot g'(x)$
+\item quotient rule: $\displaystyle d/dx (\; f(x)/g(x) \;) = (\; g(x)\cdot f'(x) - f(x)\cdot g'(x) \; )/(g(x))^2$\\ {[\emph{don't have to separately memorize quotient rule, it follows from other rules}]}
+\end{enumerate}
+
+\item Implicit differentiation and related rates [\S 3.5, 3.9]
+\begin{enumerate}
+\item for $y$ defined implicitly via equation $p(x,y)=0$, find $dy/dx$ by taking $d/dx$ of both sides, and use this to find the slope of the tangent at any point on the curve
+\item if two quantities $f(t), g(t)$ are related, then their rates of change $df/dt$, $dg/dt$ are related: like with implicit differentiation, just differentiate the relation between $f(t)$ and $g(t)$
+\end{enumerate}
+
+\item Linear approximation [\S 3.10]
+\begin{enumerate}
+\item tangent is best linear approximation to $f(x)$ near a point $a$: $f(x) \approx f(a) + (x-a) \cdot f'(a)$
+\end{enumerate}
+
+\item Extreme values [\S 4.1, 4.3]
+\begin{enumerate}
+\item local versus absolute (global) minimum and maximum values, Extreme Value Theorem
+\item the Closed Interval Method: extreme values of continuous $f$ on closed interval must occur at endpoints or at critical points (values $x$ where $f'(x)=0$ or is not defined)
+\item 1st and 2nd Derivative Tests for deciding if critical points are min.'s or max.'s
+\end{enumerate}
+
+\item What derivatives tell us about shape of graph [\S 4.2, 4.3, 4.5]
+\begin{enumerate}
+\item $f'(x)>0$ means $f$ is increasing, $f'(x) <0$ means $f$ is decreasing
+\item $f''(x)>0$ means $f$ is concave up (smile), $f''(x) <0$ means $f$ is concave down (frown)
+\end{enumerate}
+
+\item L'H\^{o}pital's rule [\S 4.4]
+\begin{enumerate}
+\item for indeterminate form limits (meaning ``$\pm \frac{\infty}{\infty}$'' or ``$\frac{0}{0}$''), $\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)} = \lim_{x\to a} \frac{f'(x)}{g'(x)}$
+\end{enumerate}
+
+\item Area under the curve [\S 5.1, 5.2]
+\begin{enumerate}
+\item can approximate area under the curve $y=f(x)$ from $x=a$ to $x=b$ by the rectangle (Riemann) sum $A_n = \sum_{i=1}^{n} f(x^{*}_i) \, \Delta x$, where $\Delta x = \frac{b-a}{n}$, $x_i = a + i \cdot \Delta x$ for $i=0,1,\ldots,n$, and any choice of sample points $x^*_i \in [x_{i-1},x_i]$
+\item usual choices: $x^*_i = x_{i-1}$ (left endpoints $A_n =L_n$); $x^*_i=x_i$ (right endpoints $A_n=R_n$); or $x^* = \frac{x_i+x_{i-1}}{2}$ (midpoints of intervals)
+\item if $f(x)$ is continuous, all give same limit $A=\lim_{n\to \infty} A_n$, the true area under the curve
+\end{enumerate}
+
+\item Definite integrals [\S 5.2, 5.3]
+\begin{enumerate}
+\item definite integral $\int_{a}^{b} f(x) \; dx$ is the area ``under'' the curve $y=f(x)$ from $x=a$ to $x=b$ as defined above: $A=\lim_{n\to \infty} A_n$; this counts area below the $x$-axis negatively
+\item Fundamental Theorem of Calculus: $\int_{a}^{b} f(x) \; dx = F(b)-F(a) =\int f(x) \; dx \big ]_{a}^{b}$, where $F(x) = \int f(x) \; dx$ is an anti-derivative of $f(x)$ 
+\item another way to think of FTC: integral of rate of change is net change (e.g., integral of velocity is displacement)
+\end{enumerate}
+
+\item Anti-derivatives, a.k.a.~indefinite integrals [\S 4.9, 5.4, 5.5]
+\begin{enumerate}
+\item basic anti-derivatives/indefinite integrals: $\int x^n \; dx = \frac{1}{n+1}x^{n+1}+C$, $\int e^x \; dx = e^x + C$, $\int \frac{1}{x} \; dx = \ln(x) + C$, $\int \sin(x) \; dx = -\cos(x) +C$, $\int \cos(x) \; dx = \sin(x) + C$
+\item integral is linear: $\int a\cdot f(x) + b\cdot g(x) \; dx = a\int f(x) \; dx + b \int g(x) \; dx$ for $a,b\in \mathbb{R}$
+\item the $u$-substitution technique: can treat the ``$dx$'' in an integral as a differential, so if we let $u=g(x)$ then we can substitute $du = g'(x) \, dx$ in an integral
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
