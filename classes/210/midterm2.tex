@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 210 (Modern Algebra I), Midterm \# 2, \\ {\normalsize Fall 2024; Instructor: Sam Hopkins; Taken on: Wednesday, November 20th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Each problem is worth 10 points, for a total of 50 points. You have 80 minutes to do the exam. Partial credit will be given generously, so write as much as you know for each problem.
+
+\thispagestyle{empty}
+\begin{enumerate}
+
+\item Give a specific example of a noncommutative ring $R$ (with a $1$). Show that your example really is noncommutative by exhibiting two elements $x,y \in R$ with $xy \neq yx$.
+
+\item Recall that the ring of \emph{Gaussian integers} is $\mathbb{Z}[i] = \{a+bi\colon a,b\in \mathbb{Z}\}$ where $i=\sqrt{-1} \in \mathbb{C}$. Consider the ideal $I = \langle 2, \, 3+i \rangle \subseteq \mathbb{Z}[i]$. We proved that $\mathbb{Z}[i]$ is a principal ideal domain. Hence there exists an $r \in \mathbb{Z}[i]$ for which $I = \langle r \rangle$. Find such an $r$. \\{\bf Hint}: how can the identity $(1-i)(1+i)=2$ help you?
+
+\item (For this problem, recall $\mathbb{R}[x]$ is the one variable polynomial ring over the real numbers $\mathbb{R}$.)
+\begin{enumerate}
+\item State what it means for an element $p \in R$ of a commutative ring $R$ to be prime.
+\item Is $x^2-1$ a prime element of $\mathbb{R}[x]$? Justify your answer.
+\item Is $x^2+1$ a prime element of $\mathbb{R}[x]$? Justify your answer.
+\end{enumerate}
+
+\item Consider the following sequence of abelian groups and homomorphisms between them:
+\[ 0 \to \mathbb{Z} \xrightarrow{f} \mathbb{Z} \oplus \mathbb{Z} \xrightarrow{g} \mathbb{Z} \to 0.\]
+Here $f\colon \mathbb{Z} \to \mathbb{Z} \oplus \mathbb{Z}$ is given by $f(a) = (a,a)$, and $g\colon \mathbb{Z} \oplus \mathbb{Z} \to \mathbb{Z}$ is given by $g(a,b) = a-b$. Prove that this is a short exact sequence.
+
+\item Recall for a commutative ring $R$ and an $R$-module $M$, its \emph{dual module} is $M^* = \mathrm{Hom}_R(M,R)$. Give a specific example of a commutative ring $R$ and an $R$-module $M$ such that $M$ is not isomorphic to its double dual $M^{**}$. Explain why your example works.
+
+\end{enumerate}
+
+
+\end{document}

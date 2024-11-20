@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 210 (Modern Algebra I), Final Exam: Part 1, \\ {\normalsize Fall 2024; Instructor: Sam Hopkins; Due on: Wednesday, December 4th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+This is the take-home part of the final. You have one week to work on these questions, and may consult your notes and the textbook, but not other students. Each problem is worth 10 points. 
+
+\thispagestyle{empty}
+\begin{enumerate}
+
+\item Recall that the \emph{dihedral group} $D_4$ has presentation $D_4 = \langle r,s \mid r^4 = s^2 = (rs)^2 = e\rangle$. And the \emph{quaternion group} $Q_8$ has presentation $Q_8 = \langle \overline{e}, i, j, k\mid \overline{e}^2 = e, i^2 = j^2 = k^2 = ijk = \overline{e}\rangle$.
+\begin{enumerate}
+\item Show that both $D_4$ and $Q_8$ are groups of order~$8$ by listing the $8$ elements in each group.
+\item Show that $D_4$ and $Q_8$ are both \emph{not} abelian by finding, in each group, a pair of elements $a$ and $b$ with $ab \neq ba$.
+\item Prove that $D_4$ and $Q_8$ are \emph{not} isomorphic.
+\end{enumerate}
+
+\item Let the group $G$ act on a set $S$. Recall that we say the action is \emph{transitive} if for every $x,y \in S$ there exists a $g \in G$ such that $gx = y$. And we say the action is \emph{faithful} if the only element that acts as the identity is the identity element, i.e., $gx = x$ for all $x \in S$ implies that $g=e$. Suppose that the action of $G$ on $S$ is transitive and faithful.
+\begin{enumerate}
+\item Let $x \in S$ and let $G_x$ be its stabilizer. Show that if $N$ is a normal subgroup of $G$ with $N\subseteq G_x$ then $N=\{e\}$.
+\item Now suppose further that $G$ is abelian and finite. Conclude that $|S| = |G|$.
+\end{enumerate}
+
+\item Let $R$ be a ring (not necessarily commutative, but with $1$) such that for every nonzero $a\in R$, there exists a \emph{unique} $b\in R$ with $aba = a$.
+\begin{enumerate}
+\item Prove that $R$ has no nonzero zero divisors.
+\item Prove that every nonzero $a \in R$ is a unit (i.e., has a multiplicative inverse).
+\end{enumerate}
+
+\item Let $R$ be a commutative ring, $A$ an $R$-module, and $f\colon A \to A$ an $R$-module homomorphism. Suppose that $f \circ f = f$ (where $\circ$ denotes composition). Prove that $A = \mathrm{ker}(f) \oplus \mathrm{im}(f)$. {\bf Hint}: this is the same as saying that each $a\in A$ can be written uniquely as $a=b+c$ with $b \in \mathrm{ker}(f)$ and $c \in \mathrm{im}(f)$.
+
+\end{enumerate}
+
+
+\end{document}
