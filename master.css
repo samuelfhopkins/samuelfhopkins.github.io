@@ -195,6 +195,10 @@ aside img {
 		width: 98%;
 	}
 	
+	aside img {
+		max-height: 300px;
+	}
+	
 	#mainContent {
 		display: block;
 		width: 93%;
