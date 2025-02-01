@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 211 (Modern Algebra II), HW\# 2, \\ {\normalsize Spring 2025; Instructor: Sam Hopkins; Due: Monday, February 10th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\noindent (This homework only has 3 problems, but the problems are more involved.)
+
+\begin{enumerate}
+
+\item Let $K$ be a field and let $L=K(x)$ be the field of rational functions with coefficients in $K$. Consider the Galois group $\mathrm{Aut}_{K}(L)$.
+\begin{enumerate}
+\item For $a \in L$ with $a \neq 0$, define $\sigma_a \colon L \to L$ by $\sigma_a( f(x) / g(x) ) = f(ax) / g(ax)$. Show that~$\sigma_a \in \mathrm{Aut}_{K}(L)$. Conclude that if $K$ is infinite, then $\mathrm{Aut}_{K}(L)$ is infinite.
+\item For $b \in L$, define $\tau_b\colon L \to L$ by $\tau_a(f(x)/g(x)) = f(x+b) / g(x+b)$. Show~$\tau_b \in \mathrm{Aut}_{K}(L)$. Show that if $a \neq 1$ and $b \neq 0$, then $\sigma_a \tau_b \neq \tau_b \sigma_a$. Conclude that $\mathrm{Aut}_{K}(L)$ is nonabelian.
+\end{enumerate}
+
+\item Let $L=\mathbb{R}$, the real numbers, viewed as an extension of $K=\mathbb{Q}$, the rational numbers. Consider the Galois group $\mathrm{Aut}_{K}(L)$.
+\begin{enumerate}
+\item Let $\sigma \in \mathrm{Aut}_{K}(L)$. Prove that $u \geq 0$ if and only if $\sigma(u) \geq 0$. Conclude that $\sigma$ preserves the order on $\mathbb{R}$. {\bf Hint:} the nonnegative numbers in $\mathbb{R}$ are exactly those which are squares.
+\item Use part (a) to show that $\mathrm{Aut}_{K}(L)$ is trivial. {\bf Hint:} every real number can be ``trapped'' between two rational numbers that are arbitrarily close to it.
+\end{enumerate}
+
+\item Let $L = \mathbb{Q}(\omega, \, \sqrt[3]{2})$, viewed as an extension of $K=\mathbb{Q}$, where $\omega = e^{2\pi i / 3} = \frac{-1+\sqrt{-3}}{2}$ is a primitive cube root of unity.  Notice that the roots of $f(x)=x^3-2$ are $\sqrt[3]{2}$, $\omega\sqrt[3]{2}$, and $\omega^2\sqrt[3]{2}$, so~$L$ is the field we get by adjoining all roots of $f(x)$ to $\mathbb{Q}$ (i.e., $L$ is the \emph{splitting field} of $f(x)$).
+
+\begin{enumerate}
+\item What is the degree $[L:K]$? Find a $K$-basis of $L$. {\bf Hint}: looking ahead to the other parts can help you answer this one.
+\item Prove that $L/K$ is a Galois extension.
+\item Prove that the Galois group $\mathrm{Aut}_{K}(L)$ is isomorphic to the symmetric group $S_3$.
+\item Draw the subgroup structure of $S_3$ and the subfield structure of $L$ and show how they match up according to the Fundamental Theorem of Galois Theory.
+\item Which subgroups of $S_3$ are normal? Which subfields of $L$ are Galois over $K$? How do these correspond?
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
