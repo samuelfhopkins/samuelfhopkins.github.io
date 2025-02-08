@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Midterm \#1 Study Guide \\ Math 157 (Calculus II), Spring 2024}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-2cm}
+
+\begin{enumerate}
+\item Geometric applications of integrals [\S6.1, 6.2, 6.3]
+\begin{enumerate}
+\item Area between curves [\S6.1]: area between $y=f(x)$ and $y=g(x)$ is $\int_{a}^{b} |f(x)-g(x)| \; dx$.
+\item Volume of general solid [\S6.2]: if $A(x)=$ area of cross-section, then volume is $\int_a^b A(x) \;dx$.
+\item Volume of solid of revolution [\S6.2, 6.3]: ``disks/washers'' $\&$ ``cylindrical shells'' methods.  \\For region below curve $y=f(x)$ from $x=a$ to $x=b$:
+\begin{enumerate}
+\item rotated around $x$-axis, ``disks method'' gives volume $=\int_a^b \pi \, f(x)^2 \; dx$;
+\item rotated around $y$-axis, ``shells method'' gives volume $=\int_a^b 2 \pi \, f(x) \, x \; dx$.
+\end{enumerate}
+%\item Arc lengths of curves [\S8.1]: length of $y=f(x)$ from $x=a$ to $x=b$ is $\int_{a}^{b} \sqrt{1+(f'(x))^2} \; dx$.
+%\item Area of surface of revolution [\S8.2]: 
+%\begin{enumerate}
+%\item for $y=f(x)$ from $x=a$ to $x=b$ rotated about $x$-axis, area is $\int_{a}^{b} 2\pi f(x) \, \sqrt{1+(f'(x))^2} \; dx$;
+%\item for $x=g(y)$ from $y=c$ to $y=d$ rotated about $x$-axis, area is $\int_{c}^{d} 2\pi y \, \sqrt{1+(g'(y))^2} \; dy$.
+%\end{enumerate}
+\end{enumerate}
+
+\item Other applications of integrals [\S6.4, 6.5]
+\begin{enumerate}
+\item Work [\S6.4]: if $F(x)=$ force as function of distance, then work done is $W=\int_{a}^{b} F(x) \; dx$.
+\item Average of function [\S6.5]: the average of $f(x)$ from $x=a$ to $x=b$ is $\frac{1}{b-a}\int_a^b f(x) \; dx$.
+%\item Center of mass [\S8.3]: centroid of region below curve $y=f(x)$ located at $(\overline{x},\overline{y})$ where $\overline{x} = \frac{1}{A} \int_a^b xf(x) \, dx$, \; $\overline{y} = \frac{1}{A} \int_{a}^{b} \frac{1}{2} (f(x))^2 \, dx$, \; and $A=\int_{a}^{b} f(x) \; dx$ is area of the region.
+\end{enumerate}
+
+\item Techniques for computing integrals [\S7.1, 7.2, 7.3, 7.4, 7.5]
+\begin{enumerate}
+\item Integration by parts [\S7.1]: $\int u \; dv = uv - \int v \; du$; choose $u$ using ``LIATE'' rule
+\item Trigonometric integrals [\S7.2]: for $\int \sin^n(x) \cos^m(x) \; dx$, use the Pythagorean identity $\sin^2(x) + \cos^2(x)=1$ to isolate single factor of $\cos(x) \; dx$ or $\sin(x) \; dx$, then do a $u$-sub.
+\item Trigonometric substitution [\S7.3]: 
+\begin{enumerate}
+\item for $a^2-x^2$ $\Rightarrow$ sub $x = a\sin(\theta)$, $dx = a\cos(\theta) \, d\theta$, and use $1-\sin^2(\theta) = \cos^2(\theta)$;
+\item for $a^2+x^2$ $\Rightarrow$ sub $x = a\tan(\theta)$, $dx = a\sec^2(\theta) \, d\theta$, and use $1+\tan^2(\theta) = \sec^2(\theta)$.
+\end{enumerate}
+\item Integrating rational functions by partial fractions [\S7.4]: find roots of denominator $Q(x)$ and solve system of equations to write $P(x)/Q(x) = A/(x-a) + B/(x-b) + ...  + Z/(x-z)$ and use $\int A/(x-a) \;dx = A \ln(x-a)$; for repeated roots do $A_1/(x-a) + A_2/(x-a)^2 + \cdots$.
+\end{enumerate}
+
+\item Other concepts related to integration [\S7.7] %[\S7.8]
+\begin{enumerate}
+\item Approximating definite integrals [\S7.7]: two good approximations of $\int_{a}^{b} f(x) \, dx$ are
+\begin{enumerate}
+\item midpoint approximation $M_n = \sum_{i=1}^{n} f(\overline{x}_i) \Delta x$ where $\overline{x}_i = \frac{x_{i-1}+x_i}{2}$;
+\item trapezoid approximation $T_n = \frac{\Delta x}{2} (f(x_0)+2f(x_1) + 2f(x_2) + \cdots + 2f(x_{n-1}) + f(x_n) )$.
+\end{enumerate}
+%\item Improper integrals [\S7.8]: $\int_{a}^{\infty} f(x) \; dx = \lim_{t\to \infty} \int_a^t f(x) \; dx$, et cetera.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
