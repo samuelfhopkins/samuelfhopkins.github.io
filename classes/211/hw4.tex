@@ -34,9 +34,12 @@
 
 \item \begin{enumerate}
 \item Let $f(x) = ax^3+bx^2+cx+d \in \mathbb{Q}[x]$ be a cubic polynomial (so $a \neq 0$). Show that the polynomial $\frac{1}{a} \cdot f(x-\frac{b}{3a})$ has the form $x^3+px+q$ for $p,q\in \mathbb{Q}$.
-\item Let $f(x) = x^3+px+q\in \mathbb{Q}[x]$ with $p\neq 0$ and $q\neq 0$. Show that a root of~$f(x)$ has the form $x=\sqrt[3]{A}+\sqrt[3]{B}$ where 
+\item Let $f(x) = x^3+px+q\in \mathbb{Q}[x]$ with $p\neq 0$ and $q\neq 0$. Show that one root of~$f(x)$ has the form $x=\sqrt[3]{A}+\sqrt[3]{B}$ where 
 \[ A = \frac{-q}{2} + \sqrt{\frac{q^2}{4}+\frac{p^3}{27}}, \quad B = \frac{-q}{2} - \sqrt{\frac{q^2}{4}+\frac{p^3}{27}}.\]
-(This solution to the cubic equation is often called \emph{Cardano's formula}.)
+(This solution to the cubic equation is often called \emph{Cardano's formula}.) \\
+{\bf Hint:} First notice (and explain why!) that with $x=\sqrt[3]{A}+\sqrt[3]{B}$ we get 
+\[ x^3+px+q = A+B+(3\sqrt[3]{AB}+p)(\sqrt[3]{A}+\sqrt[3]{B})+q.\]
+And then what can you say about the term $(3\sqrt[3]{AB}+p)$?
 \item Conclude that if $f(x) \in \mathbb{Q}[x]$ is any cubic polynomial, then the splitting field of $f(x)$ is a radical extension of $\mathbb{Q}$.
 \end{enumerate}
 
