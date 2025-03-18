@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Midterm \#2 Study Guide \\ Math 157 (Calculus II), Spring 2025}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-2cm}
+
+\begin{enumerate}
+\item More geometric applications of integrals [\S8.1, 8.2]
+\begin{enumerate}
+\item Arc lengths of curves [\S8.1]: length of $y=f(x)$ from $x=a$ to $x=b$ is $\int_{a}^{b} \sqrt{1+(f'(x))^2} \; dx$.
+\item Area of surface of revolution [\S8.2]: 
+\begin{enumerate}
+\item for $y=f(x)$ from $x=a$ to $x=b$ rotated about $x$-axis, area is $\int_{a}^{b} 2\pi f(x) \, \sqrt{1+(f'(x))^2} \; dx$;
+\item for $y=f(x)$ from $x=a$ to $x=b$ rotated about $y$-axis, area is $\int_{a}^{b} 2\pi x \, \sqrt{1+(f'(x))^2} \; dx$.
+\end{enumerate}
+\end{enumerate}
+
+\item Parametrized curves [\S10.1, 10.2]
+\begin{enumerate}
+\item Curve of form $x=f(t)$ and $y=g(t)$ for some auxiliary variable $t$ (``time'') [\S10.1]
+\item Slope of tangent [\S10.2] to curve given by chain rule: $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{g'(t)}{f'(t)}$ 
+\item Arc length [\S10.2] is $\int_{a}^{b} \sqrt{(\frac{dy}{dt})^2 + (\frac{dx}{dt})^2} \; dt = \int_{a}^{b} \sqrt{g'(t)^2 + f'(t)^2} \; dt$
+\end{enumerate}
+
+\item Polar coordinates and polar curves [\S10.3, 10.4]
+\begin{enumerate}
+\item Cartesian vs.~polar [\S10.3]: $(x,y) = (r\cos \theta, r \sin \theta)$ and $(r,\theta) = (\sqrt{x^2+y^2}, \arctan (\frac{y}{x}))$
+\item Area inside [\S10.4] polar curve $r=f(\theta)$ for $\alpha \leq \theta \leq \beta$ is $\int_{\alpha}^{\beta} \frac{1}{2} r^2 \; d\theta=\int_{\alpha}^{\beta} \frac{1}{2} f(\theta)^2 \; d\theta$ 
+\item Slope of tangent [\S10.4] to polar curve $r=f(\theta)$ given by chain and product rules: 
+{\small \[\frac{dy}{dx} = \frac{dy/d\theta}{dx/d\theta} = \frac{\frac{d}{d\theta}(r \sin\theta)}{\frac{d}{d\theta}(r \cos\theta)} = \frac{f(\theta)\, \cos \theta  + f'(\theta) \, \sin \theta}{f'(\theta)\cos\theta-f(\theta)\, \sin\theta }\]}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
