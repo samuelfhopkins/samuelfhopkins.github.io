@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 211 (Modern Algebra II), HW\# 5, \\ {\normalsize Spring 2025; Instructor: Sam Hopkins; Due: Wednesday, April 2nd}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1cm}
+
+\begin{enumerate}
+
+\item Let $K$ be a field and consider $K(x)$, the field of rational functions in the variable $x$, as a (simple, transcendental) extension of $K$. On a previous homework, you found some properties of the Galois group $\mathrm{Aut}_K(K(x))$. In this problem, you will fully describe $\mathrm{Aut}_K(K(x))$.
+\begin{enumerate}
+    \item For a rational function $0 \neq f/g \in K(x)$ with $f,g \in K[x]$ relatively prime, define its \emph{degree} to be $\mathrm{deg}(f/g) := \mathrm{max}(\mathrm{deg}(f),\mathrm{deg}(g))$. Show that $[K(x) : K(f/g)] = \mathrm{deg}(f/g)$ if $\mathrm{deg}(f/g) \geq 1$. {\bf Hint}: $x$ is a root of the polynomial $\varphi(y) = (f/g)g(y)-f(y) \in K(f/g)[y]$; you may use without proof the fact that this polynomial is irreducible.
+    \item Let $f/g \in K(x)$ with $\mathrm{deg}(f/g) \geq 1$. Explain why the assignment $\sigma\colon x \mapsto f/g$ induces a homomorphism $\sigma \colon K(x) \to K(x)$, which is an automorphism if and only if $\mathrm{deg}(f/g)=1$.
+    \item Conclude that $\mathrm{Aut}_K(K(x))$ consists exactly of the assignments $x \mapsto (ax+b)/(cx+d)$ with $a,b,c,d \in K$ and $ad - bc \neq 0$. (These are called \emph{fractional linear transformations}, and can be viewed as $2\times 2$ matrices with entries in $K$.)
+\end{enumerate}
+
+\item Let $L/K$ be a field extension, and $S \subseteq L$ an algebraically indepdendent subset. Let $u, v \in L$ with $v \in S$ and $u \notin S$. Suppose that $u$ is algebraic over $K(S)$ but that $u$ is not algebraic over $K(S \setminus \{v\})$. Show that $v$ is algebraic over $K((S \setminus \{v\}) \cup \{u\})$. (This is called the \emph{exchange lemma} for transcendence bases.)
+
+\item In this problem, you will explore $\mathrm{Aut}_{\mathbb{Q}}(\mathbb{C})$, the field automorphisms of the complex numbers. We already know that two elements of $\mathrm{Aut}_{\mathbb{Q}}(\mathbb{C})$ are the identity and complex conjugation $\sigma\colon a+bi \mapsto a-bi$. You will show that there are many other ``wild'' elements.
+\begin{enumerate}
+\item Show that a transcendence basis of $\mathbb{C}$ over $\mathbb{Q}$ is infinite. {\bf Hint}: First, note $\mathbb{Q}(x_1,\ldots,x_n)$ is countably infinite for any finite $n \geq 1$ (why?). Then you may use the fact, which we did not prove in class but which is in the book, that if $K$ is an infinite field, the algebraic closure $\overline{K}$ of $K$ has the same cardinality as $K$.
+\item Let $S$ be a transcendence basis of $\mathbb{C}$ over $\mathbb{Q}$. Show that any permutation of $S$ induces an automorphism in $\mathrm{Aut}_{\mathbb{Q}}(\mathbb{C})$. {\bf Hint}: First, observe in general that if the set $S$ is algebraically independent over the field $K$, then any permutation of $S$ induces an automorphism of $K(S)$. Then you may use the fact, which we did not prove in class but which is in the book, that if $L_1/K$ and $L_2/K$ are two algebraic closures of $K$, then there is an isomorphism $\varphi \colon L_1 \to L_2$ such that $\varphi$ is the identity when restricted to $K$.
+\item Conclude that $\mathrm{Aut}_{\mathbb{Q}}(\mathbb{C})$ is infinite.
+\end{enumerate}
+(The only automorphisms in $\mathrm{Aut}_{\mathbb{Q}}(\mathbb{C})$ that are \emph{continuous} with respect to the standard topology on $\mathbb{C}$ are the identity and complex conjugation. The other ``wild'' automorphisms are very wild indeed - their existence depends on the axiom of choice!)
+
+\end{enumerate}
+
+
+\end{document}
