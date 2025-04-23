@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Midterm \#3, 4/23 \\ Math 157 (Calculus II), Spring 2025}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-2cm}
+
+Each problem is worth 10 points, for a total of 50 points. You have 50 minutes to do the exam. Remember to \emph{show your work} on all problems!
+
+\begin{enumerate}
+
+\item For each of the following sequence limits, state the value of the limit or state that it diverges. Explain your answer.
+\begin{enumerate}
+\item $\displaystyle \lim_{n\to \infty} \frac{6n^2-2n-1}{2n^2+2n+1}$
+\item $\displaystyle \lim_{n\to \infty} \sin(\frac{\pi}{n})$
+\item $\displaystyle \lim_{n\to \infty} (-1)^n \cdot \frac{n}{n+1}$
+\item $\displaystyle \lim_{n\to \infty} \ln(n)$
+\end{enumerate}
+
+\item For each of the following series, decide (with explanation) whether it converges or diverges.
+\begin{enumerate}
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{4n}{2n-1}$ \hfill ({\bf Hint}: check the limit of the terms.)
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{4}{2n-1}$ \hfill ({\bf Hint:} compare to a series you know.)
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n+2}$ \hfill ({\bf Hint:} it is an alternating series.)
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{3^n+3}{4^n+4}$ \hfill ({\bf Hint:} look at the ratio of successive terms.)
+\end{enumerate}
+
+\item Consider the series $s=\displaystyle \sum_{n=1}^{\infty} \frac{1}{(2n+1)^2}$. Let $s_n = \frac{1}{3^2} + \frac{1}{5^2} + \cdots + \frac{1}{(2n+1)^2}$ be its $n$th partial sum.
+\begin{enumerate}
+\item Compute the second partial sum $s_2$ as an estimate for the true value $s$ of the series. \\ (Do not worry about simplifying your answer.)
+\item Let $R_2 = s - s_2$ be the corresponding remainder, i.e., the error of your estimate from part (a). Give an upper bound for $R_2$. ({\bf Hint}: use an improper integral as the bound.)
+\end{enumerate}
+
+\item Consider the function $\displaystyle f(x) = e^{-3x}$.
+\begin{enumerate}
+\item Express this function as a power series centered at zero: $f(x) = \sum_{n = 0}^{\infty} c_n x^n$.
+\item Determine the radius of convergence $R$ of the power series you found in part (a).
+\end{enumerate}
+
+\item Let $f\colon \mathbb{R}\to \mathbb{R}$ be a twice-differentiable function satisfying $f(0) = 4$, $f'(0) = 3$, and $f''(0)=2$.
+\begin{enumerate}
+\item Write the degree two Taylor polynomial $T_2(x)$, centered at $x=0$, for $f(x)$.
+\item Use your answer in part (a) to estimate the value of $f(1)$. (You do not need to give any bounds on the error of your estimate.) 
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
