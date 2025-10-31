@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Math 210 (Modern Algebra I), HW\# 6, \\ {\normalsize Fall 2025; Instructor: Sam Hopkins; Due: Wednesday, November 12th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{enumerate}
+
+\item Let $R$ be a ring (not necessarily commutative, but with 1) and let $M$ be left $R$-module. 
+\begin{enumerate}
+\item For $x \in M$, define the \emph{annihilator} of $x$ to be $\mathrm{Ann}(x) := \{r \in R\colon rx = 0\}$. Prove that $\mathrm{Ann}(x)$ is always a left ideal of $R$.
+\item Suppose that $M$ is cyclic, i.e., $M = \langle x \rangle$ for some $x \in M$. Prove that $M \simeq R/\mathrm{Ann}(x)$.
+\end{enumerate}
+
+\item Let $R$ be a commutative ring.
+\begin{enumerate}
+\item Prove that the polynomial ring $R[x]$ is naturally an $R$-module.
+\item Prove that the following is a short exact sequence of $R$-modules:
+\[ 0 \to R[x] \xrightarrow{\cdot x} R[x] \to R \to 0 \]
+Here $R[x] \xrightarrow{\cdot x} R[x]$ is the map $f(x) \mapsto x \cdot f(x)$, and $R[x] \to R$ is the map $f(x) \mapsto f(0)$.
+\end{enumerate}
+
+\item Let $p$ be a prime number and $A$ an abelian group. Show that $A[p] := \{a \in A\colon pa = 0\}$ is naturally a vector space over $\mathbb{Z}/p\mathbb{Z}$. Deduce that if $A$ is finite, then $|A[p]| = p^n$ for some $n$.
+
+\item Let $m \geq 1$ be a positive integer.
+\begin{enumerate} 
+\item Prove that for any abelian group $A$, $\mathrm{Hom}_{\mathbb{Z}}(\mathbb{Z}/m\mathbb{Z},A) \simeq A[m] := \{a \in A\colon ma = 0\}$.
+\item Use part (a) to show that $\mathrm{Hom}_{\mathbb{Z}}(\mathbb{Z}/m\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \simeq \mathbb{Z}/\mathrm{gcd}(m,n)\mathbb{Z}$ for any $n \geq 1$.
+\item Use part (a) to show that the dual $(\mathbb{Z}/m\mathbb{Z})^*$ of $\mathbb{Z}/m\mathbb{Z}$, as a $\mathbb{Z}$-module, is $0$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Explain why the sequence $0 \to \mathbb{Z} \to \mathbb{Q}$ of abelian groups is exact.
+\item Prove that, after tensoring over $\mathbb{Z}$ with $\mathbb{Z}/2\mathbb{Z}$, the induced sequence of abelian groups
+\[0 \to \mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{Z}/2\mathbb{Z} \to \mathbb{Q} \otimes_{\mathbb{Z}} \mathbb{Z}/2\mathbb{Z}\]
+ is \emph{not} exact.
+\end{enumerate}
+(This means that ``the tensor product functor is not left-exact.'')
+
+
+
+\end{enumerate}
+
+
+\end{document}
