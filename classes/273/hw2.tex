@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Howard Math 273, HW\# 2, \\ {\normalsize Fall 2026; Instructor: Sam Hopkins; Due: Friday, October 2nd}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1.8cm}
+
+\begin{enumerate}
+
+\item \begin{enumerate}
+
+\item Let $od(n)$ denote the number of partitions of $n$ into distinct odd parts. Show that $\displaystyle \sum_{n \geq 0} od(n) x^n = \prod_{k \geq 1} (1+x^{2k-1})$.
+
+\item Let $ee(n)$ denote the number of partitions of $n$ with an even number of even parts, and $oe(n)$ denote the number of partitions of $n$ with an odd number of even parts. Show that $\displaystyle \sum_{n \geq 0} (ee(n)-oe(n)) x^n = \prod_{k \geq 1} \frac{1}{1+(-x)^k}$.
+
+\item Prove that $od(n) = ee(n)-oe(n)$ for all $n \geq 0$. {\bf Hint}: use parts (a) and (b).
+
+\end{enumerate}
+
+\item Prove that, for any $n \geq 0$,
+\[ \sum_{k=0}^{n} \binom{2k}{k}\binom{2(n-k)}{n-k} = 4^n. \]
+{\bf Hint}: We discussed the generating function $\sum_{n\geq 0} \binom{2n}{n}x^n$ of the central binomial coefficients. How can you use what we proved about this generating function to deduce the desired result?
+
+\item Let $\mathrm{ODD}(n)$ denote the subset of permutations in the symmetric group $S_n$ that have no cycles of even size. Prove that, for any $n \geq 1$,
+\[ \sum_{\sigma \in \mathrm{ODD}(n)} 2^{\#\mathrm{cycles}(\sigma)} = 2\cdot n!. \]
+{\bf Hint}: Recall that we showed
+\[ \sum_{n \geq 0}  \left( \, \sum_{\sigma\in S_n} t_1^{c_1(\sigma)} t_2^{c_2(\sigma)} \cdots t_n^{c_n(\sigma)} \, \right)  \frac{x^n}{n!} = e^{t_1 \frac{x}{1} + t_2\frac{x^2}{2} + t_3\frac{x^3}{3} + t_4\frac{x^4}{4} + \cdots},\]
+where $c_k(\sigma)$ is the number of cycles of $\sigma$ of size $k$. How can you use this generating function identity to deduce the desired result?
+
+\item Recall that a permutation $\sigma \in S_n$ is called a \emph{derangement} if it has no fixed points, i.e., $\sigma(i)\neq i$ for all $i=1,\ldots,n$. Meanwhile, $\sigma \in S_n$ is called an \emph{involution} if it is its own inverse, i.e., $\sigma^2$ is the identity permutation. Give a simple product formula for the number of permutations in the symmetric group $S_n$ that are simultaneously derangements and involutions. Explain why your formula is correct.
+
+\end{enumerate}
+
+
+\end{document}
