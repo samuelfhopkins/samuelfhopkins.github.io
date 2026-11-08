@@ -36,10 +36,8 @@
 \[ \sum_{I \in \mathcal{J}(P)} x^{\#I} = (1+x)(1+x^2)(1+x+x^2).\]
 {\bf Hint}: How many order ideals must such a $P$ have? How many elements must $P$ have? How many \emph{minimal} elements must it have? How many \emph{maximal} elements must it have?
 
-\item \emph{(Stanley, EC1, \#3.89)} Let $L$ be a finite lattice, with minimum element $\hat{0}$. Let $f_L(m)$ be the number of $m$-tuples $(t_1,\ldots,t_m)\in L^m$ such that $t_1 \wedge t_2 \wedge \cdots \wedge t_m = \hat{0}$. Use M\"{o}bius inversion to show that
-\[ f_L(m) = \sum_{t\in L} \mu(\hat{0},t) \cdot (\#\{s\in L\colon s \geq t\})^m,\]
-where $\mu$ is the M\"{o}bius function of $L$. \\
-{\bf Hint}: Define $f_L(m,t) := \#\{(t_1,\ldots,t_m)\in L^m\colon t_1 \wedge t_2 \wedge \cdots \wedge t_m = t\}$ for any $t \in L$ (so that $f_L(m)=f_L(m,\hat{0})$), and also define $g_L(m,t) := \#\{(t_1,\ldots,t_m)\in L^m\colon t_1 \wedge t_2 \wedge \cdots \wedge t_m \geq t\}$. How are these $f$ and $g$ related? Can you find a simpler expression for $g$?
+\item Let $G$ be a graph with vertex set $[n]:=\{1,2,\ldots,n\}$. A set partition $\pi=\{\pi_1,\pi_2,\ldots,\pi_k\}$ of~$[n]$ is called \emph{$G$-connected} if the restriction of $G$ to each block $\pi_i$ is connected. Define $L_G$, the \emph{bond lattice} of $G$, to be the poset whose elements are the $G$-connected partitions of $[n]$, with $\pi \leq \pi'$ if each block of $\pi$ is a subset of some block of $\pi'$. Define $\chi_G(x) := \sum_{\pi \in L_G} \mu(\hat{0},\pi) x^{\#\pi}$, where $\hat{0} = \{\{1\},\ldots,\{n\}\}$ (the all singletons partition) is the minimum of $L_G$, and $\mu$ is the M\"{o}bius function of $L_G$. Prove that, for every positive integer $x$, $\chi_G(x)$ is the number of ways to color the vertices of $G$ with colors $\{1,2,\ldots,x\}$ such that adjacent vertices are colored different colors. (This $\chi_G(x)$ is called the \emph{chromatic polynomial} of the graph $G$.) \\
+{\bf Hint}: For $\pi \in L_G$, define $g_{\pi}(x)$ to be the number of vertex colorings with $x$ colors so that all blocks in $\pi$ are monochromatic, and $f_{\pi}(x)$ to be the number which additionally have adjacent blocks colored differently. Notice that $\chi_G(x) = f_{\hat{0}}(x)$. Explain how these $f(\pi,x)$ and $g(\pi,x)$ are related, give a simple formula for $g(\pi,x)$, and then apply M\"{o}bius inversion.
 
 \end{enumerate}
 
