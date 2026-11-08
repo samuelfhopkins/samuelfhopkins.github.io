@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Howard Math 273, HW\# 4, \\ {\normalsize Fall 2026; Instructor: Sam Hopkins; Due: Wednesday, November 25th}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\vspace{-1cm}
+
+\begin{enumerate}
+
+\renewcommand{\binom}{\genfrac{(}{)}{0pt}{}}
+\DeclareRobustCommand{\qbinom}{\genfrac{\lbrack}{\rbrack}{0pt}{}}
+
+\item The $q$-binomial coefficient satisfies $\qbinom{n}{k}_q = \sum_{w \in \mathcal{W}_{n,k}} q^{\mathrm{inv}(w)},$ where $\mathcal{W}_{n,k}$ is the set of words that are rearrangements of $(n-k)$ $0$'s and $k$ $1$'s, and $\mathrm{inv}(w)$ is the number of inversions of~$w$.
+
+{\bf Suppose $n=2m$ is even.} Prove that $\qbinom{n}{k}_{q := -1}$ (the evaluation of the $q$-binomial at $q=-1$) is equal to $\#\mathcal{P}_{n,k}$, where $\mathcal{P}_{n,k}$ is the subset of words $w=w_1w_2\ldots w_{n} \in \mathcal{W}_{n,k}$ that are \emph{palindromes}, i.e., which satisfy $w_i = w_{n+1-i}$ for all $i$. Do this by defining a {\bf sign-reversing involution}. That is, define an involution $\tau\colon \mathcal{W}_{n,k}\to \mathcal{W}_{n,k}$ satisfying:
+\begin{itemize}
+\item $\mathrm{inv}(w)$ and $\mathrm{inv}(\tau(w))$ have opposite parity for all $w\in \mathcal{W}_{n,k}$ with $\tau(w)\neq w$;
+\item $\mathrm{inv}(w)$ is even for all $w\in \mathcal{W}_{n,k}$ with $\tau(w)=w$;
+\item $\#\{w\in \mathcal{W}_{n,k}\colon \tau(w)=w\} = \#\mathcal{P}_{n,k}$.
+\end{itemize}
+
+\item The \emph{complete bipartite graph $K_{n,m}$} is the graph with vertex set $X\cup Y$ where $X=\{x_1,...,x_n\}$ and $Y=\{y_1,...,y_m\}$, and with edges $\{x_i,y_j\}$ for all $1\leq i \leq n, 1\leq j \leq m$ (but with no edges between the $x$'s, or between the $y$'s). Use the Matrix-Tree Theorem to show that the number of spanning trees of $K_{n,m}$ is $n^{m-1}m^{n-1}$. \\
+{\bf Hint}: You can use the fact that for a matrix $M$ in \emph{block form} $M=\begin{pmatrix} A & B \\ C & D \end{pmatrix}$ we have $\mathrm{det}(M) = \mathrm{det}(A-BD^{-1}C)\cdot\mathrm{det}(D)$ if $D$ is invertible. Compare to: $\mathrm{det}\begin{pmatrix} a & b \\ c & d\end{pmatrix}=ad-bc$.
+
+\item \emph{(Stanley, EC1, \#3.34)} Recall that for a poset $P$, $\mathcal{J}(P)$ denotes the set of \emph{order ideals} of $P$ (i.e., subsets $I\subseteq P$ for which $q\in I$ and $p\leq q\in P$ implies $p\in I$). Find {\bf all} finite posets $P$ for which
+\[ \sum_{I \in \mathcal{J}(P)} x^{\#I} = (1+x)(1+x^2)(1+x+x^2).\]
+{\bf Hint}: How many order ideals must such a $P$ have? How many elements must $P$ have? How many \emph{minimal} elements must it have? How many \emph{maximal} elements must it have?
+
+\item \emph{(Stanley, EC1, \#3.89)} Let $L$ be a finite lattice, with minimum element $\hat{0}$. Let $f_L(m)$ be the number of $m$-tuples $(t_1,\ldots,t_m)\in L^m$ such that $t_1 \wedge t_2 \wedge \cdots \wedge t_m = \hat{0}$. Use M\"{o}bius inversion to show that
+\[ f_L(m) = \sum_{t\in L} \mu(\hat{0},t) \cdot (\#\{s\in L\colon s \geq t\})^m,\]
+where $\mu$ is the M\"{o}bius function of $L$. \\
+{\bf Hint}: Define $f_L(m,t) := \#\{(t_1,\ldots,t_m)\in L^m\colon t_1 \wedge t_2 \wedge \cdots \wedge t_m = t\}$ for any $t \in L$ (so that $f_L(m)=f_L(m,\hat{0})$), and also define $g_L(m,t) := \#\{(t_1,\ldots,t_m)\in L^m\colon t_1 \wedge t_2 \wedge \cdots \wedge t_m \geq t\}$. How are these $f$ and $g$ related? Can you find a simpler expression for $g$?
+
+\end{enumerate}
+
+
+\end{document}
